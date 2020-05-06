@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oraclechain.pocketeos.blockchain.cypto.util;
+package com.oraclechain.pocketrix.blockchain.cypto.util;
 
 import java.io.DataInputStream;
 import java.io.IOException;

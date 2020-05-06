@@ -1,17 +1,17 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.usercenter.changename;
+package com.oraclechain.pocketrix.modules.leftdrawer.usercenter.changename;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.view.ClearEditText;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.view.ClearEditText;
 
 import butterknife.BindView;
 

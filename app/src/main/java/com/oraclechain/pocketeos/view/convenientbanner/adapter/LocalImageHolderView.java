@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.view.convenientbanner.adapter;
+package com.oraclechain.pocketrix.view.convenientbanner.adapter;
 
 /**
- * Created by pocketEos on 2018/1/3.
+ * Created by pocketrix on 2018/1/3.
  */
 
 import android.content.Context;
@@ -13,8 +13,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.view.convenientbanner.holder.Holder;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.view.convenientbanner.holder.Holder;
 
 /**
  * 设置加载图片类型

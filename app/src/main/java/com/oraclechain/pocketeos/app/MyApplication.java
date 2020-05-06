@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.app;
+package com.oraclechain.pocketrix.app;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -18,14 +18,14 @@ import com.lzy.okgo.cookie.store.SPCookieStore;
 import com.lzy.okgo.https.HttpsUtils;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
 import com.lzy.okgo.model.HttpHeaders;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.DaoMaster;
-import com.oraclechain.pocketeos.gen.DaoSession;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.utils.LocalManageUtil;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.DaoMaster;
+import com.oraclechain.pocketrix.gen.DaoSession;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.utils.LocalManageUtil;
+import com.oraclechain.pocketrix.utils.Utils;
 import com.tencent.tauth.Tencent;
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
@@ -37,7 +37,7 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketRix on 2017/11/23.
  */
 
 public class MyApplication extends MultiDexApplication {
@@ -138,7 +138,7 @@ public class MyApplication extends MultiDexApplication {
      */
     private void setupDatabase() {
         //创建数据库
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "pocketEos.db", null);
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "pocketRix.db", null);
         //获取可写数据库
         SQLiteDatabase db = helper.getWritableDatabase();
         //获取数据库对象

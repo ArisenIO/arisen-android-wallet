@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.view.dialog.sharedialog;
+package com.oraclechain.pocketrix.view.dialog.sharedialog;
 
 /**
- * Created by pocketEos on 2017/12/12.
+ * Created by pocketrix on 2017/12/12.
  */
 
 public interface ShareCallBack {

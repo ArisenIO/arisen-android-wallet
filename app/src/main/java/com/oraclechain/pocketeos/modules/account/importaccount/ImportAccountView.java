@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.account.importaccount;
+package com.oraclechain.pocketrix.modules.account.importaccount;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.BlockChainAccountInfoBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.BlockChainAccountInfoBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface ImportAccountView extends BaseView {
 
@@ -14,5 +14,5 @@ public interface ImportAccountView extends BaseView {
 
     void getDataHttpFail(String msg);
 
-    void postEosAccountDataHttp();
+    void postrixAccountDataHttp();
 }

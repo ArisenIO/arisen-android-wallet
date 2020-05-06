@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.blockchain.util;
+package com.oraclechain.pocketrix.blockchain.util;
 
 
-import com.oraclechain.pocketeos.blockchain.chain.PackedTransaction;
-import com.oraclechain.pocketeos.blockchain.chain.SignedTransaction;
+import com.oraclechain.pocketrix.blockchain.chain.PackedTransaction;
+import com.oraclechain.pocketrix.blockchain.chain.SignedTransaction;
 
 /**
  * Created by swapnibble on 2017-09-12.

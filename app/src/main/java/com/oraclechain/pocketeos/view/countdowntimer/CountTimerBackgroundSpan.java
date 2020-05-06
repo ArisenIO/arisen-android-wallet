@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.countdowntimer;
+package com.oraclechain.pocketrix.view.countdowntimer;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.text.style.ImageSpan;
 
 /**
- * Created by pocketEos on 2017/7/28.
+ * Created by pocketrix on 2017/7/28.
  */
 
 public class CountTimerBackgroundSpan extends ImageSpan {

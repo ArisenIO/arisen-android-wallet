@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.io.Serializable;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketrix on 2018/4/2.
  */
 public class BaseResponseBean implements Serializable {
 

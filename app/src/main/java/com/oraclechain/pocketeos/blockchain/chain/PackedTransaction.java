@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.blockchain.chain;
+package com.oraclechain.pocketrix.blockchain.chain;
 
 import com.google.gson.annotations.Expose;
-import com.oraclechain.pocketeos.blockchain.cypto.util.HexUtils;
-import com.oraclechain.pocketeos.blockchain.types.EosByteWriter;
+import com.oraclechain.pocketrix.blockchain.cypto.util.HexUtils;
+import com.oraclechain.pocketrix.blockchain.types.rixByteWriter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -41,7 +41,7 @@ public class PackedTransaction {
     }
 
     private byte[] packTransaction( Transaction transaction, CompressType compressType ) {
-        EosByteWriter byteWriter = new EosByteWriter(512);
+        rixByteWriter byteWriter = new rixByteWriter(512);
         transaction.pack(byteWriter);
 
         // pack -> compress
@@ -50,7 +50,7 @@ public class PackedTransaction {
 
 
     private byte[] packContextFreeData(  List<String> ctxFreeData, CompressType compressType ){
-        EosByteWriter byteWriter = new EosByteWriter(64);
+        rixByteWriter byteWriter = new rixByteWriter(64);
 
         int ctxFreeDataCount = ( ctxFreeData == null ) ? 0 : ctxFreeData.size();
         if ( ctxFreeDataCount == 0 ){

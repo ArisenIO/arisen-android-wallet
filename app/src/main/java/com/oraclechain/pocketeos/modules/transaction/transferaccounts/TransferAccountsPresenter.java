@@ -1,25 +1,25 @@
-package com.oraclechain.pocketeos.modules.transaction.transferaccounts;
+package com.oraclechain.pocketrix.modules.transaction.transferaccounts;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.PostChainHistoryBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.PostChainHistoryBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import org.apache.commons.lang.StringUtils;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class TransferAccountsPresenter extends BasePresent<TransferAccountsView> {
@@ -32,7 +32,7 @@ public class TransferAccountsPresenter extends BasePresent<TransferAccountsView>
     public void getCoinRateData(String coinmarket_id) {//获取token汇率
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("coinmarket_id", coinmarket_id);
-        HttpUtils.postRequest(BaseUrl.HTTP_eos_get_coin_rate, mContext, hashMap, new JsonCallback<ResponseBean<CoinRateBean.DataBean>>() {
+        HttpUtils.postRequest(BaseUrl.HTTP_rix_get_coin_rate, mContext, hashMap, new JsonCallback<ResponseBean<CoinRateBean.DataBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<CoinRateBean.DataBean>> response) {
                 if (response.body().code == 0) {
@@ -47,7 +47,7 @@ public class TransferAccountsPresenter extends BasePresent<TransferAccountsView>
     public void getAccountDetailsData(final String name) {//动态获取账号资产信息
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("name", name);
-        HttpUtils.postRequest(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
+        HttpUtils.postRequest(BaseUrl.HTTP_rix_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<AccountDetailsBean>> response) {
                 if (response.body().code == 0) {

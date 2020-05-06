@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos;
+package com.oraclechain.pocketrix;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.oraclechain.pocketeos", appContext.getPackageName());
+        assertEquals("com.oraclechain.pocketrix", appContext.getPackageName());
     }
 }

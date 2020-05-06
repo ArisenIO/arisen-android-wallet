@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.convenientbanner.listener;
+package com.oraclechain.pocketrix.view.convenientbanner.listener;
 
 import android.support.v4.view.ViewPager;
 import android.widget.ImageView;
@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 /**
- * Created by pocketEos on 2017/12/7.
+ * Created by pocketrix on 2017/12/7.
  * 翻页指示器适配器
  */
 public class CBPageChangeListener implements ViewPager.OnPageChangeListener {

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -7,12 +7,12 @@ import android.os.Build;
 import android.os.LocaleList;
 import android.util.DisplayMetrics;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 import java.util.Locale;
 
 /**
- * Created by pocketEos on 2018/5/22.
+ * Created by pocketrix on 2018/5/22.
  * 国际化语言设置选项
  */
 

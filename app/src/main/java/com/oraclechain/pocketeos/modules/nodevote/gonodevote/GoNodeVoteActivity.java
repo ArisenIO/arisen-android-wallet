@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.nodevote.gonodevote;
+package com.oraclechain.pocketrix.modules.nodevote.gonodevote;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -11,20 +11,20 @@ import android.widget.TextView;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.ResultNodeListBean;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.RichTextActivity;
-import com.oraclechain.pocketeos.modules.nodevote.NodeVoteDetailsActivity;
-import com.oraclechain.pocketeos.modules.nodevote.surevote.SureNodeVoteActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.RoundImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.ResultNodeListBean;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.RichTextActivity;
+import com.oraclechain.pocketrix.modules.nodevote.NodeVoteDetailsActivity;
+import com.oraclechain.pocketrix.modules.nodevote.surevote.SureNodeVoteActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.RoundImageView;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

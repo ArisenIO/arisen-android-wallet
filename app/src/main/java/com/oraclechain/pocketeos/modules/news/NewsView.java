@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.modules.news;
+package com.oraclechain.pocketrix.modules.news;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.CoinBean;
-import com.oraclechain.pocketeos.bean.NewsBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.CoinBean;
+import com.oraclechain.pocketrix.bean.NewsBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取friendslist
  */
 

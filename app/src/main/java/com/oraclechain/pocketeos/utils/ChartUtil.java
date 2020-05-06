@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 /**
- * Created by pocketEos on 2017/12/6.
+ * Created by pocketrix on 2017/12/6.
  */
 
 import android.content.Context;
@@ -17,7 +17,7 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.candyintegral;
+package com.oraclechain.pocketrix.modules.leftdrawer.candyintegral;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,16 +7,16 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.CandyScoreBean;
-import com.oraclechain.pocketeos.bean.CandyUserTaskBean;
-import com.oraclechain.pocketeos.bean.HotEquitiesBean;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.RoundImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.CandyScoreBean;
+import com.oraclechain.pocketrix.bean.CandyUserTaskBean;
+import com.oraclechain.pocketrix.bean.HotEquitiesBean;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.RoundImageView;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.modules.nodevote;
+package com.oraclechain.pocketrix.modules.nodevote;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.ResultTableRowBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.ResultTableRowBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface NodeVoteView extends BaseView {
 

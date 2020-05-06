@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.app.Activity;
 import android.graphics.Rect;
@@ -7,7 +7,7 @@ import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 
 /**
- * Created by pocketEos on 2018/5/11.
+ * Created by pocketrix on 2018/5/11.
  * 解决软键盘遮挡布局问题
  */
 

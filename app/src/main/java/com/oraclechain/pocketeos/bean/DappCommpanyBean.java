@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/1/3.
+ * Created by pocketrix on 2018/1/3.
  */
 
 public class DappCommpanyBean {

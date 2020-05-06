@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.contact;
+package com.oraclechain.pocketrix.view.contact;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Iterator;
@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.Set;
 
 /**
- * Created by pocketEos on 2017/11/30.
+ * Created by pocketrix on 2017/11/30.
  */
 public class ChineseToEnglish {
 

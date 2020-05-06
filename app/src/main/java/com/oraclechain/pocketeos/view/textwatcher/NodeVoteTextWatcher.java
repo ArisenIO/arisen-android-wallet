@@ -1,29 +1,29 @@
-package com.oraclechain.pocketeos.view.textwatcher;
+package com.oraclechain.pocketrix.view.textwatcher;
 
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.SeekBar;
 
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.ToastUtils;
 
 /**
- * Created by pocketEos on 2018/2/27.
+ * Created by pocketrix on 2018/2/27.
  */
 
 public class NodeVoteTextWatcher implements TextWatcher {
     private EditText editText;
     private SeekBar mSeekBar;
-    private String eosToatalAmount;
+    private String rixToatalAmount;
 
 
-    public NodeVoteTextWatcher(EditText et, SeekBar seekBar, String eosToatalAmount) {
+    public NodeVoteTextWatcher(EditText et, SeekBar seekBar, String rixToatalAmount) {
         editText = et;
         mSeekBar = seekBar;
         mSeekBar.setFocusable(true);
         mSeekBar.setFocusableInTouchMode(true);
-        this.eosToatalAmount = eosToatalAmount;
+        this.rixToatalAmount = rixToatalAmount;
     }
 
     @Override
@@ -34,10 +34,10 @@ public class NodeVoteTextWatcher implements TextWatcher {
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if (BigDecimalUtil.greaterThan(BigDecimalUtil.toBigDecimal(s.toString()), BigDecimalUtil.toBigDecimal(eosToatalAmount))) {
-            ToastUtils.showLongToast("您最多可输入" + eosToatalAmount + "EOS");
-            editText.setText(eosToatalAmount);
-            editText.setSelection(eosToatalAmount.length()); //光标移到最后
+        if (BigDecimalUtil.greaterThan(BigDecimalUtil.toBigDecimal(s.toString()), BigDecimalUtil.toBigDecimal(rixToatalAmount))) {
+            ToastUtils.showLongToast("您最多可输入" + rixToatalAmount + "RIX");
+            editText.setText(rixToatalAmount);
+            editText.setSelection(rixToatalAmount.length()); //光标移到最后
         }
     }
 

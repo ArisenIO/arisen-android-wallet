@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.fragment.memory.MemoryFragment">
+    tools:context="com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.fragment.memory.MemoryFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_8"
-            android:text="@string/pocket_eos"
+            android:text="@string/pocket_rix"
             android:textSize="@dimen/dimens_13"/>
     </LinearLayout>
 

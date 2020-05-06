@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.contact;
+package com.oraclechain.pocketrix.view.contact;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,14 +10,14 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.utils.DensityUtil;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.utils.DensityUtil;
 
 import java.util.Arrays;
 
 
 /**
- * Created by pocketEos on 2017/11/30.
+ * Created by pocketrix on 2017/11/30.
  */
 public class SideBarView extends View {
     public static String[] b = {"@", "A", "B", "C", "D", "E", "F", "G", "H", "I",

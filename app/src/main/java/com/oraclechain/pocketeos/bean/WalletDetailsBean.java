@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/1/25.
+ * Created by pocketrix on 2018/1/25.
  */
 
 public class WalletDetailsBean {
@@ -12,7 +12,7 @@ public class WalletDetailsBean {
     /**
      * code : 0
      * message : ok
-     * data : [{"eosAccountName":"1589","isMainAccount":1}]
+     * data : [{"rixAccountName":"1589","isMainAccount":1}]
      */
 
     private String code;
@@ -48,19 +48,19 @@ public class WalletDetailsBean {
 
     public static class DataBean {
         /**
-         * eosAccountName : 1589
+         * rixAccountName : 1589
          * isMainAccount : 1
          */
 
-        private String eosAccountName;
+        private String rixAccountName;
         private int isMainAccount;
 
-        public String getEosAccountName() {
-            return eosAccountName == null ? "" : eosAccountName;
+        public String getrixAccountName() {
+            return rixAccountName == null ? "" : rixAccountName;
         }
 
-        public void setEosAccountName(String eosAccountName) {
-            this.eosAccountName = eosAccountName;
+        public void setrixAccountName(String rixAccountName) {
+            this.rixAccountName = rixAccountName;
         }
 
         public int getIsMainAccount() {

@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.dapp.paidanswer.questiondetails;
+package com.oraclechain.pocketrix.modules.dapp.paidanswer.questiondetails;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.ChainInfoBean;
-import com.oraclechain.pocketeos.bean.GetChainJsonBean;
-import com.oraclechain.pocketeos.bean.GetRequiredKeysBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.ChainInfoBean;
+import com.oraclechain.pocketrix.bean.GetChainJsonBean;
+import com.oraclechain.pocketrix.bean.GetRequiredKeysBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface QuestionDetailsView extends BaseView {
 

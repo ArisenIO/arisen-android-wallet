@@ -1,16 +1,16 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/2/1.
+ * Created by pocketrix on 2018/2/1.
  * 获取json序列化 发送的json实体类
  */
 public class PostChainHistoryBean {
 
 
     /**
-     * symbols : [{"symbolName":"EOS","contractName":"eosio.token"},{"symbolName":"AAA","contractName":"helloworldgo"}]
+     * symbols : [{"symbolName":"RIX","contractName":"arisen.token"},{"symbolName":"AAA","contractName":"helloworldgo"}]
      * from : oraclechain4
      * to : oraclechain4
      * page : 0
@@ -65,8 +65,8 @@ public class PostChainHistoryBean {
 
     public static class SymbolsBean {
         /**
-         * symbolName : EOS
-         * contractName : eosio.token
+         * symbolName : RIX
+         * contractName : arisen.token
          */
 
         private String symbolName;

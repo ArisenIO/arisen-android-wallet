@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  * app信息
  */
 public class AppUtil {

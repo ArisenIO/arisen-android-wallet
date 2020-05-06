@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.bean;
+package com.oraclechain.pocketrix.blockchain.bean;
 
 import java.util.List;
 

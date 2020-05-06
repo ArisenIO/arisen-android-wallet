@@ -1,20 +1,20 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.messagecenter;
+package com.oraclechain.pocketrix.modules.leftdrawer.messagecenter;
 
 import android.content.Context;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.MessageCenterBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.MessageCenterBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class MessageCenterPresenter extends BasePresent<MessageCenterView> {

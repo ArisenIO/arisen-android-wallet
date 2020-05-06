@@ -1,19 +1,19 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.anticipationredpacket;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.anticipationredpacket;
 
 import android.content.Context;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.AuthRedPacketBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.AuthRedPacketBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class AnticipationRedPacketPresenter extends BasePresent<AnticipationRedPacketView> {

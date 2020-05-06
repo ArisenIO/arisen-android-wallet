@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.blockchain.chain;
+package com.oraclechain.pocketrix.blockchain.chain;
 
 import com.google.gson.annotations.Expose;
-import com.oraclechain.pocketeos.blockchain.cypto.digest.Sha256;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EcDsa;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EcSignature;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EosPrivateKey;
-import com.oraclechain.pocketeos.blockchain.types.EosByteWriter;
-import com.oraclechain.pocketeos.blockchain.types.TypeChainId;
+import com.oraclechain.pocketrix.blockchain.cypto.digest.Sha256;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.EcDsa;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.EcSignature;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.rixPrivateKey;
+import com.oraclechain.pocketrix.blockchain.types.rixByteWriter;
+import com.oraclechain.pocketrix.blockchain.types.TypeChainId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class SignedTransaction extends Transaction {
 
 
     private Sha256 getDigestForSignature(TypeChainId chainId) {
-        EosByteWriter writer = new EosByteWriter(255);
+        rixByteWriter writer = new rixByteWriter(255);
 
         // data layout to sign :
         // [ {chainId}, {Transaction( parent class )}, {hash of context_free_data only when exists ]
@@ -68,7 +68,7 @@ public class SignedTransaction extends Transaction {
         return Sha256.from(writer.toBytes());
     }
 
-    public void sign(EosPrivateKey privateKey, TypeChainId chainId) {
+    public void sign(rixPrivateKey privateKey, TypeChainId chainId) {
         if ( null == this.signatures){
             this.signatures = new ArrayList<>();
         }

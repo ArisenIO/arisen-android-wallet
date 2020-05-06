@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.blockchain.chain;
+package com.oraclechain.pocketrix.blockchain.chain;
 
 import com.google.gson.annotations.Expose;
-import com.oraclechain.pocketeos.blockchain.types.EosType;
+import com.oraclechain.pocketrix.blockchain.types.rixType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +65,7 @@ public class Transaction extends TransactionHeader {
     }
 
     @Override
-    public void pack(EosType.Writer writer) {
+    public void pack(rixType.Writer writer) {
         super.pack(writer);
 
         writer.putCollection(context_free_actions);

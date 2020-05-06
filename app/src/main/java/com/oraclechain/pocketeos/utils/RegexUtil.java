@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  * 正则验证工具类
  */
 public class RegexUtil {
@@ -119,28 +119,28 @@ public class RegexUtil {
     }
 
     /**
-     * eos账号名
+     * rix账号名
      *
-     * @param eosName the eos name
+     * @param rixName the rix name
      * @return boolean
      */
-    public static boolean isEosName(String eosName) {
+    public static boolean isrixName(String rixName) {
         String strPattern = "^[a-z]{1}[1-5a-z]{11}$";
         Pattern p = Pattern.compile(strPattern);
-        Matcher m = p.matcher(eosName);
+        Matcher m = p.matcher(rixName);
         return m.matches();
     }
 
     /**
      * 搜索输入框限制
      *
-     * @param eosName the eos name
+     * @param rixName the rix name
      * @return boolean
      */
-    public static boolean seachName(String eosName) {
+    public static boolean seachName(String rixName) {
         String strPattern = "^[a-z]{1}[1-5a-z]{11}$";
         Pattern p = Pattern.compile(strPattern);
-        Matcher m = p.matcher(eosName);
+        Matcher m = p.matcher(rixName);
         return m.matches();
     }
 

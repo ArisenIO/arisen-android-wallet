@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.systemsetting;
+package com.oraclechain.pocketrix.modules.leftdrawer.systemsetting;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
 import com.zzhoujay.richtext.ImageHolder;
 import com.zzhoujay.richtext.RichText;
 

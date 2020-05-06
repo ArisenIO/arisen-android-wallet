@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
-import com.oraclechain.pocketeos.app.MyApplication;
+import com.oraclechain.pocketrix.app.MyApplication;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by pocketEos on 2018/1/19.
+ * Created by pocketrix on 2018/1/19.
  * 加密工具类
  */
 public class PasswordToKeyUtils {

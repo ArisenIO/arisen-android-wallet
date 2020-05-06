@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.blackbox.existwalletlogin;
+package com.oraclechain.pocketrix.modules.blackbox.existwalletlogin;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,24 +9,24 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.modules.account.createaccount.CreateAccountActivity;
-import com.oraclechain.pocketeos.modules.blackbox.BlackBoxMainActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.RichTextActivity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.login.LoginActivity;
-import com.oraclechain.pocketeos.utils.AndroidBug5497Workaround;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.modules.account.createaccount.CreateAccountActivity;
+import com.oraclechain.pocketrix.modules.blackbox.BlackBoxMainActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.RichTextActivity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.login.LoginActivity;
+import com.oraclechain.pocketrix.utils.AndroidBug5497Workaround;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 public class ExistBlackBoxLoginActivity extends BaseAcitvity<NormalView, NormalPresenter> implements NormalView {
 
@@ -54,8 +54,8 @@ public class ExistBlackBoxLoginActivity extends BaseAcitvity<NormalView, NormalP
     TextView mBlackBoxInfo;
 
     List<UserBean> mUserBeanList = new ArrayList<>();
-    @BindView(R.id.go_pocketeos_user)
-    TextView mGoPocketeosUser;
+    @BindView(R.id.go_pocketrix_user)
+    TextView mGoPocketrixUser;
     private CommonAdapter mCommonAdapter;
 
     @OnClick({R.id.social_contact, R.id.black_box_sure, R.id.create_a_wallet, R.id.black_box_info})
@@ -131,11 +131,11 @@ public class ExistBlackBoxLoginActivity extends BaseAcitvity<NormalView, NormalP
 
     @Override
     public void initEvent() {
-        mGoPocketeosUser.setOnClickListener(new View.OnClickListener() {
+        mGoPocketrixUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("details", FilesUtils.readAssetsTxt(ExistBlackBoxLoginActivity.this, "pocketeos_user"));
+                bundle.putString("details", FilesUtils.readAssetsTxt(ExistBlackBoxLoginActivity.this, "pocketrix_user"));
                 bundle.putString("title", getString(R.string.setting_one));
                 ActivityUtils.next(ExistBlackBoxLoginActivity.this, RichTextActivity.class, bundle);
             }

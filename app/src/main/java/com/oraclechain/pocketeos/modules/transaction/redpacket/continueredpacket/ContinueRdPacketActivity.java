@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.continueredpacket;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.continueredpacket;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,22 +10,22 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.RedPacketDetailsBean;
-import com.oraclechain.pocketeos.bean.RedPacketHistoryBean;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.view.RoundImageView;
-import com.oraclechain.pocketeos.view.dialog.sharedialog.ShareCallBack;
-import com.oraclechain.pocketeos.view.dialog.sharedialog.ShareDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.RedPacketDetailsBean;
+import com.oraclechain.pocketrix.bean.RedPacketHistoryBean;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.view.RoundImageView;
+import com.oraclechain.pocketrix.view.dialog.sharedialog.ShareCallBack;
+import com.oraclechain.pocketrix.view.dialog.sharedialog.ShareDialog;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
@@ -96,8 +96,8 @@ public class ContinueRdPacketActivity extends BaseAcitvity<ContinueRedPacketView
     @Override
     protected void initData() {
         showProgress();
-        if (mDataBean.getType().equals("EOS")) {
-            presenter.getCoinRateData("eos");
+        if (mDataBean.getType().equals("rix")) {
+            presenter.getCoinRateData("rix");
         } else {
             presenter.getCoinRateData("oraclechain");
         }
@@ -158,7 +158,7 @@ public class ContinueRdPacketActivity extends BaseAcitvity<ContinueRedPacketView
                         @Override
                         public void goWeixinFriend() {
                             WxShareAndLoginUtils.WxUrlShare(ContinueRdPacketActivity.this,
-                                    "https://pocketeos.com",
+                                    "https://pocketrix.com",
                                     getString(R.string.share_redpacket_title),
                                     mRedPacketStatus.getText().toString(),
                                     MyApplication.getInstance().getUserBean().getWallet_img(),
@@ -167,7 +167,7 @@ public class ContinueRdPacketActivity extends BaseAcitvity<ContinueRedPacketView
 
                         @Override
                         public void goWeixinCircle() {
-                            WxShareAndLoginUtils.WxUrlShare(ContinueRdPacketActivity.this, "https://pocketeos.com",
+                            WxShareAndLoginUtils.WxUrlShare(ContinueRdPacketActivity.this, "https://pocketrix.com",
                                     getString(R.string.share_redpacket_title),
                                     mRedPacketStatus.getText().toString(),
                                     MyApplication.getInstance().getUserBean().getWallet_img(),
@@ -180,7 +180,7 @@ public class ContinueRdPacketActivity extends BaseAcitvity<ContinueRedPacketView
                             params.putString(QQShare.SHARE_TO_QQ_TITLE, getString(R.string.share_redpacket_title));// 标题
                             params.putString(QQShare.SHARE_TO_QQ_SUMMARY, mRedPacketStatus.getText().toString());// 摘要
                             params.putString(QQShare.SHARE_TO_QQ_TARGET_URL, "http://10.0.0.48:8081?id=" + mDataBean.getId() + "&verifystring=" + mDataBean.getVerifyString());// 内容地址
-                            params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, "http://pocketeos.oss-cn-beijing.aliyuncs.com/yl/pocketeos.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");// 网络图片地址
+                            params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, "http://pocketrix.oss-cn-beijing.aliyuncs.com/yl/pocketrix.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");// 网络图片地址
                             params.putString(QQShare.SHARE_TO_QQ_EXT_INT, "其它附加功能");
                             MyApplication.getInstance().getTencent().shareToQQ(ContinueRdPacketActivity.this, params, new BaseUIListener(ContinueRdPacketActivity.this, true));
                         }
@@ -190,9 +190,9 @@ public class ContinueRdPacketActivity extends BaseAcitvity<ContinueRedPacketView
                             params.putInt(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, QzoneShare.SHARE_TO_QZONE_TYPE_IMAGE_TEXT);
                             params.putString(QzoneShare.SHARE_TO_QQ_TITLE, getString(R.string.share_redpacket_title));// 标题
                             params.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, mRedPacketStatus.getText().toString());// 摘要
-                            params.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, "https://pocketeos.com");// 内容地址
+                            params.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, "https://pocketrix.com");// 内容地址
                             ArrayList<String> imgUrlList = new ArrayList<>();
-                            imgUrlList.add("http://pocketeos.oss-cn-beijing.aliyuncs.com/yl/pocketeos.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");
+                            imgUrlList.add("http://pocketrix.oss-cn-beijing.aliyuncs.com/yl/pocketrix.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");
                             params.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL,
                                     imgUrlList);// 图片地址ArrayList
                             MyApplication.getInstance().getTencent().shareToQzone(ContinueRdPacketActivity.this, params, new BaseUIListener(ContinueRdPacketActivity.this, true));

@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.modules.normalvp;
+package com.oraclechain.pocketrix.modules.normalvp;
 
-import com.oraclechain.pocketeos.base.BasePresent;
+import com.oraclechain.pocketrix.base.BasePresent;
 
 /**
- * Created by pocketEos on 2017/11/24.
+ * Created by pocketrix on 2017/11/24.
  */
 
 public class NormalPresenter extends BasePresent<NormalView> {

@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocket.bean;
 
 import java.io.Serializable;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketrix on 2018/4/2.
  */
 
 

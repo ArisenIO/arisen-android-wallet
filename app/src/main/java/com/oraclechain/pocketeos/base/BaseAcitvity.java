@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.base;
+package com.oraclechain.pocketrix.base;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -12,21 +12,21 @@ import android.widget.TextView;
 import com.gyf.barlibrary.ImmersionBar;
 import com.gyf.barlibrary.KeyboardPatch;
 import com.lzy.okgo.OkGo;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.LocalManageUtil;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.ThemeUtil;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.LocalManageUtil;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.ThemeUtil;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.Utils;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import butterknife.ButterKnife;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 
 public abstract class BaseAcitvity<V, P extends BasePresent<V>> extends AutoLayoutActivity implements BaseView {

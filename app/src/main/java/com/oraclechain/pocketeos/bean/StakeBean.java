@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/6/22.
+ * Created by pocketrix on 2018/6/22.
  */
 
 public class StakeBean {
@@ -9,8 +9,8 @@ public class StakeBean {
     /**
      * from : aaa
      * receiver : aaa
-     * stake_net_quantity : 0.0001 SYS
-     * stake_cpu_quantity : 0.0001 SYS
+     * stake_net_quantity : 0.0001 RIX
+     * stake_cpu_quantity : 0.0001 RIX
      * transfer : false
      */
 

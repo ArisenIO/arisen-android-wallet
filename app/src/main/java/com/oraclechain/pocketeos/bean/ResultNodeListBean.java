@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/6/11.
+ * Created by pocketrix on 2018/6/11.
  */
 
 public class ResultNodeListBean {
@@ -14,7 +14,7 @@ public class ResultNodeListBean {
     /**
      * code : 0
      * msg : SUCCESS
-     * data : {"currentPage":0,"rowsPerPage":10,"totalPages":2,"totalRows":18,"data":[{"owner":"oraclegogogo","total_votes":"74145520018.94651794433593750","producer_key":"EOS5c2fvwkzAcBK57irykyeGd8cuhag43U77peqYzMU71JKvmf91R","is_active":1,"url":"https://oraclechain.io/","unpaid_blocks":0,"last_claim_time":0,"location":0,"producerUrlInfo":{"producer_account_name":"oraclegogogo","org":{"branding":{"logo_256":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}}}]}
+     * data : {"currentPage":0,"rowsPerPage":10,"totalPages":2,"totalRows":18,"data":[{"owner":"oraclegogogo","total_votes":"74145520018.94651794433593750","producer_key":"rix5c2fvwkzAcBK57irykyeGd8cuhag43U77peqYzMU71JKvmf91R","is_active":1,"url":"https://oraclechain.io/","unpaid_blocks":0,"last_claim_time":0,"location":0,"producerUrlInfo":{"producer_account_name":"oraclegogogo","org":{"branding":{"logo_256":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}}}]}
      */
 
     private String code;
@@ -51,7 +51,7 @@ public class ResultNodeListBean {
          * rowsPerPage : 10
          * totalPages : 2
          * totalRows : 18
-         * data : [{"owner":"oraclegogogo","total_votes":"74145520018.94651794433593750","producer_key":"EOS5c2fvwkzAcBK57irykyeGd8cuhag43U77peqYzMU71JKvmf91R","is_active":1,"url":"https://oraclechain.io/","unpaid_blocks":0,"last_claim_time":0,"location":0,"producerUrlInfo":{"producer_account_name":"oraclegogogo","org":{"branding":{"logo_256":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}}}]
+         * data : [{"owner":"oraclegogogo","total_votes":"74145520018.94651794433593750","producer_key":"RSN5c2fvwkzAcBK57irykyeGd8cuhag43U77peqYzMU71JKvmf91R","is_active":1,"url":"https://oraclechain.io/","unpaid_blocks":0,"last_claim_time":0,"location":0,"producerUrlInfo":{"producer_account_name":"oraclegogogo","org":{"branding":{"logo_256":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}}}]
          */
 
         private int currentPage;
@@ -104,13 +104,13 @@ public class ResultNodeListBean {
             /**
              * owner : oraclegogogo
              * total_votes : 74145520018.94651794433593750
-             * producer_key : EOS5c2fvwkzAcBK57irykyeGd8cuhag43U77peqYzMU71JKvmf91R
+             * producer_key : RSN5c2fvwkzAcBK57irykyeGd8cuhag43U77peqYzMU71JKvmf91R
              * is_active : 1
              * url : https://oraclechain.io/
              * unpaid_blocks : 0
              * last_claim_time : 0
              * location : 0
-             * producerUrlInfo : {"producer_account_name":"oraclegogogo","org":{"branding":{"logo_256":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}}
+             * producerUrlInfo : {"producer_account_name":"oraclegogogo","org":{"branding":{"logo_256":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}}
              */
 
             private String owner;
@@ -207,7 +207,7 @@ public class ResultNodeListBean {
             public static class ProducerUrlInfoBean implements Parcelable {
                 /**
                  * producer_account_name : oraclegogogo
-                 * org : {"branding":{"logo_256":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}
+                 * org : {"branding":{"logo_256":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""},"candidate_name":"oraclechain","website":"https://oraclechain.io","email":"decai.zeng@oracleChain.io"}
                  */
 
                 private String producer_account_name;
@@ -231,7 +231,7 @@ public class ResultNodeListBean {
 
                 public static class OrgBean implements Parcelable {
                     /**
-                     * branding : {"logo_256":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""}
+                     * branding : {"logo_256":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle.png","logo_1024":"https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png","logo_svg":""}
                      * candidate_name : oraclechain
                      * website : https://oraclechain.io
                      * email : decai.zeng@oracleChain.io
@@ -308,8 +308,8 @@ public class ResultNodeListBean {
 
                     public static class BrandingBean implements Parcelable {
                         /**
-                         * logo_256 : https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle.png
-                         * logo_1024 : https://pocketeos.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png
+                         * logo_256 : https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle.png
+                         * logo_1024 : https://pocketrix.oss-cn-beijing.aliyuncs.com/P1/oracle_big.png
                          * logo_svg :
                          */
 

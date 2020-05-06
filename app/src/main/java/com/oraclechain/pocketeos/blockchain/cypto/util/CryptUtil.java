@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.oraclechain.pocketeos.blockchain.cypto.util;
+package com.oraclechain.pocketrix.blockchain.cypto.util;
 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;

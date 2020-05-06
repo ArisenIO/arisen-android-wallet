@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.friendslist.friendsdetails;
+package com.oraclechain.pocketrix.modules.friendslist.friendsdetails;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,23 +15,23 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.bean.WalletDetailsBean;
-import com.oraclechain.pocketeos.modules.switchusernumber.SwitchUserNumberActivity;
-import com.oraclechain.pocketeos.modules.transaction.transferaccounts.TransferAccountsActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.DensityUtil;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.view.AppDefeatHeadView;
-import com.oraclechain.pocketeos.view.MyScrollview;
-import com.oraclechain.pocketeos.view.RoundImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.bean.WalletDetailsBean;
+import com.oraclechain.pocketrix.modules.switchusernumber.SwitchUserNumberActivity;
+import com.oraclechain.pocketrix.modules.transaction.transferaccounts.TransferAccountsActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.DensityUtil;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.view.AppDefeatHeadView;
+import com.oraclechain.pocketrix.view.MyScrollview;
+import com.oraclechain.pocketrix.view.RoundImageView;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -171,10 +171,10 @@ public class FriendsDetailsActivity extends BaseAcitvity<FriendsDetailsView, Fri
         mFriendsTitle1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!mFriendsAccountNumber.getText().toString().equals(getString(R.string.no_account)) && !mFriendsAccountNumber.getText().toString().equals("PocketEos")) {
+                if (!mFriendsAccountNumber.getText().toString().equals(getString(R.string.no_account)) && !mFriendsAccountNumber.getText().toString().equals("Pocketrix")) {
                     Bundle bundle = new Bundle();
                     bundle.putString("account", mFriendsAccountNumber.getText().toString().trim().toString());
-                    bundle.putString("coin", "EOS");
+                    bundle.putString("coin", "RIX");
                     bundle.putString("from", "frienddetails");
                     ActivityUtils.next(FriendsDetailsActivity.this, TransferAccountsActivity.class, bundle);
                 } else {
@@ -204,13 +204,13 @@ public class FriendsDetailsActivity extends BaseAcitvity<FriendsDetailsView, Fri
             mTransferAccounts.setClickable(false);
             mFriendsTitle1.setClickable(false);
         } else {
-            mFriendsAccountNumber.setText(walletDetailsBean.get(0).getEosAccountName());
-            presenter.getAccountDetailsData(walletDetailsBean.get(0).getEosAccountName());
+            mFriendsAccountNumber.setText(walletDetailsBean.get(0).getrixAccountName());
+            presenter.getAccountDetailsData(walletDetailsBean.get(0).getrixAccountName());
             mTransferAccounts.setClickable(true);
             mFriendsTitle1.setClickable(true);
             for (int i = 0; i < walletDetailsBean.size(); i++) {
                 AccountInfoBean accountInfoBean = new AccountInfoBean();
-                accountInfoBean.setAccount_name(walletDetailsBean.get(i).getEosAccountName());
+                accountInfoBean.setAccount_name(walletDetailsBean.get(i).getrixAccountName());
                 mAccountInfoBeanList.add(accountInfoBean);
             }
         }
@@ -224,9 +224,9 @@ public class FriendsDetailsActivity extends BaseAcitvity<FriendsDetailsView, Fri
             for (AccountWithCoinBean accountWithCoinBean : accountWithCoinBeens) {
                 mAccountWithCoinBeen.add(accountWithCoinBean);
             }
-            BigDecimal eosToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(0).getCoinForCny()));
+            BigDecimal rixToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(0).getCoinForCny()));
             BigDecimal octToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(1).getCoinForCny()));
-            mFriendsAllProperty.setText("≈" + StringUtils.addComma(BigDecimalUtil.add(eosToCny, octToCny) + ""));
+            mFriendsAllProperty.setText("≈" + StringUtils.addComma(BigDecimalUtil.add(rixToCny, octToCny) + ""));
             mCoinAdapter.notifyDataSetChanged();
         }
     }
@@ -345,10 +345,10 @@ public class FriendsDetailsActivity extends BaseAcitvity<FriendsDetailsView, Fri
                 ActivityUtils.next(FriendsDetailsActivity.this, SwitchUserNumberActivity.class, bundle, 100);
                 break;
             case R.id.transfer_accounts:
-                if (!mFriendsAccountNumber.getText().toString().equals(getString(R.string.no_account)) && !mFriendsAccountNumber.getText().toString().equals("PocketEos")) {
+                if (!mFriendsAccountNumber.getText().toString().equals(getString(R.string.no_account)) && !mFriendsAccountNumber.getText().toString().equals("Pocketrix")) {
                     bundle.putString("getmoneyperson", mFriendsAccountNumber.getText().toString().trim().toString());
                     bundle.putString("account", MyApplication.getInstance().getUserBean().getWallet_main_account());
-                    bundle.putString("coin", "EOS");
+                    bundle.putString("coin", "RIX");
                     bundle.putString("from", "frienddetails");
                     ActivityUtils.next(this, TransferAccountsActivity.class, bundle);
                 } else {

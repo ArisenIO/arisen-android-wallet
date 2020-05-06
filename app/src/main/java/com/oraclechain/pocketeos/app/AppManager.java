@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.app;
+package com.oraclechain.pocketrix.app;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -7,7 +7,7 @@ import android.content.Context;
 import java.util.Stack;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  * 应用程序Activity管理类：用于Activity管理和应用程序退出
  */
 public class AppManager {

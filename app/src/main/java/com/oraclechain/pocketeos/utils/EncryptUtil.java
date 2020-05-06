@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.spongycastle.util.encoders.Hex;
@@ -19,7 +19,7 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * Created by pocketEos on 2018/5/26.
+ * Created by pocketrix on 2018/5/26.
  * 加密工具类
  */
 public class EncryptUtil {

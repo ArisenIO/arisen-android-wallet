@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp.paidanswer.questiondetails;
+package com.oraclechain.pocketrix.modules.dapp.paidanswer.questiondetails;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,17 +11,17 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AnswerMessageBean;
-import com.oraclechain.pocketeos.bean.QuestionListBean;
-import com.oraclechain.pocketeos.blockchain.AskansDatamanger;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AnswerMessageBean;
+import com.oraclechain.pocketrix.bean.QuestionListBean;
+import com.oraclechain.pocketrix.blockchain.AskansDatamanger;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import butterknife.BindView;
 
@@ -30,7 +30,7 @@ public class QuestionDetailsActivity extends BaseAcitvity<NormalView, NormalPres
 
     @BindView(R.id.webview)
     WebView mWebview;
-    String url = "https://static.pocketeos.top:3000/#/answer";
+    String url = "https://static.pocketrix.top:3000/#/answer";
     @BindView(R.id.progressBar)
     ProgressBar mProgressBar;
     private QuestionListBean mDataBean;

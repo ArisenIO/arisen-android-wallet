@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.blackbox.blackhome;
+package com.oraclechain.pocketrix.modules.blackbox.blackhome;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public interface BlackBoxHomeView extends BaseView {

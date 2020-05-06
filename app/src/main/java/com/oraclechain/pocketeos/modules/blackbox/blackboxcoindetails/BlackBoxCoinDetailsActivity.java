@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.blackbox.blackboxcoindetails;
+package com.oraclechain.pocketrix.modules.blackbox.blackboxcoindetails;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,25 +11,25 @@ import android.widget.TextView;
 import com.github.mikephil.charting.charts.LineChart;
 import com.liaoinstan.springview.container.AliFooter;
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.bean.PostChainHistoryBean;
-import com.oraclechain.pocketeos.bean.SparkLinesBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.modules.coindetails.CoinDetailsPresenter;
-import com.oraclechain.pocketeos.modules.coindetails.CoinDetailsView;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
-import com.oraclechain.pocketeos.modules.transaction.transferaccounts.TransferAccountsActivity;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.view.DrawableCenterTextView;
-import com.oraclechain.pocketeos.view.dialog.sharecoindetailsdialog.ShareCoinDetailsCallBack;
-import com.oraclechain.pocketeos.view.dialog.sharecoindetailsdialog.ShareCoinDetailsDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.bean.PostChainHistoryBean;
+import com.oraclechain.pocketrix.bean.SparkLinesBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.modules.coindetails.CoinDetailsPresenter;
+import com.oraclechain.pocketrix.modules.coindetails.CoinDetailsView;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.modules.transaction.transferaccounts.TransferAccountsActivity;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.view.DrawableCenterTextView;
+import com.oraclechain.pocketrix.view.dialog.sharecoindetailsdialog.ShareCoinDetailsCallBack;
+import com.oraclechain.pocketrix.view.dialog.sharecoindetailsdialog.ShareCoinDetailsDialog;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
@@ -71,7 +71,7 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
     private EmptyWrapper mHistoryAdapter;
     private int size = 10; //每页加载的数量
     private PostChainHistoryBean mPostChainHistoryBean = new PostChainHistoryBean();
-    private String cointype = "eos";
+    private String cointype = "rix";
     private int page = 0;
 
     @Override
@@ -91,8 +91,8 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
         mRecycleCoinHistory.setLayoutManager(layoutManager);
 
         accountWithCoinBean = getIntent().getParcelableExtra("coin");
-        if (accountWithCoinBean.getCoinName().equals("EOS")) {
-            cointype = "eos";
+        if (accountWithCoinBean.getCoinName().equals("RIX")) {
+            cointype = "rix";
         } else {
             cointype = "oct";
         }
@@ -107,8 +107,8 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
         mCoinUoanddown.setText(accountWithCoinBean.getCoinUpsAndDowns() + getString(R.string.today));
 
 
-        if (accountWithCoinBean.getCoinName().equals("EOS")) {
-            mCoinMaketCap.setText(getString(R.string.rated_24) + accountWithCoinBean.getEos_market_cap_cny() + "CNY");
+        if (accountWithCoinBean.getCoinName().equals("RIX")) {
+            mCoinMaketCap.setText(getString(R.string.rated_24) + accountWithCoinBean.getrix_market_cap_cny() + "CNY");
         } else {
             mCoinMaketCap.setText(getString(R.string.rated_24) + accountWithCoinBean.getOct_market_cap_cny() + "CNY");
         }
@@ -140,13 +140,13 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
         mPostChainHistoryBean.setPage(page);
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
-        PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
-        symbolsBeanEos.setContractName(com.oraclechain.pocketeos.base.Constants.EOSCONTRACT);
+        PostChainHistoryBean.SymbolsBean symbolsBeanrix = new PostChainHistoryBean.SymbolsBean();
+        symbolsBeanrix.setSymbolName("RIX");
+        symbolsBeanrix.setContractName(com.oraclechain.pocketrix.base.Constants.rixCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
-        symbolsBeanOCT.setContractName(com.oraclechain.pocketeos.base.Constants.OCTCONTRACT);
-        symbolsBeans.add(symbolsBeanEos);
+        symbolsBeanOCT.setContractName(com.oraclechain.pocketrix.base.Constants.OCTCONTRACT);
+        symbolsBeans.add(symbolsBeanrix);
         symbolsBeans.add(symbolsBeanOCT);
         mPostChainHistoryBean.setSymbols(symbolsBeans);
         presenter.getTransferHistoryData(mPostChainHistoryBean);
@@ -181,8 +181,8 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
 
     @Override
     public void getSparklinesData(SparkLinesBean.DataBean dataBean) {
-        if (accountWithCoinBean.getCoinName().equals("EOS")) {
-            MyApplication.getInstance().showImage(dataBean.getSparkline_eos_png(), mCoinUpanddownImg);
+        if (accountWithCoinBean.getCoinName().equals("RIX")) {
+            MyApplication.getInstance().showImage(dataBean.getSparkline_rix_png(), mCoinUpanddownImg);
         } else {
             MyApplication.getInstance().showImage(dataBean.getSparkline_oct_png(), mCoinUpanddownImg);
         }
@@ -223,7 +223,7 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
                 if (accountWithCoinBean.getCoinName().equals("OCT")) {
                     desc = getString(R.string.reference_price_cny) + StringUtils.addComma(accountWithCoinBean.getOct_price_cny()) + getString(R.string.toast_down_up) + accountWithCoinBean.getCoinUpsAndDowns() + getString(R.string.all_market_price) + StringUtils.addComma(accountWithCoinBean.getOct_market_cap_cny());
                 } else {
-                    desc = getString(R.string.reference_price_cny) + StringUtils.addComma(accountWithCoinBean.getEos_price_cny()) + getString(R.string.toast_down_up) + accountWithCoinBean.getCoinUpsAndDowns() + getString(R.string.all_market_price) + StringUtils.addComma(accountWithCoinBean.getEos_market_cap_cny());
+                    desc = getString(R.string.reference_price_cny) + StringUtils.addComma(accountWithCoinBean.getrix_price_cny()) + getString(R.string.toast_down_up) + accountWithCoinBean.getCoinUpsAndDowns() + getString(R.string.all_market_price) + StringUtils.addComma(accountWithCoinBean.getrix_market_cap_cny());
                 }
                 if (dialog == null) {
                     bundle.putParcelable("coin", accountWithCoinBean);
@@ -231,14 +231,14 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
                     dialog = new ShareCoinDetailsDialog(BlackBoxCoinDetailsActivity.this, new ShareCoinDetailsCallBack() {
                         @Override
                         public void goWeixinFriend() {
-                            WxShareAndLoginUtils.WxUrlShare(BlackBoxCoinDetailsActivity.this, "https://pocketeos.com", accountWithCoinBean.getCoinName() + "最新资讯详情", finalDesc,
+                            WxShareAndLoginUtils.WxUrlShare(BlackBoxCoinDetailsActivity.this, "https://pocketrix.com", accountWithCoinBean.getCoinName() + "最新资讯详情", finalDesc,
                                     MyApplication.getInstance().getUserBean().getWallet_img(),
                                     WxShareAndLoginUtils.WECHAT_FRIEND);
                         }
 
                         @Override
                         public void goWeixinCircle() {
-                            WxShareAndLoginUtils.WxUrlShare(BlackBoxCoinDetailsActivity.this, "https://pocketeos.com", accountWithCoinBean.getCoinName() + "最新资讯详情", finalDesc,
+                            WxShareAndLoginUtils.WxUrlShare(BlackBoxCoinDetailsActivity.this, "https://pocketrix.com", accountWithCoinBean.getCoinName() + "最新资讯详情", finalDesc,
                                     MyApplication.getInstance().getUserBean().getWallet_img(),
                                     WxShareAndLoginUtils.WECHAT_MOMENT);
                         }
@@ -248,8 +248,8 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
                             params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_DEFAULT);
                             params.putString(QQShare.SHARE_TO_QQ_TITLE, accountWithCoinBean.getCoinName() + "最新资讯详情");// 标题
                             params.putString(QQShare.SHARE_TO_QQ_SUMMARY, finalDesc);// 摘要
-                            params.putString(QQShare.SHARE_TO_QQ_TARGET_URL, "https://pocketeos.com");// 内容地址
-                            params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, "http://pocketeos.oss-cn-beijing.aliyuncs.com/yl/pocketeos.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");
+                            params.putString(QQShare.SHARE_TO_QQ_TARGET_URL, "https://pocketrix.com");// 内容地址
+                            params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, "http://pocketrix.oss-cn-beijing.aliyuncs.com/yl/pocketrix.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");
                             params.putString(QQShare.SHARE_TO_QQ_EXT_INT, "其它附加功能");
                             MyApplication.getInstance().getTencent().shareToQQ(BlackBoxCoinDetailsActivity.this, params, new BaseUIListener(BlackBoxCoinDetailsActivity.this, true));
                         }
@@ -259,9 +259,9 @@ public class BlackBoxCoinDetailsActivity extends BaseAcitvity<CoinDetailsView, C
                             params.putInt(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, QzoneShare.SHARE_TO_QZONE_TYPE_IMAGE_TEXT);
                             params.putString(QzoneShare.SHARE_TO_QQ_TITLE, accountWithCoinBean.getCoinName() + "最新资讯详情");// 标题
                             params.putString(QzoneShare.SHARE_TO_QQ_SUMMARY, finalDesc);// 摘要
-                            params.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, "https://pocketeos.com");// 内容地址
+                            params.putString(QzoneShare.SHARE_TO_QQ_TARGET_URL, "https://pocketrix.com");// 内容地址
                             ArrayList<String> imgUrlList = new ArrayList<>();
-                            imgUrlList.add("http://pocketeos.oss-cn-beijing.aliyuncs.com/yl/pocketeos.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");
+                            imgUrlList.add("http://pocketrix.oss-cn-beijing.aliyuncs.com/yl/pocketrix.png?Expires=1839400748&OSSAccessKeyId=LTAIdWMZ4ikcYbmF&Signature=dAyqIz3DfCq4emFtdUu%2F%2Fq7kQYU%3D");
                             params.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL,
                                     imgUrlList);// 图片地址ArrayList
                             MyApplication.getInstance().getTencent().shareToQzone(BlackBoxCoinDetailsActivity.this, params, new BaseUIListener(BlackBoxCoinDetailsActivity.this, true));

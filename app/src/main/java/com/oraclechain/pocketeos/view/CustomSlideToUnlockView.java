@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view;
+package com.oraclechain.pocketrix.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,11 +15,11 @@ import android.widget.TextView;
 import com.github.florent37.viewanimator.AnimationListener;
 import com.github.florent37.viewanimator.ViewAnimator;
 import com.nineoldandroids.view.ViewHelper;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.utils.DensityUtil;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.utils.DensityUtil;
 
 /**
- * Created by pocketEos on 2017/12/14.'
+ * Created by pocketrix on 2017/12/14.'
  * 滑动销毁
  */
 

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.blackbox.blackhome;
+package com.oraclechain.pocketrix.modules.blackbox.blackhome;
 
 
 import android.app.Activity;
@@ -20,33 +20,33 @@ import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.modules.blackbox.blackboxcoindetails.BlackBoxCoinDetailsActivity;
-import com.oraclechain.pocketeos.modules.nodevote.NodeVoteActivity;
-import com.oraclechain.pocketeos.modules.transaction.makecollections.MakeCollectionsActivity;
-import com.oraclechain.pocketeos.modules.transaction.transferaccounts.TransferAccountsActivity;
-import com.oraclechain.pocketeos.modules.unstake.UnStakeActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.DensityUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.RotateUtils;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.AppDefeatHeadView;
-import com.oraclechain.pocketeos.view.MyScrollview;
-import com.oraclechain.pocketeos.view.ScrollText;
-import com.oraclechain.pocketeos.view.dialog.advertisingdialog.AdvertisingCallback;
-import com.oraclechain.pocketeos.view.dialog.advertisingdialog.AdvertisingDialog;
-import com.oraclechain.pocketeos.view.popupwindow.BasePopupWindow;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.modules.blackbox.blackboxcoindetails.BlackBoxCoinDetailsActivity;
+import com.oraclechain.pocketrix.modules.nodevote.NodeVoteActivity;
+import com.oraclechain.pocketrix.modules.transaction.makecollections.MakeCollectionsActivity;
+import com.oraclechain.pocketrix.modules.transaction.transferaccounts.TransferAccountsActivity;
+import com.oraclechain.pocketrix.modules.unstake.UnStakeActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.DensityUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.RotateUtils;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.AppDefeatHeadView;
+import com.oraclechain.pocketrix.view.MyScrollview;
+import com.oraclechain.pocketrix.view.ScrollText;
+import com.oraclechain.pocketrix.view.dialog.advertisingdialog.AdvertisingCallback;
+import com.oraclechain.pocketrix.view.dialog.advertisingdialog.AdvertisingDialog;
+import com.oraclechain.pocketrix.view.popupwindow.BasePopupWindow;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -351,13 +351,13 @@ public class BlackHomeFragment extends BaseFragment<BlackBoxHomeView, BlackBoxHo
                 break;
             case R.id.transfer_accounts:
                 bundle.putString("account", mChooseAccount.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 bundle.putString("from", "home");
                 ActivityUtils.next(getActivity(), TransferAccountsActivity.class, bundle);
                 break;
             case R.id.make_collections:
                 bundle.putString("account", mChooseAccount.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 ActivityUtils.next(getActivity(), MakeCollectionsActivity.class, bundle);
                 break;
         }
@@ -388,9 +388,9 @@ public class BlackHomeFragment extends BaseFragment<BlackBoxHomeView, BlackBoxHo
                 mAccountWithCoinBeen.add(accountWithCoinBean);
             }
             mCoinAdapter.notifyDataSetChanged();
-            BigDecimal eosToCny = BigDecimal.valueOf(Double.parseDouble(mAccountWithCoinBeen.get(0).getCoinForCny()));
+            BigDecimal rixToCny = BigDecimal.valueOf(Double.parseDouble(mAccountWithCoinBeen.get(0).getCoinForCny()));
             BigDecimal octToCny = BigDecimal.valueOf(Double.parseDouble(mAccountWithCoinBeen.get(1).getCoinForCny()));
-            openMoney = "≈" + StringUtils.addComma((BigDecimalUtil.add(eosToCny, octToCny) + ""));
+            openMoney = "≈" + StringUtils.addComma((BigDecimalUtil.add(rixToCny, octToCny) + ""));
             isOpen = Utils.getSpUtils().getBoolean("isOpenMoney");
             if (!isOpen) {
                 mUserAllProperty.setText("******");

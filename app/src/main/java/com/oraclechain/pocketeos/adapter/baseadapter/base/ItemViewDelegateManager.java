@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.adapter.baseadapter.base;
+package com.oraclechain.pocketrix.adapter.baseadapter.base;
 
 import android.support.v4.util.SparseArrayCompat;
 
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketRix on 2017/11/23.
  */
 public class ItemViewDelegateManager<T> {
     SparseArrayCompat<ItemViewDelegate<T>> delegates = new SparseArrayCompat();

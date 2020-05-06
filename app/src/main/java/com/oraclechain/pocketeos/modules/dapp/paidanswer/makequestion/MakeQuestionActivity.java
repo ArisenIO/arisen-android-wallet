@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp.paidanswer.makequestion;
+package com.oraclechain.pocketrix.modules.dapp.paidanswer.makequestion;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,32 +12,32 @@ import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AnswerBean;
-import com.oraclechain.pocketeos.bean.ApproveMessageBean;
-import com.oraclechain.pocketeos.bean.AskMessageBean;
-import com.oraclechain.pocketeos.bean.ChainAsktitleBean;
-import com.oraclechain.pocketeos.bean.ChainOptionanswersBean;
-import com.oraclechain.pocketeos.blockchain.AskansDatamanger;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.utils.AndroidBug5497Workaround;
-import com.oraclechain.pocketeos.utils.DateUtils;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.dialog.confimdialog.Callback;
-import com.oraclechain.pocketeos.view.dialog.confimdialog.ConfirmDialog;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
-import com.oraclechain.pocketeos.view.textwatcher.FourMoneyTextWatcher;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AnswerBean;
+import com.oraclechain.pocketrix.bean.ApproveMessageBean;
+import com.oraclechain.pocketrix.bean.AskMessageBean;
+import com.oraclechain.pocketrix.bean.ChainAsktitleBean;
+import com.oraclechain.pocketrix.bean.ChainOptionanswersBean;
+import com.oraclechain.pocketrix.blockchain.AskansDatamanger;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.utils.AndroidBug5497Workaround;
+import com.oraclechain.pocketrix.utils.DateUtils;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.dialog.confimdialog.Callback;
+import com.oraclechain.pocketrix.view.dialog.confimdialog.ConfirmDialog;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.view.textwatcher.FourMoneyTextWatcher;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -50,7 +50,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 //提问页面
 public class MakeQuestionActivity extends BaseAcitvity<NormalView, NormalPresenter> implements NormalView {

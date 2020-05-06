@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 /**
- * Created by pocketEos on 2017/12/4.
+ * Created by pocketrix on 2017/12/4.
  * 箭头旋转
  */
 

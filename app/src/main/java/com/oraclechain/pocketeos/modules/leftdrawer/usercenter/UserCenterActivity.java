@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.usercenter;
+package com.oraclechain.pocketrix.modules.leftdrawer.usercenter;
 
 import android.Manifest;
 import android.content.Intent;
@@ -17,29 +17,29 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.UpdataPhotoBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.leftdrawer.usercenter.changename.ChangeNameActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.usercenter.otherlogintype.OtherLoginTypeActivity;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.login.LoginActivity;
-import com.oraclechain.pocketeos.utils.DensityUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.CustomSlideToUnlockView;
-import com.oraclechain.pocketeos.view.RoundImageView;
-import com.oraclechain.pocketeos.view.dialog.gophotodialog.GoPhotoCallBack;
-import com.oraclechain.pocketeos.view.dialog.gophotodialog.GoPhotoDialog;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.UpdataPhotoBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.leftdrawer.usercenter.changename.ChangeNameActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.usercenter.otherlogintype.OtherLoginTypeActivity;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.login.LoginActivity;
+import com.oraclechain.pocketrix.utils.DensityUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.CustomSlideToUnlockView;
+import com.oraclechain.pocketrix.view.RoundImageView;
+import com.oraclechain.pocketrix.view.dialog.gophotodialog.GoPhotoCallBack;
+import com.oraclechain.pocketrix.view.dialog.gophotodialog.GoPhotoDialog;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -249,7 +249,7 @@ public class UserCenterActivity extends BaseAcitvity<UserCenterView, UserCenterP
                             @Override
                             public void goTakePhoto() {
                                 String pathUri = Environment
-                                        .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/Picture";
+                                        .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/Picture";
                                 if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
                                     File f = new File(pathUri);// 目录
                                     if (!f.exists()) {
@@ -261,7 +261,7 @@ public class UserCenterActivity extends BaseAcitvity<UserCenterView, UserCenterP
                                         MediaStore.ACTION_IMAGE_CAPTURE);
                                 tempUri = Uri.fromFile(fileUri);
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                                    tempUri = FileProvider.getUriForFile(UserCenterActivity.this, "com.oraclechain.pocketeos.fileprovider", fileUri);//通过FileProvider创建一个content类型的Uri
+                                    tempUri = FileProvider.getUriForFile(UserCenterActivity.this, "com.oraclechain.pocketrix.fileprovider", fileUri);//通过FileProvider创建一个content类型的Uri
                                     openCameraIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); //添加这一句表示对目标应用临时授权该Uri所代表的文件
                                 }
                                 //将拍照结果保存至photo_file的Uri中，不保留在相册中
@@ -353,7 +353,7 @@ public class UserCenterActivity extends BaseAcitvity<UserCenterView, UserCenterP
             mBitmap = extras.getParcelable("data");
             mBitmap = FilesUtils.toRoundBitmap(mBitmap, tempUri);
             imagePath = FilesUtils.savePhoto(mBitmap, Environment
-                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/ClipPhoto", String
+                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/ClipPhoto", String
                     .valueOf(System.currentTimeMillis()));
             if (imagePath != null) {
                 showProgress();

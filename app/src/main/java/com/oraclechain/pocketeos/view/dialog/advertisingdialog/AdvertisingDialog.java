@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.advertisingdialog;
+package com.oraclechain.pocketrix.view.dialog.advertisingdialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,8 +9,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.view.OvalImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.view.OvalImageView;
 
 
 /**

@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/6/22.
+ * Created by pocketrix on 2018/6/22.
  */
 
 public class BuyRamBean {
@@ -9,7 +9,7 @@ public class BuyRamBean {
     /**
      * payer : aaa
      * receiver : aaa
-     * quant : 2.0000 SYS
+     * quant : 2.0000 RIX
      */
 
     private String payer;

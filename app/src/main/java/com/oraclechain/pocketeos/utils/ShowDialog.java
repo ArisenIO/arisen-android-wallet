@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,11 +11,11 @@ import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 
 /**
- * Created by PocketEos on 2017/12/10.
+ * Created by Pocketrix on 2017/12/10.
  * 加载动画
  */
 public class ShowDialog extends Dialog {

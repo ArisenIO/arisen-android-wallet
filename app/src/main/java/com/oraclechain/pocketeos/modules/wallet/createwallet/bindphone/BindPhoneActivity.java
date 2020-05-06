@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.wallet.createwallet.bindphone;
+package com.oraclechain.pocketrix.modules.wallet.createwallet.bindphone;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,23 +7,23 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.CodeAuthBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.RichTextActivity;
-import com.oraclechain.pocketeos.modules.main.MainActivity;
-import com.oraclechain.pocketeos.modules.otherloginorshare.QQUserInfoBean;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WechatInfoBean;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.CreateWalletActivity;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.countdowntimer.CountDownTimerUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.CodeAuthBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.RichTextActivity;
+import com.oraclechain.pocketrix.modules.main.MainActivity;
+import com.oraclechain.pocketrix.modules.otherloginorshare.QQUserInfoBean;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WechatInfoBean;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.CreateWalletActivity;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.countdowntimer.CountDownTimerUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -44,8 +44,8 @@ public class BindPhoneActivity extends BaseAcitvity<BindPhoneView, BindPhonePres
     String openid, type = null;
     QQUserInfoBean qqUserInfoBean;
     WechatInfoBean wechatInfoBean;
-    @BindView(R.id.go_pocketeos_user)
-    TextView mGoPocketeosUser;
+    @BindView(R.id.go_pocketrix_user)
+    TextView mGoPocketrixUser;
 
     @Override
     protected int getLayoutId() {
@@ -92,11 +92,11 @@ public class BindPhoneActivity extends BaseAcitvity<BindPhoneView, BindPhonePres
                 }
             }
         });
-        mGoPocketeosUser.setOnClickListener(new View.OnClickListener() {
+        mGoPocketrixUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("details", FilesUtils.readAssetsTxt(BindPhoneActivity.this,"pocketeos_user"));
+                bundle.putString("details", FilesUtils.readAssetsTxt(BindPhoneActivity.this,"pocketrix_user"));
                 bundle.putString("title", getString(R.string.setting_one));
                 ActivityUtils.next(BindPhoneActivity.this, RichTextActivity.class, bundle);
             }

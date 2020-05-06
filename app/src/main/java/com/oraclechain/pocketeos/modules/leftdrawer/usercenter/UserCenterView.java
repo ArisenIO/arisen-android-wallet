@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.usercenter;
+package com.oraclechain.pocketrix.modules.leftdrawer.usercenter;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.UpdataPhotoBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.UpdataPhotoBean;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public interface UserCenterView extends BaseView {

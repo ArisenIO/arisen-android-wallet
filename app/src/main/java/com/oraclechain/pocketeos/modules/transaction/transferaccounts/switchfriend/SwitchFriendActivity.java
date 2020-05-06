@@ -1,23 +1,23 @@
-package com.oraclechain.pocketeos.modules.transaction.transferaccounts.switchfriend;
+package com.oraclechain.pocketrix.modules.transaction.transferaccounts.switchfriend;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.FriendsListInfoBean;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.FriendsListInfoBean;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 public class SwitchFriendActivity extends BaseAcitvity<SwitchFriendView, SwitchFriendPresenter> implements SwitchFriendView {
 

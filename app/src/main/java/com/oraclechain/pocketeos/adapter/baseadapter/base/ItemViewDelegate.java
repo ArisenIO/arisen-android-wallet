@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.adapter.baseadapter.base;
+package com.oraclechain.pocketrix.adapter.baseadapter.base;
 
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketRix on 2017/11/23.
  */
 public interface ItemViewDelegate<T>
 {

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.util;
+package com.oraclechain.pocketrix.blockchain.util;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
@@ -7,10 +7,10 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
-import com.oraclechain.pocketeos.blockchain.types.TypeAccountName;
-import com.oraclechain.pocketeos.blockchain.types.TypeActionName;
-import com.oraclechain.pocketeos.blockchain.types.TypeName;
-import com.oraclechain.pocketeos.blockchain.types.TypePermissionName;
+import com.oraclechain.pocketrix.blockchain.types.TypeAccountName;
+import com.oraclechain.pocketrix.blockchain.types.TypeActionName;
+import com.oraclechain.pocketrix.blockchain.types.TypeName;
+import com.oraclechain.pocketrix.blockchain.types.TypePermissionName;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -22,7 +22,7 @@ import java.util.Map;
  * Created by swapnibble on 2017-09-12.
  */
 
-public class GsonEosTypeAdapterFactory implements TypeAdapterFactory {
+public class GsonrixTypeAdapterFactory implements TypeAdapterFactory {
 
     private Map<Class<?>, TypeAdapter<?>> adapters = new LinkedHashMap<>();
 

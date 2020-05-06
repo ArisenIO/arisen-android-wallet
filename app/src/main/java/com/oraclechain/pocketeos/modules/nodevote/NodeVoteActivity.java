@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.nodevote;
+package com.oraclechain.pocketrix.modules.nodevote;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,22 +8,22 @@ import android.widget.TextView;
 
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.AccountVoteHistoryBean;
-import com.oraclechain.pocketeos.bean.ResultTableRowBean;
-import com.oraclechain.pocketeos.modules.nodevote.agencyvote.AgencyVoteActivity;
-import com.oraclechain.pocketeos.modules.nodevote.gonodevote.GoNodeVoteActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.AccountVoteHistoryBean;
+import com.oraclechain.pocketrix.bean.ResultTableRowBean;
+import com.oraclechain.pocketrix.modules.nodevote.agencyvote.AgencyVoteActivity;
+import com.oraclechain.pocketrix.modules.nodevote.gonodevote.GoNodeVoteActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -161,10 +161,10 @@ public class NodeVoteActivity extends BaseAcitvity<NodeVoteView, NodeVotePresent
 
     @Override
     public void getAccountDetailsDataHttp(AccountDetailsBean accountDetailsBean) {
-        mAmount.setText(RegexUtil.subZeroAndDot(accountDetailsBean.getEos_balance()));
-        String stake = BigDecimalUtil.add(new BigDecimal(RegexUtil.subZeroAndDot(accountDetailsBean.getEos_cpu_weight())),new BigDecimal(RegexUtil.subZeroAndDot(accountDetailsBean.getEos_net_weight())))+"";
+        mAmount.setText(RegexUtil.subZeroAndDot(accountDetailsBean.getrix_balance()));
+        String stake = BigDecimalUtil.add(new BigDecimal(RegexUtil.subZeroAndDot(accountDetailsBean.getrix_cpu_weight())),new BigDecimal(RegexUtil.subZeroAndDot(accountDetailsBean.getrix_net_weight())))+"";
         stakedAmount = RegexUtil.subZeroAndDot(stake);
-        mVoteAccount.setText(stakedAmount+ " EOS");
+        mVoteAccount.setText(stakedAmount+ " RIX");
     }
 
     @Override

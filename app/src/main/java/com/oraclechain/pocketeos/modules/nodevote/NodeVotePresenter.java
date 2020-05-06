@@ -1,22 +1,22 @@
-package com.oraclechain.pocketeos.modules.nodevote;
+package com.oraclechain.pocketrix.modules.nodevote;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.RequestTableRowsBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.bean.ResultTableRowBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.RequestTableRowsBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.ResultTableRowBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class NodeVotePresenter extends BasePresent<NodeVoteView> {
@@ -39,7 +39,7 @@ public class NodeVotePresenter extends BasePresent<NodeVoteView> {
 
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("name", account);
-        HttpUtils.postRequest(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
+        HttpUtils.postRequest(BaseUrl.HTTP_rix_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<AccountDetailsBean>> response) {
                 if (response.body().code == 0) {

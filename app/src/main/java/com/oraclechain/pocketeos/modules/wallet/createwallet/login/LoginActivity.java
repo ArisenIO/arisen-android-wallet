@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.wallet.createwallet.login;
+package com.oraclechain.pocketrix.modules.wallet.createwallet.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,30 +9,30 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.CodeAuthBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.account.createaccount.CreateAccountActivity;
-import com.oraclechain.pocketeos.modules.blackbox.existwalletlogin.ExistBlackBoxLoginActivity;
-import com.oraclechain.pocketeos.modules.blackbox.nowalletlogin.BlackBoxLoginActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.RichTextActivity;
-import com.oraclechain.pocketeos.modules.main.MainActivity;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.OtherLoginCallBack;
-import com.oraclechain.pocketeos.modules.otherloginorshare.QQUserInfoBean;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.CreateWalletActivity;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.bindphone.BindPhoneActivity;
-import com.oraclechain.pocketeos.utils.AndroidBug5497Workaround;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.countdowntimer.CountDownTimerUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.CodeAuthBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.account.createaccount.CreateAccountActivity;
+import com.oraclechain.pocketrix.modules.blackbox.existwalletlogin.ExistBlackBoxLoginActivity;
+import com.oraclechain.pocketrix.modules.blackbox.nowalletlogin.BlackBoxLoginActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.RichTextActivity;
+import com.oraclechain.pocketrix.modules.main.MainActivity;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.OtherLoginCallBack;
+import com.oraclechain.pocketrix.modules.otherloginorshare.QQUserInfoBean;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.CreateWalletActivity;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.bindphone.BindPhoneActivity;
+import com.oraclechain.pocketrix.utils.AndroidBug5497Workaround;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.countdowntimer.CountDownTimerUtils;
 import com.tencent.tauth.Tencent;
 
 import butterknife.BindView;
@@ -58,8 +58,8 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
     TextView mBlackBox;
     @BindView(R.id.other_login_txt)
     TextView mOtherLoginTxt;
-    @BindView(R.id.go_pocketeos_user)
-    TextView mGoPocketeosUser;
+    @BindView(R.id.go_pocketrix_user)
+    TextView mGoPocketrixUser;
 
 
     @Override
@@ -110,11 +110,11 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
                 }
             }
         });
-        mGoPocketeosUser.setOnClickListener(new View.OnClickListener() {
+        mGoPocketrixUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("details", FilesUtils.readAssetsTxt(LoginActivity.this, "pocketeos_user"));
+                bundle.putString("details", FilesUtils.readAssetsTxt(LoginActivity.this, "pocketrix_user"));
                 bundle.putString("title", getString(R.string.setting_one));
                 ActivityUtils.next(LoginActivity.this, RichTextActivity.class, bundle);
             }

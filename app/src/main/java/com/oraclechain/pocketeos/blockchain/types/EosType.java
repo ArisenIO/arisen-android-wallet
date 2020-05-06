@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.types;
+package com.oraclechain.pocketrix.blockchain.types;
 
 import java.util.Collection;
 
@@ -6,29 +6,29 @@ import java.util.Collection;
  * Created by swapnibble on 2017-09-12.
  */
 
-public interface EosType {
+public interface rixType {
     class InsufficientBytesException extends Exception {
 
         private static final long serialVersionUID = 1L;
     }
 
     interface Packer {
-        void pack(EosType.Writer writer);
+        void pack(rixType.Writer writer);
     }
 
     interface Unpacker {
-        void unpack(EosType.Reader reader) throws EosType.InsufficientBytesException;
+        void unpack(rixType.Reader reader) throws rixType.InsufficientBytesException;
     }
 
     interface Reader {
-        byte get() throws EosType.InsufficientBytesException;
-        int getShortLE() throws EosType.InsufficientBytesException;
-        int getIntLE() throws EosType.InsufficientBytesException;
-        long getLongLE() throws EosType.InsufficientBytesException;
-        byte[] getBytes(int size) throws EosType.InsufficientBytesException;
-        String getString() throws EosType.InsufficientBytesException;
+        byte get() throws rixType.InsufficientBytesException;
+        int getShortLE() throws rixType.InsufficientBytesException;
+        int getIntLE() throws rixType.InsufficientBytesException;
+        long getLongLE() throws rixType.InsufficientBytesException;
+        byte[] getBytes(int size) throws rixType.InsufficientBytesException;
+        String getString() throws rixType.InsufficientBytesException;
 
-        long getVariableUint() throws EosType.InsufficientBytesException;
+        long getVariableUint() throws rixType.InsufficientBytesException;
     }
 
     interface Writer {

@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.net;
+package com.oraclechain.pocketrix.net;
 
 import com.lzy.okgo.OkGo;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.Map;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketrix on 2018/4/2.
  * app网络请求管理类
  */
 public class HttpUtils {

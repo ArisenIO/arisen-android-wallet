@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.base;
+package com.oraclechain.pocketrix.base;
 
 
 import android.content.Context;
@@ -12,14 +12,14 @@ import android.view.ViewGroup;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.lzy.okgo.OkGo;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.Utils;
 
 import butterknife.ButterKnife;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 
 public abstract class BaseFragment<V, P extends BasePresent<V>> extends Fragment implements BaseView {

@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EosPrivateKey;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.rixPrivateKey;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/2/3.
+ * Created by pocketrix on 2018/2/3.
  */
 
 public class PublicAndPrivateKeyUtils {
@@ -50,10 +50,10 @@ public class PublicAndPrivateKeyUtils {
         }
     }
 
-    public static EosPrivateKey[] getPrivateKey(int count) {
-        EosPrivateKey[] retKeys = new EosPrivateKey[count];
+    public static rixPrivateKey[] getPrivateKey(int count) {
+        rixPrivateKey[] retKeys = new rixPrivateKey[count];
         for (int i = 0; i < count; i++) {
-            retKeys[i] = new EosPrivateKey();
+            retKeys[i] = new rixPrivateKey();
         }
 
         return retKeys;

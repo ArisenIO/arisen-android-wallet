@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.popupwindow;
+package com.oraclechain.pocketrix.view.popupwindow;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.PopupWindow;
 
 /**
- * Created by pocketEos on 2017/12/4.
+ * Created by pocketrix on 2017/12/4.
  */
 
 public class PopupController {

@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.messagecenter;
+package com.oraclechain.pocketrix.modules.leftdrawer.messagecenter;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.MessageCenterBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.MessageCenterBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取friendslist
  */
 public interface MessageCenterView extends BaseView {

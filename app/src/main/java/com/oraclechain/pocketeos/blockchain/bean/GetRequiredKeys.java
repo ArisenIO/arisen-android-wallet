@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.blockchain.bean;
+package com.oraclechain.pocketrix.blockchain.bean;
 
 
 import com.google.gson.annotations.Expose;
-import com.oraclechain.pocketeos.blockchain.chain.SignedTransaction;
+import com.oraclechain.pocketrix.blockchain.chain.SignedTransaction;
 
 import java.util.ArrayList;
 import java.util.List;

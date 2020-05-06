@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.adapter;
+package com.oraclechain.pocketrix.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,44 +9,44 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.Constants;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.AccountVoteHistoryBean;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.bean.CandyUserTaskBean;
-import com.oraclechain.pocketeos.bean.CoinBean;
-import com.oraclechain.pocketeos.bean.DappBean;
-import com.oraclechain.pocketeos.bean.DappCommpanyBean;
-import com.oraclechain.pocketeos.bean.FriendsListInfoBean;
-import com.oraclechain.pocketeos.bean.HotEquitiesBean;
-import com.oraclechain.pocketeos.bean.MessageCenterBean;
-import com.oraclechain.pocketeos.bean.NewsBean;
-import com.oraclechain.pocketeos.bean.PelistBean;
-import com.oraclechain.pocketeos.bean.QuestionListBean;
-import com.oraclechain.pocketeos.bean.RedPacketDetailsBean;
-import com.oraclechain.pocketeos.bean.RedPacketHistoryBean;
-import com.oraclechain.pocketeos.bean.SuggestionBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.modules.dapp.dappcommpany.DappCommpanyDetailsActivity;
-import com.oraclechain.pocketeos.modules.dapp.dappdetails.DappDetailsActivity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.activity.PaidAnswerActivity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.questiondetails.QuestionDetailsActivity;
-import com.oraclechain.pocketeos.modules.friendslist.friendsdetails.FriendsDetailsActivity;
-import com.oraclechain.pocketeos.modules.news.newsdetails.WebNewsDetailsActivity;
-import com.oraclechain.pocketeos.modules.transaction.redpacket.continueredpacket.ContinueRdPacketActivity;
-import com.oraclechain.pocketeos.modules.transaction.redpacket.getredpacketdetails.GetRedPacketDetailsActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.DateUtils;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.view.RoundImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.Constants;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.AccountVoteHistoryBean;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.bean.CandyUserTaskBean;
+import com.oraclechain.pocketrix.bean.CoinBean;
+import com.oraclechain.pocketrix.bean.DappBean;
+import com.oraclechain.pocketrix.bean.DappCommpanyBean;
+import com.oraclechain.pocketrix.bean.FriendsListInfoBean;
+import com.oraclechain.pocketrix.bean.HotEquitiesBean;
+import com.oraclechain.pocketrix.bean.MessageCenterBean;
+import com.oraclechain.pocketrix.bean.NewsBean;
+import com.oraclechain.pocketrix.bean.PelistBean;
+import com.oraclechain.pocketrix.bean.QuestionListBean;
+import com.oraclechain.pocketrix.bean.RedPacketDetailsBean;
+import com.oraclechain.pocketrix.bean.RedPacketHistoryBean;
+import com.oraclechain.pocketrix.bean.SuggestionBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.modules.dapp.dappcommpany.DappCommpanyDetailsActivity;
+import com.oraclechain.pocketrix.modules.dapp.dappdetails.DappDetailsActivity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.activity.PaidAnswerActivity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.questiondetails.QuestionDetailsActivity;
+import com.oraclechain.pocketrix.modules.friendslist.friendsdetails.FriendsDetailsActivity;
+import com.oraclechain.pocketrix.modules.news.newsdetails.WebNewsDetailsActivity;
+import com.oraclechain.pocketrix.modules.transaction.redpacket.continueredpacket.ContinueRdPacketActivity;
+import com.oraclechain.pocketrix.modules.transaction.redpacket.getredpacketdetails.GetRedPacketDetailsActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.DateUtils;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.view.RoundImageView;
 
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -54,7 +54,7 @@ import java.util.List;
 
 
 /**
- * Created by pocketEos on 2018/3/14.
+ * Created by pocketRix on 2018/3/14.
  */
 public class AdapterManger {
 
@@ -88,10 +88,10 @@ public class AdapterManger {
                 holder.setText(R.id.coin_number_for_cny, "≈" + StringUtils.addComma(accountWithCoinBean.getCoinForCny()) + " CNY");
 
                 ImageView imageView = (ImageView) holder.getView(R.id.coin_img);
-                if (accountWithCoinBean.getCoinName().equals("EOS")) {
-                    imageView.setImageResource(R.mipmap.eos);
-                    holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " EOS");
-                    holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getEos_price_cny()));
+                if (accountWithCoinBean.getCoinName().equals("RIX")) {
+                    imageView.setImageResource(R.mipmap.rix);
+                    holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " RIX");
+                    holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getRix_price_cny()));
                 } else {
                     imageView.setImageResource(R.mipmap.oct);
                     holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " OCT");

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import java.util.Locale;
 
 /**
- * Created by pocketEos on 2018/5/23.
+ * Created by pocketrix on 2018/5/23.
  */
 
 public class SPUtil {

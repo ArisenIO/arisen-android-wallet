@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.modules.dapp;
+package com.oraclechain.pocketrix.modules.dapp;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.DappBean;
-import com.oraclechain.pocketeos.bean.DappCommpanyBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.DappBean;
+import com.oraclechain.pocketrix.bean.DappCommpanyBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取friendslist
  */
 

@@ -1,18 +1,18 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.transactionhistory;
+package com.oraclechain.pocketrix.modules.leftdrawer.transactionhistory;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.PostChainHistoryBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.PostChainHistoryBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class TransactionHistoryPresenter extends BasePresent<TransactionHistoryView> {

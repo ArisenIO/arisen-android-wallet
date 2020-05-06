@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.oraclechain.pocketeos.blockchain.util;
+package com.oraclechain.pocketrix.blockchain.util;
 
 /**
  * Created by swapnibble on 2017-09-28.

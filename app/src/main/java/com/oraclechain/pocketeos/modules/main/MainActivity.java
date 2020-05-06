@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.main;
+package com.oraclechain.pocketrix.modules.main;
 
 
 import android.content.Intent;
@@ -17,37 +17,37 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.QrCodeWalletBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.dapp.DappFragment;
-import com.oraclechain.pocketeos.modules.friendslist.myfriendslist.FriendsListFragment;
-import com.oraclechain.pocketeos.modules.home.HomeFragment;
-import com.oraclechain.pocketeos.modules.leftdrawer.appupdate.AppUpdateActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.candyintegral.CandyIntegralActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.messagecenter.MessageCenterActivity;
-import com.oraclechain.pocketeos.modules.nodevote.NodeVoteActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.SystemSettingActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.transactionhistory.TransactionHistoryActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.usercenter.UserCenterActivity;
-import com.oraclechain.pocketeos.modules.news.NewsFragment;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.login.LoginActivity;
-import com.oraclechain.pocketeos.modules.wallet.walletmanagement.WalletManagementActivity;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.utils.UpdateUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RoundImageView;
-import com.oraclechain.pocketeos.view.dialog.walletcodedialog.WalletCodeCallBack;
-import com.oraclechain.pocketeos.view.dialog.walletcodedialog.WalletCodeDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.QrCodeWalletBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.dapp.DappFragment;
+import com.oraclechain.pocketrix.modules.friendslist.myfriendslist.FriendsListFragment;
+import com.oraclechain.pocketrix.modules.home.HomeFragment;
+import com.oraclechain.pocketrix.modules.leftdrawer.appupdate.AppUpdateActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.candyintegral.CandyIntegralActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.messagecenter.MessageCenterActivity;
+import com.oraclechain.pocketrix.modules.nodevote.NodeVoteActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.SystemSettingActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.transactionhistory.TransactionHistoryActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.usercenter.UserCenterActivity;
+import com.oraclechain.pocketrix.modules.news.NewsFragment;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.login.LoginActivity;
+import com.oraclechain.pocketrix.modules.wallet.walletmanagement.WalletManagementActivity;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.UpdateUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RoundImageView;
+import com.oraclechain.pocketrix.view.dialog.walletcodedialog.WalletCodeCallBack;
+import com.oraclechain.pocketrix.view.dialog.walletcodedialog.WalletCodeDialog;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
@@ -59,7 +59,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.oraclechain.pocketeos.R.id.drawer;
+import static com.oraclechain.pocketrix.R.id.drawer;
 
 public class MainActivity extends BaseAcitvity<NormalView, NormalPresenter> implements View.OnClickListener, NormalView, HomeFragment.Openleft {
 
@@ -252,9 +252,9 @@ public class MainActivity extends BaseAcitvity<NormalView, NormalPresenter> impl
                             Bundle params = new Bundle();
                             params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
                             params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, FilesUtils.savePhoto(bitmap, Environment
-                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/walletCode", String
+                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/walletCode", String
                                     .valueOf(System.currentTimeMillis())));
-                            params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketEos");
+                            params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketrix");
                             params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_ITEM_HIDE);
                             MyApplication.getInstance().getTencent().shareToQQ(MainActivity.this, params, new BaseUIListener(MainActivity.this, true));
                         }
@@ -265,7 +265,7 @@ public class MainActivity extends BaseAcitvity<NormalView, NormalPresenter> impl
                             params.putInt(QzonePublish.PUBLISH_TO_QZONE_KEY_TYPE, QzonePublish.PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD);
                             ArrayList<String> imgUrlList = new ArrayList<>();
                             imgUrlList.add(FilesUtils.savePhoto(bitmap, Environment
-                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/walletCode", String
+                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/walletCode", String
                                     .valueOf(System.currentTimeMillis())));// 图片地址
                             params.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL,
                                     imgUrlList);// 图片地址ArrayList

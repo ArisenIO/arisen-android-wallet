@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="?attr/color_bg_main"
     android:orientation="vertical"
-    tools:context="com.oraclechain.pocketeos.modules.account.mapaccount.MapAccountActivity">
+    tools:context="com.oraclechain.pocketrix.modules.account.mapaccount.MapAccountActivity">
 
     <include layout="@layout/title_project"/>
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:padding="@dimen/dimens_20"
-        android:text="输入映射的EOS私钥"
+        android:text="输入映射的RIX私钥"
         android:textColor="@color/gray_color"
         android:textSize="@dimen/dimens_13"/>
 
@@ -42,7 +42,7 @@
             android:text="@string/private_key"
             android:textSize="@dimen/dimens_16"/>
 
-        <com.oraclechain.pocketeos.view.ClearEditText
+        <com.oraclechain.pocketrix.view.ClearEditText
             android:id="@+id/owner_private_key"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimens_40"

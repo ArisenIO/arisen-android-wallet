@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.widget.TextView;
 
 /**
- * Created by pocketEos on 2018/6/1.
+ * Created by pocketrix on 2018/6/1.
  */
 
 public class TextDrawUtil {

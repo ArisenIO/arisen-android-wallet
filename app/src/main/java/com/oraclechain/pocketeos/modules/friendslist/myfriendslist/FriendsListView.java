@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.friendslist.myfriendslist;
+package com.oraclechain.pocketrix.modules.friendslist.myfriendslist;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.User;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.User;
 
 import java.util.ArrayList;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取friendslist
  */
 

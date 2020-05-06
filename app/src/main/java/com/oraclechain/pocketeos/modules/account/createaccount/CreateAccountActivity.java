@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.account.createaccount;
+package com.oraclechain.pocketrix.modules.account.createaccount;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,28 +9,28 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.utils.OkLogger;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EosPrivateKey;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.account.backupaccount.BackUpKeyActivity;
-import com.oraclechain.pocketeos.modules.account.importaccount.ImportAccountActivity;
-import com.oraclechain.pocketeos.modules.account.mapaccount.MapAccountActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.RichTextActivity;
-import com.oraclechain.pocketeos.utils.EncryptUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.PublicAndPrivateKeyUtils;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.rixPrivateKey;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.account.backupaccount.BackUpKeyActivity;
+import com.oraclechain.pocketrix.modules.account.importaccount.ImportAccountActivity;
+import com.oraclechain.pocketrix.modules.account.mapaccount.MapAccountActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.RichTextActivity;
+import com.oraclechain.pocketrix.utils.EncryptUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.PublicAndPrivateKeyUtils;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -52,8 +52,8 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
     ImageView mIvBack;
     @BindView(R.id.go_import_account)
     TextView mGoImportAccount;
-    @BindView(R.id.go_pocketeos_user)
-    TextView mGoPocketeosUser;
+    @BindView(R.id.go_pocketrix_user)
+    TextView mGoPocketrixUser;
     @BindView(R.id.go_map_account)
     TextView mGoMapAccount;
 
@@ -62,8 +62,8 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
     private String userPassword = null;
 
 
-    private EosPrivateKey mOwnerKey;
-    private EosPrivateKey mActiveKey;
+    private rixPrivateKey mOwnerKey;
+    private rixPrivateKey mActiveKey;
 
     @OnClick(R.id.create_account)
     public void onViewClicked() {
@@ -71,7 +71,7 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
             toast(getString(R.string.black_box_creat_account_toast));
             return;
         }
-        if (RegexUtil.isEosName(mAccountName.getText().toString())) {
+        if (RegexUtil.isrixName(mAccountName.getText().toString())) {
             PasswordDialog dialog = new PasswordDialog(CreateAccountActivity.this, new PasswordCallback() {
                 @Override
                 public void sure(String password) {
@@ -86,7 +86,7 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
                         mAccount_owner_private_key = mOwnerKey.toString();
                         OkLogger.i("===============>mAccount_active_private_key"+mAccount_active_private_key);
                         OkLogger.i("===============>mAccount_owner_private_key"+mAccount_owner_private_key);
-                        presenter.postEosAccountData(mAccountName.getText().toString().trim(), mAccount_owner_public_key, mAccount_active_public_key);
+                        presenter.postrixAccountData(mAccountName.getText().toString().trim(), mAccount_owner_public_key, mAccount_active_public_key);
                     } else {
 
                         toast(getResources().getString(R.string.password_error));
@@ -106,9 +106,9 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
 
 
     @Override
-    public void postEosAccountDataHttp() {
+    public void postrixAccountDataHttp() {
         hideProgress();
-        toast(getString(R.string.eos_register_success));
+        toast(getString(R.string.rix_register_success));
         ArrayList<AccountInfoBean> accountInfoBeanArrayList = new ArrayList<>();
         if (MyApplication.getInstance().getUserBean().getAccount_info() != null) {
             accountInfoBeanArrayList = JsonUtil.parseJsonToArrayList(MyApplication.getInstance().getUserBean().getAccount_info(), AccountInfoBean.class);
@@ -203,10 +203,10 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
                 ActivityUtils.next(CreateAccountActivity.this, ImportAccountActivity.class, bundle);
             }
         });
-        mGoPocketeosUser.setOnClickListener(new View.OnClickListener() {
+        mGoPocketrixUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bundle.putString("details", FilesUtils.readAssetsTxt(CreateAccountActivity.this, "pocketeos_user"));
+                bundle.putString("details", FilesUtils.readAssetsTxt(CreateAccountActivity.this, "pocketrix_user"));
                 bundle.putString("title", getString(R.string.setting_one));
                 ActivityUtils.next(CreateAccountActivity.this, RichTextActivity.class, bundle);
             }

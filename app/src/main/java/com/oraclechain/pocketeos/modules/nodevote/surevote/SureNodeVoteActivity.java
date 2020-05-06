@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.nodevote.surevote;
+package com.oraclechain.pocketrix.modules.nodevote.surevote;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,33 +12,33 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountVoteHistoryBean;
-import com.oraclechain.pocketeos.bean.DelegatebwMessageBean;
-import com.oraclechain.pocketeos.bean.RegproxyMessageBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.bean.ResultNodeListBean;
-import com.oraclechain.pocketeos.bean.ResultTableRowBean;
-import com.oraclechain.pocketeos.bean.ResultVoteWeightBean;
-import com.oraclechain.pocketeos.bean.VoteproducerMessageBean;
-import com.oraclechain.pocketeos.blockchain.PushDatamanger;
-import com.oraclechain.pocketeos.modules.leftdrawer.systemsetting.RichTextActivity;
-import com.oraclechain.pocketeos.modules.nodevote.gonodevote.GoNodeVoteActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountVoteHistoryBean;
+import com.oraclechain.pocketrix.bean.DelegatebwMessageBean;
+import com.oraclechain.pocketrix.bean.RegproxyMessageBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.ResultNodeListBean;
+import com.oraclechain.pocketrix.bean.ResultTableRowBean;
+import com.oraclechain.pocketrix.bean.ResultVoteWeightBean;
+import com.oraclechain.pocketrix.bean.VoteproducerMessageBean;
+import com.oraclechain.pocketrix.blockchain.PushDatamanger;
+import com.oraclechain.pocketrix.modules.leftdrawer.systemsetting.RichTextActivity;
+import com.oraclechain.pocketrix.modules.nodevote.gonodevote.GoNodeVoteActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ import butterknife.OnClick;
 public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNodeVotePresenter> implements SureNodeVoteView {
 
     SeekBar mMseekbar;
-    EditText mVoteEosAmount;
+    EditText mVoterixAmount;
     TextView mInputNumber;
     TextView vote_amount;
     TextView mBelocked;
@@ -64,7 +64,7 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
     XRecyclerView mVoteDetailsRecycleview;
     @BindView(R.id.sure_vote)
     TextView mSureVote;
-    String eosAmount, stakeAmount;
+    String rixAmount, stakeAmount;
     String voteWeight = "0";
     String mpassword = "";
     private ArrayList<ResultNodeListBean.DataBeanX.DataBean> mSelectNode = new ArrayList<>();
@@ -98,17 +98,17 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
         mMseekbar.setEnabled(true);
         mMseekbar.setFocusable(true);
         mMseekbar.setFocusableInTouchMode(true);
-        mVoteEosAmount = contentView.findViewById(R.id.vote_eos_amount);
+        mVoterixAmount = contentView.findViewById(R.id.vote_rix_amount);
         mInputNumber = contentView.findViewById(R.id.input_number);
         mBelocked = contentView.findViewById(R.id.be_locked);
         vote_amount = contentView.findViewById(R.id.vote_amount);
         mVoteDetailsRecycleview.addHeaderView(contentView);
-        eosAmount = getIntent().getStringExtra("amount");
+        rixAmount = getIntent().getStringExtra("amount");
         stakeAmount = getIntent().getStringExtra("stakedAmount");
 
 
-        mVoteEosAmount.setText("0");
-        vote_amount.setText(stakeAmount+" EOS");
+        mVoterixAmount.setText("0");
+        vote_amount.setText(stakeAmount+" rix");
     }
 
     @Override
@@ -131,14 +131,14 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
         mMseekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mVoteEosAmount.setFocusable(false);
-                mVoteEosAmount.setFocusableInTouchMode(false);
-                mVoteEosAmount.setClickable(false);
+                mVoterixAmount.setFocusable(false);
+                mVoterixAmount.setFocusableInTouchMode(false);
+                mVoterixAmount.setClickable(false);
                 if (KeyBoardUtil.isSoftInputShow(SureNodeVoteActivity.this)) {
                     KeyBoardUtil.getInstance(SureNodeVoteActivity.this).hide();
                 }
-                BigDecimal bigDecimal = BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(progress), new BigDecimal(100), 2), new BigDecimal(eosAmount), 0);
-                mVoteEosAmount.setText(bigDecimal + "");
+                BigDecimal bigDecimal = BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(progress), new BigDecimal(100), 2), new BigDecimal(rixAmount), 0);
+                mVoterixAmount.setText(bigDecimal + "");
             }
 
             @Override
@@ -149,7 +149,7 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 for (int i = 0; i < mAccountVoteHistoryBeans.size(); i++) {
-                    mAccountVoteHistoryBeans.get(i).setNumber(BigDecimalUtil.multiply(BigDecimalUtil.multiply(BigDecimalUtil.add(new BigDecimal(mVoteEosAmount.getText().toString()), new BigDecimal(stakeAmount), 4), new BigDecimal("10000"), 4), new BigDecimal(voteWeight), 4) + "");
+                    mAccountVoteHistoryBeans.get(i).setNumber(BigDecimalUtil.multiply(BigDecimalUtil.multiply(BigDecimalUtil.add(new BigDecimal(mVoterixAmount.getText().toString()), new BigDecimal(stakeAmount), 4), new BigDecimal("10000"), 4), new BigDecimal(voteWeight), 4) + "");
                 }
                 mCommonAdapter.notifyDataSetChanged();
             }
@@ -157,11 +157,11 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
         mInputNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mVoteEosAmount.setFocusable(true);
-                mVoteEosAmount.setFocusableInTouchMode(true);
-                mVoteEosAmount.setClickable(true);
-                mVoteEosAmount.requestFocus();
-                mVoteEosAmount.setSelection(mVoteEosAmount.getText().toString().length());//将光标移至文字末尾
+                mVoterixAmount.setFocusable(true);
+                mVoterixAmount.setFocusableInTouchMode(true);
+                mVoterixAmount.setClickable(true);
+                mVoterixAmount.requestFocus();
+                mVoterixAmount.setSelection(mVoterixAmount.getText().toString().length());//将光标移至文字末尾
                 Timer timer = new Timer();
                 timer.schedule(new TimerTask() {
                     public void run() {
@@ -172,7 +172,7 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
             }
         });
 
-//        mVoteEosAmount.addTextChangedListener(new NodeVoteTextWatcher(mVoteEosAmount, mMseekbar, "10"));
+//        mVoterixAmount.addTextChangedListener(new NodeVoteTextWatcher(mVoterixAmount, mMseekbar, "10"));
 
 
         mBelocked.setOnClickListener(new View.OnClickListener() {
@@ -188,9 +188,9 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
 
     @OnClick(R.id.sure_vote)
     public void onViewClicked() {
-        eosAmount = mVoteEosAmount.getText().toString().trim();
-        if (!mResultTableRowBean.getCode().equals("0") & mVoteEosAmount.getText().toString().trim().equals("0") && !BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0))) {
-            toast(getString(R.string.eos_zero_toast));
+        rixAmount = mVoterixAmount.getText().toString().trim();
+        if (!mResultTableRowBean.getCode().equals("0") & mVoterixAmount.getText().toString().trim().equals("0") && !BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0))) {
+            toast(getString(R.string.rix_zero_toast));
             return;
         }
         PasswordDialog mPasswordDialog = new PasswordDialog(SureNodeVoteActivity.this, new PasswordCallback() {
@@ -202,9 +202,9 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
                     DelegatebwMessageBean delegatebwMessageBean = new DelegatebwMessageBean();
                     delegatebwMessageBean.setFrom(account);
                     delegatebwMessageBean.setReceiver(account);
-                    BigDecimal bigIntegerAmount = BigDecimalUtil.multiply(BigDecimalUtil.toBigDecimal(mVoteEosAmount.getText().toString().trim()), new BigDecimal(1), 4);
-                    delegatebwMessageBean.setStake_cpu_quantity(StringUtils.addZero(BigDecimalUtil.divide(bigIntegerAmount, new BigDecimal(2), 4) + "") + " EOS");
-                    delegatebwMessageBean.setStake_net_quantity(StringUtils.addZero(BigDecimalUtil.divide(bigIntegerAmount, new BigDecimal(2), 4) + "") + " EOS");
+                    BigDecimal bigIntegerAmount = BigDecimalUtil.multiply(BigDecimalUtil.toBigDecimal(mVoterixAmount.getText().toString().trim()), new BigDecimal(1), 4);
+                    delegatebwMessageBean.setStake_cpu_quantity(StringUtils.addZero(BigDecimalUtil.divide(bigIntegerAmount, new BigDecimal(2), 4) + "") + " rix");
+                    delegatebwMessageBean.setStake_net_quantity(StringUtils.addZero(BigDecimalUtil.divide(bigIntegerAmount, new BigDecimal(2), 4) + "") + " rix");
 
                     VoteproducerMessageBean voteproducerMessageBean = new VoteproducerMessageBean();
                     voteproducerMessageBean.setVoter(account);
@@ -215,7 +215,7 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
                     voteproducerMessageBean.setProducers(Arrays.asList(StringUtils.stringSort(producers)));
                     voteproducerMessageBean.setProxy("");
 
-                    if (!mResultTableRowBean.getCode().equals("0") && BigDecimalUtil.greaterThan(new BigDecimal(eosAmount), new BigDecimal(0))) {//未注册到投票系统 只要余额大于0都要进行质押 投票系统 质押 投票
+                    if (!mResultTableRowBean.getCode().equals("0") && BigDecimalUtil.greaterThan(new BigDecimal(rixAmount), new BigDecimal(0))) {//未注册到投票系统 只要余额大于0都要进行质押 投票系统 质押 投票
                         new PushDatamanger(SureNodeVoteActivity.this, password, new PushDatamanger.Callback() {
                             @Override
                             public void getResult(String result) {
@@ -237,15 +237,15 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
                                                         }
                                                     }
                                                 }
-                                            }).pushAction("eosio", "voteproducer",
+                                            }).pushAction("arisen", "voteproducer",
                                                     new Gson().toJson(voteproducerMessageBean), account);
                                         }
                                     }
-                                }).pushAction("eosio", "delegatebw",
+                                }).pushAction("arisen", "delegatebw",
                                         new Gson().toJson(delegatebwMessageBean), account);
                             }
-                        }).pushAction("eosio", "regproxy", new Gson().toJson(new RegproxyMessageBean(account, "1")), account);
-                    } else if (!mResultTableRowBean.getCode().equals("0") && BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0)) && !BigDecimalUtil.greaterThan(new BigDecimal(eosAmount), new BigDecimal(0))) {//未注册到投票系统 质押资产！=0 余额=0 先注册到投票系统再进行投票
+                        }).pushAction("arisen", "regproxy", new Gson().toJson(new RegproxyMessageBean(account, "1")), account);
+                    } else if (!mResultTableRowBean.getCode().equals("0") && BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0)) && !BigDecimalUtil.greaterThan(new BigDecimal(rixAmount), new BigDecimal(0))) {//未注册到投票系统 质押资产！=0 余额=0 先注册到投票系统再进行投票
                         new PushDatamanger(SureNodeVoteActivity.this, password, new PushDatamanger.Callback() {
                             @Override
                             public void getResult(String result) {
@@ -263,14 +263,14 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
                                                 }
                                             }
                                         }
-                                    }).pushAction("eosio", "voteproducer",
+                                    }).pushAction("arisen", "voteproducer",
                                             new Gson().toJson(voteproducerMessageBean), account);
                                 }
                             }
-                        }).pushAction("eosio", "regproxy", new Gson().toJson(new RegproxyMessageBean(account, "1")), account);
-                    } else if (!BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0)) && !BigDecimalUtil.greaterThan(new BigDecimal(eosAmount), new BigDecimal(0))) {//余额为0 ，质押为0
-                        toast(getString(R.string.eos_zero_toast));
-                    } else if (mResultTableRowBean.getCode().equals("0") && !BigDecimalUtil.greaterThan(new BigDecimal(eosAmount), new BigDecimal(0)) && BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0))) {//检查余额为小于等于0，质押大于0，不用质押直接投票,
+                        }).pushAction("arisen", "regproxy", new Gson().toJson(new RegproxyMessageBean(account, "1")), account);
+                    } else if (!BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0)) && !BigDecimalUtil.greaterThan(new BigDecimal(rixAmount), new BigDecimal(0))) {//余额为0 ，质押为0
+                        toast(getString(R.string.rix_zero_toast));
+                    } else if (mResultTableRowBean.getCode().equals("0") && !BigDecimalUtil.greaterThan(new BigDecimal(rixAmount), new BigDecimal(0)) && BigDecimalUtil.greaterThan(new BigDecimal(stakeAmount), new BigDecimal(0))) {//检查余额为小于等于0，质押大于0，不用质押直接投票,
                         new PushDatamanger(SureNodeVoteActivity.this, password, new PushDatamanger.Callback() {
                             @Override
                             public void getResult(String result) {
@@ -283,9 +283,9 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
                                     AppManager.getAppManager().finishActivity(GoNodeVoteActivity.class);
                                 }
                             }
-                        }).pushAction("eosio", "voteproducer",
+                        }).pushAction("arisen", "voteproducer",
                                 new Gson().toJson(voteproducerMessageBean), account);
-                    } else if (mResultTableRowBean.getCode().equals("0") && BigDecimalUtil.greaterThan(new BigDecimal(eosAmount), new BigDecimal(0))) {//账户余额大于0，质押还能进行投票进行~
+                    } else if (mResultTableRowBean.getCode().equals("0") && BigDecimalUtil.greaterThan(new BigDecimal(rixAmount), new BigDecimal(0))) {//账户余额大于0，质押还能进行投票进行~
                         new PushDatamanger(SureNodeVoteActivity.this, password, new PushDatamanger.Callback() {
                             @Override
                             public void getResult(String result) {
@@ -304,11 +304,11 @@ public class SureNodeVoteActivity extends BaseAcitvity<SureNodeVoteView, SureNod
                                                 }
                                             }
                                         }
-                                    }).pushAction("eosio", "voteproducer",
+                                    }).pushAction("arisen", "voteproducer",
                                             new Gson().toJson(voteproducerMessageBean), account);
                                 }
                             }
-                        }).pushAction("eosio", "delegatebw",
+                        }).pushAction("arisen", "delegatebw",
                                 new Gson().toJson(delegatebwMessageBean), account);
                     }
                 } else {

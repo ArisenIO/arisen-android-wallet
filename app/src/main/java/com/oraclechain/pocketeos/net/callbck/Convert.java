@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oraclechain.pocketeos.net.callbck;
+package com.oraclechain.pocketrix.net.callbck;
 
 
 import com.google.gson.Gson;
@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import java.lang.reflect.Type;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketrix on 2018/4/2.
  */
 
 public class Convert {

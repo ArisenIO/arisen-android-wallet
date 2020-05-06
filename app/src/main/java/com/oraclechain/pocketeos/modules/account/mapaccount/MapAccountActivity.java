@@ -1,29 +1,29 @@
-package com.oraclechain.pocketeos.modules.account.mapaccount;
+package com.oraclechain.pocketrix.modules.account.mapaccount;
 
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.GetAccountsBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EosPrivateKey;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.blackbox.BlackBoxMainActivity;
-import com.oraclechain.pocketeos.modules.main.MainActivity;
-import com.oraclechain.pocketeos.utils.EncryptUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.GetAccountsBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.rixPrivateKey;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.blackbox.BlackBoxMainActivity;
+import com.oraclechain.pocketrix.modules.main.MainActivity;
+import com.oraclechain.pocketrix.utils.EncryptUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -45,7 +45,7 @@ public class MapAccountActivity extends BaseAcitvity<MapAccountView, MapAccountP
     private String userPassword, accountName = null;
     private UserBean userBean = new UserBean();
 
-    private EosPrivateKey mActiveKey;
+    private rixPrivateKey mActiveKey;
 
     @Override
     protected int getLayoutId() {
@@ -84,7 +84,7 @@ public class MapAccountActivity extends BaseAcitvity<MapAccountView, MapAccountP
             if (userBean != null && MyApplication.getInstance().getUserBean().getAccount_info() != null && MyApplication.getInstance().getUserBean().getAccount_info().contains(accountName)) {
                 toast(getString(R.string.import_two_account));
             } else {
-                presenter.postEosAccountData(accountName, userBean.getWallet_uid());//只是通知，不以服务端返回结果作为查询依据
+                presenter.postrixAccountData(accountName, userBean.getWallet_uid());//只是通知，不以服务端返回结果作为查询依据
                 toast(getString(R.string.map_account_success));
                 ArrayList<AccountInfoBean> accountInfoBeanArrayList = new ArrayList<>();
                 if (MyApplication.getInstance().getUserBean().getAccount_info() != null) {
@@ -145,7 +145,7 @@ public class MapAccountActivity extends BaseAcitvity<MapAccountView, MapAccountP
     }
 
     @Override
-    public void postEosAccountDataHttp() {
+    public void postrixAccountDataHttp() {
 
     }
 
@@ -161,7 +161,7 @@ public class MapAccountActivity extends BaseAcitvity<MapAccountView, MapAccountP
                         showProgress();
 
                         try {
-                            mActiveKey = new EosPrivateKey(mOwnerPrivateKey.getText().toString().trim());
+                            mActiveKey = new rixPrivateKey(mOwnerPrivateKey.getText().toString().trim());
                             mAccount_owner_public_key = mActiveKey.getPublicKey().toString();
                             mAccount_active_public_key = mActiveKey.getPublicKey().toString();
                             mAccount_active_private_key = mActiveKey.toString();

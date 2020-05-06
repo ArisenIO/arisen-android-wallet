@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.oraclechain.pocketeos.blockchain.util;
+package com.oraclechain.pocketrix.blockchain.util;
 
 
 public class StringUtils {

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.backupnumberdialog;
+package com.oraclechain.pocketrix.view.dialog.backupnumberdialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
- * Created by pocketEos on 2017/12/5.
+ * Created by pocketrix on 2017/12/5.
  * 钱包备份弹窗
  */
 

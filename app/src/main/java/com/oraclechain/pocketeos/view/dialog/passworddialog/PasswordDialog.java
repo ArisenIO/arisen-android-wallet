@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.passworddialog;
+package com.oraclechain.pocketrix.view.dialog.passworddialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.view.ClearEditText;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.view.ClearEditText;
 
 
 /**

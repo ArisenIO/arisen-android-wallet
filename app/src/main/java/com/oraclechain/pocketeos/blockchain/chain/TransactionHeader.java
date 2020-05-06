@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.blockchain.chain;
+package com.oraclechain.pocketrix.blockchain.chain;
 
 import com.google.gson.annotations.Expose;
-import com.oraclechain.pocketeos.blockchain.cypto.util.BitUtils;
-import com.oraclechain.pocketeos.blockchain.cypto.util.HexUtils;
-import com.oraclechain.pocketeos.blockchain.types.EosType;
+import com.oraclechain.pocketrix.blockchain.cypto.util.BitUtils;
+import com.oraclechain.pocketrix.blockchain.cypto.util.HexUtils;
+import com.oraclechain.pocketrix.blockchain.types.rixType;
 
 import java.math.BigInteger;
 import java.text.DateFormat;
@@ -15,7 +15,7 @@ import java.util.TimeZone;
 /**
  * Created by swapnibble on 2017-09-12.
  */
-public class TransactionHeader implements EosType.Packer {
+public class TransactionHeader implements rixType.Packer {
     @Expose
     private String expiration;
 
@@ -103,7 +103,7 @@ public class TransactionHeader implements EosType.Packer {
     }
 
     @Override
-    public void pack(EosType.Writer writer) {
+    public void pack(rixType.Writer writer) {
         writer.putIntLE( (int)(getExpirationAsDate(expiration).getTime() / 1000) ); // ms -> sec
 
         writer.putShortLE( (short)(ref_block_num  & 0xFFFF) );  // uint16

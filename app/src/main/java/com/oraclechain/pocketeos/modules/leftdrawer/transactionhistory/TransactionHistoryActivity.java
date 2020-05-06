@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.transactionhistory;
+package com.oraclechain.pocketrix.modules.leftdrawer.transactionhistory;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,29 +11,29 @@ import android.widget.TextView;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.base.Constants;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.PostChainHistoryBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.RotateUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.popupwindow.BasePopupWindow;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.base.Constants;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.PostChainHistoryBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.RotateUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.popupwindow.BasePopupWindow;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 public class TransactionHistoryActivity extends BaseAcitvity<TransactionHistoryView, TransactionHistoryPresenter> implements TransactionHistoryView {
 
@@ -113,13 +113,13 @@ public class TransactionHistoryActivity extends BaseAcitvity<TransactionHistoryV
         mPostChainHistoryBean.setPage(page);
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
-        PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
-        symbolsBeanEos.setContractName(Constants.EOSCONTRACT);
+        PostChainHistoryBean.SymbolsBean symbolsBeanrix = new PostChainHistoryBean.SymbolsBean();
+        symbolsBeanrix.setSymbolName("RIX");
+        symbolsBeanrix.setContractName(Constants.RIXCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
         symbolsBeanOCT.setContractName(Constants.OCTCONTRACT);
-        symbolsBeans.add(symbolsBeanEos);
+        symbolsBeans.add(symbolsBeanrix);
         symbolsBeans.add(symbolsBeanOCT);
         mPostChainHistoryBean.setSymbols(symbolsBeans);
         presenter.getTransferHistoryData(mPostChainHistoryBean);

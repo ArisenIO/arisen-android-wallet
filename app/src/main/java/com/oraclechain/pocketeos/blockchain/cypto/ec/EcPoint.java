@@ -19,7 +19,7 @@
  * www.bouncycastle.org. The code has been formatted to comply with the rest of
  * the formatting in this library.
  */
-package com.oraclechain.pocketeos.blockchain.cypto.ec;
+package com.oraclechain.pocketrix.blockchain.cypto.ec;
 
 import java.math.BigInteger;
 

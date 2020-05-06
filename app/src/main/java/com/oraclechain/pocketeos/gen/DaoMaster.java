@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.gen;
+package com.oraclechain.pocketrix.gen;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

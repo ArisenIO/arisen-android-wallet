@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,13 +9,13 @@ import android.widget.Toast;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.UpdateAppBean;
-import com.oraclechain.pocketeos.view.dialog.updatadialog.UpdataCallback;
-import com.oraclechain.pocketeos.view.dialog.updatadialog.UpdataDialog;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.UpdateAppBean;
+import com.oraclechain.pocketrix.view.dialog.updatadialog.UpdataCallback;
+import com.oraclechain.pocketrix.view.dialog.updatadialog.UpdataDialog;
 
 /**
- * Created by pocketEos on 2018/2/10.
+ * Created by pocketrix on 2018/2/10.
  */
 
 public class UpdateUtils {

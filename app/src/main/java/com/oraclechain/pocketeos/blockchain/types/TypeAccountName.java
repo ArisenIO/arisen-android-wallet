@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.blockchain.types;
+package com.oraclechain.pocketrix.blockchain.types;
 
 
-import com.oraclechain.pocketeos.blockchain.util.StringUtils;
+import com.oraclechain.pocketrix.blockchain.util.StringUtils;
 
 /**
  * Created by swapnibble on 2017-09-12.
@@ -20,7 +20,7 @@ public class TypeAccountName extends TypeName {
                 throw new IllegalArgumentException("account name can only be 12 chars long: " + name) ; // changed from dawn3
             }
 
-            if ( (name.indexOf( CHAR_NOT_ALLOWED) >= 0) && ! name.startsWith("eosio.") ){
+            if ( (name.indexOf( CHAR_NOT_ALLOWED) >= 0) && ! name.startsWith("arisen.") ){
                 throw new IllegalArgumentException("account name must not contain '.': " + name);
             }
         }

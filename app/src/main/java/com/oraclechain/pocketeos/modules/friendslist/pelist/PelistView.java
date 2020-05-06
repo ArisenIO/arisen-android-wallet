@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.friendslist.pelist;
+package com.oraclechain.pocketrix.modules.friendslist.pelist;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.PelistBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.PelistBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取friendslist
  */
 public interface PelistView extends BaseView {

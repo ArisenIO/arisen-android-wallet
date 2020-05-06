@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.modules.friendslist.friendsdetails;
+package com.oraclechain.pocketrix.modules.friendslist.friendsdetails;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.bean.WalletDetailsBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.bean.WalletDetailsBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public interface FriendsDetailsView extends BaseView {

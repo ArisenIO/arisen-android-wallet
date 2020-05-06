@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.adapter;
+package com.oraclechain.pocketrix.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

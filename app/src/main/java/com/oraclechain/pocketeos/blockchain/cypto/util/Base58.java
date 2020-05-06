@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.cypto.util;
+package com.oraclechain.pocketrix.blockchain.cypto.util;
 
 /**
  * Copyright 2011 Google Inc.

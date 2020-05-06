@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.view.View;
 
 /**
- * Created by pocketEos on 2018/4/18.
+ * Created by pocketrix on 2018/4/18.
  */
 public class ViewToImageUtils {
 

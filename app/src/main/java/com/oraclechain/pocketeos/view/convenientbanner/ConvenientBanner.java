@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.convenientbanner;
+package com.oraclechain.pocketrix.view.convenientbanner;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -15,12 +15,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.view.convenientbanner.adapter.CBPageAdapter;
-import com.oraclechain.pocketeos.view.convenientbanner.holder.CBViewHolderCreator;
-import com.oraclechain.pocketeos.view.convenientbanner.listener.CBPageChangeListener;
-import com.oraclechain.pocketeos.view.convenientbanner.listener.OnItemClickListener;
-import com.oraclechain.pocketeos.view.convenientbanner.view.CBLoopViewPager;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.view.convenientbanner.adapter.CBPageAdapter;
+import com.oraclechain.pocketrix.view.convenientbanner.holder.CBViewHolderCreator;
+import com.oraclechain.pocketrix.view.convenientbanner.listener.CBPageChangeListener;
+import com.oraclechain.pocketrix.view.convenientbanner.listener.OnItemClickListener;
+import com.oraclechain.pocketrix.view.convenientbanner.view.CBLoopViewPager;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;

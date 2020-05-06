@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.bean;
+package com.oraclechain.pocketrix.blockchain.bean;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;

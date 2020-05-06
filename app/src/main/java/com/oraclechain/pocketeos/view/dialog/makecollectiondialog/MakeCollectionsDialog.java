@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.makecollectiondialog;
+package com.oraclechain.pocketrix.view.dialog.makecollectiondialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 import com.google.zxing.client.result.ParsedResultType;
 import com.mylhyl.zxing.scanner.encode.QREncode;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.utils.ViewToImageUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.utils.ViewToImageUtils;
 
 /**
- * Created by pocketEos on 2017/12/5.
+ * Created by pocketrix on 2017/12/5.
  * 收款二维码弹窗
  */
 

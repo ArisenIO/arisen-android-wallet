@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos;
+package com.oraclechain.pocketrix;
 
 import org.junit.Test;
 

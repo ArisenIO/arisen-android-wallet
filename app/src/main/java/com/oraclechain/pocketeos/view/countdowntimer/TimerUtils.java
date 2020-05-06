@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.countdowntimer;
+package com.oraclechain.pocketrix.view.countdowntimer;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -7,7 +7,7 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 
 /**
- * Created by pocketEos on 2017/7/28.
+ * Created by pocketrix on 2017/7/28.
  */
 
 public class TimerUtils {

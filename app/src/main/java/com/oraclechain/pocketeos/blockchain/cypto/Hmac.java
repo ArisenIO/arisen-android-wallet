@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.oraclechain.pocketeos.blockchain.cypto;
+package com.oraclechain.pocketrix.blockchain.cypto;
 
 
-import com.oraclechain.pocketeos.blockchain.cypto.util.BitUtils;
-import com.oraclechain.pocketeos.blockchain.cypto.util.HexUtils;
+import com.oraclechain.pocketrix.blockchain.cypto.util.BitUtils;
+import com.oraclechain.pocketrix.blockchain.cypto.util.HexUtils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

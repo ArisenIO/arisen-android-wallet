@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.activity;
+package com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.activity;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -9,13 +9,13 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.Find_tab_Adapter;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.fragment.memory.MemoryFragment;
-import com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.fragment.net.NetFragment;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.Find_tab_Adapter;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.fragment.memory.MemoryFragment;
+import com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.fragment.net.NetFragment;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.app;
+package com.oraclechain.pocketrix.app;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 
 public class ActivityUtils {

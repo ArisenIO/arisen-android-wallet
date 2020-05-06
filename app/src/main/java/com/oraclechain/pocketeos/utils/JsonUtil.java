@@ -1,16 +1,16 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 public class JsonUtil {
     /**

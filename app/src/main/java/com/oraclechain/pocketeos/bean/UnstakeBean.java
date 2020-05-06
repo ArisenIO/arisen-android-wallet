@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/6/15.
+ * Created by pocketrix on 2018/6/15.
  */
 
 public class UnstakeBean {
@@ -9,8 +9,8 @@ public class UnstakeBean {
     /**
      * from : aaaaaavotera
      * receiver : aaaaaavotera
-     * unstake_net_quantity : 10.0000 SYS
-     * unstake_cpu_quantity : 10.0000 SYS
+     * unstake_net_quantity : 10.0000 RIX
+     * unstake_cpu_quantity : 10.0000 RIX
      */
 
     private String from;

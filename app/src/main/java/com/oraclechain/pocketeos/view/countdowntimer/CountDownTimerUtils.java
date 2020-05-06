@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.countdowntimer;
+package com.oraclechain.pocketrix.view.countdowntimer;
 
 import android.graphics.Color;
 import android.os.CountDownTimer;

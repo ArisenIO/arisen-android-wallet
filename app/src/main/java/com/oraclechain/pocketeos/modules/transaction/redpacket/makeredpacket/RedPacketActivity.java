@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.makeredpacket;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.makeredpacket;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,30 +14,30 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.liaoinstan.springview.container.DefaultFooter;
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.RedPacketHistoryBean;
-import com.oraclechain.pocketeos.bean.SendRedPacketBean;
-import com.oraclechain.pocketeos.bean.TransferEosMessageBean;
-import com.oraclechain.pocketeos.blockchain.EosDataManger;
-import com.oraclechain.pocketeos.utils.AndroidBug5497Workaround;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.RotateUtils;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.popupwindow.BasePopupWindow;
-import com.oraclechain.pocketeos.view.textwatcher.MakeRedPacketMoneyTextWatcher;
-import com.oraclechain.pocketeos.view.textwatcher.MakeRedPacketNumberTextWatcher;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.RedPacketHistoryBean;
+import com.oraclechain.pocketrix.bean.SendRedPacketBean;
+import com.oraclechain.pocketrix.bean.TransferrixMessageBean;
+import com.oraclechain.pocketrix.blockchain.rixDataManger;
+import com.oraclechain.pocketrix.utils.AndroidBug5497Workaround;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.RotateUtils;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.popupwindow.BasePopupWindow;
+import com.oraclechain.pocketrix.view.textwatcher.MakeRedPacketMoneyTextWatcher;
+import com.oraclechain.pocketrix.view.textwatcher.MakeRedPacketNumberTextWatcher;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 //发红包
 public class RedPacketActivity extends BaseAcitvity<RedPacketView, RedPacketPresenter> implements RedPacketView {
@@ -109,7 +109,7 @@ public class RedPacketActivity extends BaseAcitvity<RedPacketView, RedPacketPres
 
         mAccountInfoBeanList = JsonUtil.parseJsonToArrayList(MyApplication.getInstance().getUserBean().getAccount_info(), AccountInfoBean.class);
         mSwitchNumber.setText(getIntent().getStringExtra("account"));
-        mSwitchProperty.setText(getIntent().getStringExtra("coin"));//默认选择EOS
+        mSwitchProperty.setText(getIntent().getStringExtra("coin"));//默认选择rix
 
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(RedPacketActivity.this, LinearLayoutManager.VERTICAL, false);
@@ -139,14 +139,14 @@ public class RedPacketActivity extends BaseAcitvity<RedPacketView, RedPacketPres
 
     @Override
     protected void initData() {
-        mCoinList.add("EOS");
+        mCoinList.add("rix");
         mCoinList.add("OCT");
         showProgress();
 
         if (mSwitchProperty.getText().toString().equals("OCT")) {
             presenter.getCoinRateData("oraclechain");
         } else {
-            presenter.getCoinRateData("eos");
+            presenter.getCoinRateData("rix");
         }
 
 
@@ -193,18 +193,18 @@ public class RedPacketActivity extends BaseAcitvity<RedPacketView, RedPacketPres
     @Override
     public void sendRedPacketDataHttp(SendRedPacketBean.DataBean sendRedPacketBean) {
 
-        if (mSwitchProperty.getText().toString().equals("EOS")) {
-            new EosDataManger(RedPacketActivity.this, userPassword).setCoinRate(coinRate).setRedpacketInfo(sendRedPacketBean, mRedPacketNumber.getText().toString().trim())
+        if (mSwitchProperty.getText().toString().equals("rix")) {
+            new rixDataManger(RedPacketActivity.this, userPassword).setCoinRate(coinRate).setRedpacketInfo(sendRedPacketBean, mRedPacketNumber.getText().toString().trim())
                     .sendRedPacket(
-                            new Gson().toJson(new TransferEosMessageBean(mLeaveMessage.getText().toString().trim()
+                            new Gson().toJson(new TransferrixMessageBean(mLeaveMessage.getText().toString().trim()
                                     , "oc.redpacket",
                                     StringUtils.addZero(mRedPacketMoney.getText().toString().trim()) + " " + mSwitchProperty.getText().toString().trim(),
                                     mSwitchNumber.getText().toString().trim())),
                             mSwitchNumber.getText().toString().trim());
         } else {
-            new EosDataManger(RedPacketActivity.this, userPassword).setRedpacketInfo(sendRedPacketBean, mRedPacketNumber.getText().toString().trim())
+            new rixDataManger(RedPacketActivity.this, userPassword).setRedpacketInfo(sendRedPacketBean, mRedPacketNumber.getText().toString().trim())
                     .sendRedPacket(
-                            new Gson().toJson(new TransferEosMessageBean(mLeaveMessage.getText().toString().trim()
+                            new Gson().toJson(new TransferrixMessageBean(mLeaveMessage.getText().toString().trim()
                                     , "oc.redpacket",
                                     StringUtils.addZero(mRedPacketMoney.getText().toString().trim()) + " " + mSwitchProperty.getText().toString().trim(),
                                     mSwitchNumber.getText().toString().trim())),
@@ -282,8 +282,8 @@ public class RedPacketActivity extends BaseAcitvity<RedPacketView, RedPacketPres
                             mSwitchProperty.setText(mCoinList.get(position));
                             if (mSwitchProperty.getText().toString().equals("OCT")) {
                                 presenter.getCoinRateData("oraclechain");
-                            } else if (mSwitchProperty.getText().toString().equals("EOS")) {
-                                presenter.getCoinRateData("eos");
+                            } else if (mSwitchProperty.getText().toString().equals("rix")) {
+                                presenter.getCoinRateData("rix");
                             }
                             mDataBeanList.clear();
                             presenter.getRedPacketHistoryData(mSwitchNumber.getText().toString().trim(), mSwitchProperty.getText().toString().trim());

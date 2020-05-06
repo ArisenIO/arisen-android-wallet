@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.wallet.importwallet;
+package com.oraclechain.pocketrix.modules.wallet.importwallet;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,12 +6,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.account.createaccount.CreateAccountActivity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.account.createaccount.CreateAccountActivity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
 
 import butterknife.BindView;
 import butterknife.OnClick;

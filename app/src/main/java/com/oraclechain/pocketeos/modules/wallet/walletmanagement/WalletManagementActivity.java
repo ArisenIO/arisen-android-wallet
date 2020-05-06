@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.wallet.walletmanagement;
+package com.oraclechain.pocketrix.modules.wallet.walletmanagement;
 
 import android.Manifest;
 import android.os.Bundle;
@@ -11,31 +11,31 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.HeaderAndFooterWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.BaseBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.modules.account.accountdetails.AccountDetailsActivity;
-import com.oraclechain.pocketeos.modules.account.createaccount.CreateAccountActivity;
-import com.oraclechain.pocketeos.modules.account.importaccount.ImportAccountActivity;
-import com.oraclechain.pocketeos.utils.EncryptUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.TextDrawUtil;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.dialog.backupnumberdialog.BackUpNumberCallBack;
-import com.oraclechain.pocketeos.view.dialog.backupnumberdialog.BackUpNumberDialog;
-import com.oraclechain.pocketeos.view.dialog.changepassworddialog.ChangePasswordDialog;
-import com.oraclechain.pocketeos.view.dialog.changepassworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.swiperecycle.SwipeItemLayout;
-import com.oraclechain.pocketeos.view.swiperecycle.SwipeMenuRecyclerView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.HeaderAndFooterWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.BaseBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.modules.account.accountdetails.AccountDetailsActivity;
+import com.oraclechain.pocketrix.modules.account.createaccount.CreateAccountActivity;
+import com.oraclechain.pocketrix.modules.account.importaccount.ImportAccountActivity;
+import com.oraclechain.pocketrix.utils.EncryptUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.TextDrawUtil;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.dialog.backupnumberdialog.BackUpNumberCallBack;
+import com.oraclechain.pocketrix.view.dialog.backupnumberdialog.BackUpNumberDialog;
+import com.oraclechain.pocketrix.view.dialog.changepassworddialog.ChangePasswordDialog;
+import com.oraclechain.pocketrix.view.dialog.changepassworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.swiperecycle.SwipeItemLayout;
+import com.oraclechain.pocketrix.view.swiperecycle.SwipeMenuRecyclerView;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -181,7 +181,7 @@ public class WalletManagementActivity extends BaseAcitvity<WalletManagementView,
                     if (dialog == null) {
                         //创建本地备份生成文件
                         UserBackupPath = FilesUtils.saveTxtFile(jsonString, Environment
-                                .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/UserBackup", userBean + "的钱包");
+                                .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/UserBackup", userBean + "的钱包");
                         dialog = new BackUpNumberDialog(WalletManagementActivity.this, new BackUpNumberCallBack() {
                         });
                         dialog.setContent(userBean.getWallet_name() + "的钱包", UserBackupPath);

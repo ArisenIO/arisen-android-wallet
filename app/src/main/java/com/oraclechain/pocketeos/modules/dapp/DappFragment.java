@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp;
+package com.oraclechain.pocketrix.modules.dapp;
 
 
 import android.os.Bundle;
@@ -10,26 +10,26 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.DappBean;
-import com.oraclechain.pocketeos.bean.DappCommpanyBean;
-import com.oraclechain.pocketeos.modules.dapp.dappcommpany.DappCommpanyDetailsActivity;
-import com.oraclechain.pocketeos.modules.dapp.dappdetails.DappDetailsActivity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.activity.PaidAnswerActivity;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.AppDefeatHeadView;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.RoundImageView;
-import com.oraclechain.pocketeos.view.convenientbanner.ConvenientBanner;
-import com.oraclechain.pocketeos.view.convenientbanner.adapter.LocalImageHolderView;
-import com.oraclechain.pocketeos.view.convenientbanner.holder.CBViewHolderCreator;
-import com.oraclechain.pocketeos.view.convenientbanner.listener.OnItemClickListener;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.DappBean;
+import com.oraclechain.pocketrix.bean.DappCommpanyBean;
+import com.oraclechain.pocketrix.modules.dapp.dappcommpany.DappCommpanyDetailsActivity;
+import com.oraclechain.pocketrix.modules.dapp.dappdetails.DappDetailsActivity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.activity.PaidAnswerActivity;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.AppDefeatHeadView;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.RoundImageView;
+import com.oraclechain.pocketrix.view.convenientbanner.ConvenientBanner;
+import com.oraclechain.pocketrix.view.convenientbanner.adapter.LocalImageHolderView;
+import com.oraclechain.pocketrix.view.convenientbanner.holder.CBViewHolderCreator;
+import com.oraclechain.pocketrix.view.convenientbanner.listener.OnItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;

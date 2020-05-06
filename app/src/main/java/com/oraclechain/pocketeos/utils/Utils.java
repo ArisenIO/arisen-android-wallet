@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.content.Intent;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.service.KillSelfService;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.service.KillSelfService;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import me.ljp.permission.PermissionCallback;
 import me.ljp.permission.PermissionItem;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  * Utils初始化相关
  */
 public final class Utils {

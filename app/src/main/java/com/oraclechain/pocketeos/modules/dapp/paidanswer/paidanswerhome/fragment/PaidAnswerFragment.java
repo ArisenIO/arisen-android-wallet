@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.fragment;
+package com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.fragment;
 
 
 import android.os.Bundle;
@@ -6,12 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.PaidAnswerBean;
-import com.oraclechain.pocketeos.bean.QuestionListBean;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.PaidAnswerBean;
+import com.oraclechain.pocketrix.bean.QuestionListBean;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

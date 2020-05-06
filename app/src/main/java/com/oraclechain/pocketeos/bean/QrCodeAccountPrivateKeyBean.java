@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/2/1.
+ * Created by pocketrix on 2018/2/1.
  */
 
 public class QrCodeAccountPrivateKeyBean {

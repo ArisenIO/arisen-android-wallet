@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.nodevote.gonodevote;
+package com.oraclechain.pocketrix.modules.nodevote.gonodevote;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.ResultNodeListBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.ResultNodeListBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface GoNodeVoteView extends BaseView {
 

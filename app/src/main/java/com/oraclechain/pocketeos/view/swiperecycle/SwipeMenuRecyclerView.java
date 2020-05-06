@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.swiperecycle;
+package com.oraclechain.pocketrix.view.swiperecycle;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by pocketEos on 2017/12/11.
+ * Created by pocketrix on 2017/12/11.
  * 侧滑recycleview
  */
 public class SwipeMenuRecyclerView extends RecyclerView {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oraclechain.pocketeos.blockchain.cypto.digest;
+package com.oraclechain.pocketrix.blockchain.cypto.digest;
 
 /**
  * base implementation of MD4 family style digest as outlined in

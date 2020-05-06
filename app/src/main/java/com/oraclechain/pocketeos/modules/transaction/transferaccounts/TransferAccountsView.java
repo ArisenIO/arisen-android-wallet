@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.transaction.transferaccounts;
+package com.oraclechain.pocketrix.modules.transaction.transferaccounts;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface TransferAccountsView extends BaseView {
     void getCoinRateDataHttp(CoinRateBean.DataBean coinRateBean);

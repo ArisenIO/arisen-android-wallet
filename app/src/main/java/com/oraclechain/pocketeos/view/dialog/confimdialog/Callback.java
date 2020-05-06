@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.confimdialog;
+package com.oraclechain.pocketrix.view.dialog.confimdialog;
 
 
 public interface Callback {

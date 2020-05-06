@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp.dappcommpany;
+package com.oraclechain.pocketrix.modules.dapp.dappcommpany;
 
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -8,18 +8,18 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.DappBean;
-import com.oraclechain.pocketeos.bean.DappCommpanyBean;
-import com.oraclechain.pocketeos.modules.dapp.dappdetails.DappDetailsActivity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.activity.PaidAnswerActivity;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.DappBean;
+import com.oraclechain.pocketrix.bean.DappCommpanyBean;
+import com.oraclechain.pocketrix.modules.dapp.dappdetails.DappDetailsActivity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.activity.PaidAnswerActivity;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 public class DappCommpanyDetailsActivity extends BaseAcitvity<DappCommpanyDetailsView, DappCommpanyDetailsPresenter> implements DappCommpanyDetailsView {
 

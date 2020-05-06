@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.blockchain.chain;
+package com.oraclechain.pocketrix.blockchain.chain;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.annotations.Expose;
-import com.oraclechain.pocketeos.blockchain.cypto.util.HexUtils;
-import com.oraclechain.pocketeos.blockchain.types.EosType;
-import com.oraclechain.pocketeos.blockchain.types.TypeAccountName;
-import com.oraclechain.pocketeos.blockchain.types.TypeActionName;
-import com.oraclechain.pocketeos.blockchain.types.TypePermissionLevel;
+import com.oraclechain.pocketrix.blockchain.cypto.util.HexUtils;
+import com.oraclechain.pocketrix.blockchain.types.rixType;
+import com.oraclechain.pocketrix.blockchain.types.TypeAccountName;
+import com.oraclechain.pocketrix.blockchain.types.TypeActionName;
+import com.oraclechain.pocketrix.blockchain.types.TypePermissionLevel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +17,7 @@ import java.util.List;
  * Created by swapnibble on 2017-09-12.
  */
 
-public class Action implements EosType.Packer {
+public class Action implements rixType.Packer {
     @Expose
     private TypeAccountName account;
 
@@ -99,7 +99,7 @@ public class Action implements EosType.Packer {
     }
 
     @Override
-    public void pack(EosType.Writer writer) {
+    public void pack(rixType.Writer writer) {
         account.pack(writer);
         name.pack(writer);
 

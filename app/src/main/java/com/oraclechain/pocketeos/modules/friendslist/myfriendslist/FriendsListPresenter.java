@@ -1,20 +1,20 @@
-package com.oraclechain.pocketeos.modules.friendslist.myfriendslist;
+package com.oraclechain.pocketrix.modules.friendslist.myfriendslist;
 
 import android.content.Context;
 import android.text.TextUtils;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.FriendsListInfoBean;
-import com.oraclechain.pocketeos.view.contact.ChineseToEnglish;
-import com.oraclechain.pocketeos.view.contact.CompareSort;
-import com.oraclechain.pocketeos.bean.User;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.FriendsListInfoBean;
+import com.oraclechain.pocketrix.view.contact.ChineseToEnglish;
+import com.oraclechain.pocketrix.view.contact.CompareSort;
+import com.oraclechain.pocketrix.bean.User;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class FriendsListPresenter extends BasePresent<FriendsListView> {

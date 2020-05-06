@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.app;
+package com.oraclechain.pocketrix.app;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketRix on 2018/4/2.
  */
 public class SafeHostnameVerifier implements HostnameVerifier {
     @Override

@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.wallet.createwallet.login;
+package com.oraclechain.pocketrix.modules.wallet.createwallet.login;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.CodeAuthBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.CodeAuthBean;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public interface LoginView extends BaseView {

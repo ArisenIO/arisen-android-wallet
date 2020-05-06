@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.news;
+package com.oraclechain.pocketrix.modules.news;
 
 
 import android.os.Bundle;
@@ -13,24 +13,24 @@ import android.widget.TextView;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.CoinBean;
-import com.oraclechain.pocketeos.bean.NewsBean;
-import com.oraclechain.pocketeos.modules.news.newsdetails.WebNewsDetailsActivity;
-import com.oraclechain.pocketeos.utils.RotateUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.convenientbanner.ConvenientBanner;
-import com.oraclechain.pocketeos.view.convenientbanner.adapter.LocalImageHolderView;
-import com.oraclechain.pocketeos.view.convenientbanner.holder.CBViewHolderCreator;
-import com.oraclechain.pocketeos.view.convenientbanner.listener.OnItemClickListener;
-import com.oraclechain.pocketeos.view.popupwindow.BasePopupWindow;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.CoinBean;
+import com.oraclechain.pocketrix.bean.NewsBean;
+import com.oraclechain.pocketrix.modules.news.newsdetails.WebNewsDetailsActivity;
+import com.oraclechain.pocketrix.utils.RotateUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.convenientbanner.ConvenientBanner;
+import com.oraclechain.pocketrix.view.convenientbanner.adapter.LocalImageHolderView;
+import com.oraclechain.pocketrix.view.convenientbanner.holder.CBViewHolderCreator;
+import com.oraclechain.pocketrix.view.convenientbanner.listener.OnItemClickListener;
+import com.oraclechain.pocketrix.view.popupwindow.BasePopupWindow;
 
 import java.util.ArrayList;
 import java.util.List;

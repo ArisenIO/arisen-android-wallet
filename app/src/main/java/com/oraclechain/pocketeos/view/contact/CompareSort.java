@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.view.contact;
+package com.oraclechain.pocketrix.view.contact;
 
-import com.oraclechain.pocketeos.bean.User;
+import com.oraclechain.pocketrix.bean.User;
 
 import java.util.Comparator;
 
 /**
  * 排序类
  * //@标签代表A前面的那些，#代表除了A-Z以外的其他标签
- * Created by pocketEos on 2017/11/30.
+ * Created by pocketrix on 2017/11/30.
  */
 public class CompareSort implements Comparator<User> {
     @Override

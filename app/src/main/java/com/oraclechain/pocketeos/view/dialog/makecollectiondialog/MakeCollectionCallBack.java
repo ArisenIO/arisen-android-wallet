@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.view.dialog.makecollectiondialog;
+package com.oraclechain.pocketrix.view.dialog.makecollectiondialog;
 
 import android.graphics.Bitmap;
 
 /**
- * Created by pocketEos on 2017/12/5.
+ * Created by pocketrix on 2017/12/5.
  */
 
 public interface MakeCollectionCallBack {

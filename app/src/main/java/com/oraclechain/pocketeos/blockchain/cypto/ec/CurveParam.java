@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.oraclechain.pocketeos.blockchain.cypto.ec;
+package com.oraclechain.pocketrix.blockchain.cypto.ec;
 
 
-import com.oraclechain.pocketeos.blockchain.cypto.util.HexUtils;
+import com.oraclechain.pocketrix.blockchain.cypto.util.HexUtils;
 
 import java.math.BigInteger;
 

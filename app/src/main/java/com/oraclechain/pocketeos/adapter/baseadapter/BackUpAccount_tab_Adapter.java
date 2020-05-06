@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.adapter.baseadapter;
+package com.oraclechain.pocketrix.adapter.baseadapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.oraclechain.pocketeos.modules.account.backupaccount.fragment.BackUpAccountFragment;
+import com.oraclechain.pocketrix.modules.account.backupaccount.fragment.BackUpAccountFragment;
 
 import java.util.List;
 

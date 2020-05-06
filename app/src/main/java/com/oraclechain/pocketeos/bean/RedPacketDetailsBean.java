@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/4/20.
+ * Created by pocketrix on 2018/4/20.
  */
 
 public class RedPacketDetailsBean {
@@ -11,7 +11,7 @@ public class RedPacketDetailsBean {
     /**
      * msg : SUCCEED
      * code : 0
-     * data : {"statistics":{"residueCount":0,"residueAmount":"0.0000","packetCount":1,"amount":"10.0000","isSend":true},"redPacketOrderRedisDtos":[{"type":"EOS","amount":"10.0000","account":"lucan222","createTime":"2018-04-20 15:30:14"}]}
+     * data : {"statistics":{"residueCount":0,"residueAmount":"0.0000","packetCount":1,"amount":"10.0000","isSend":true},"redPacketOrderRedisDtos":[{"type":"rix","amount":"10.0000","account":"lucan222","createTime":"2018-04-20 15:30:14"}]}
      */
 
     private String msg;
@@ -45,7 +45,7 @@ public class RedPacketDetailsBean {
     public static class DataBean {
         /**
          * statistics : {"residueCount":0,"residueAmount":"0.0000","packetCount":1,"amount":"10.0000","isSend":true}
-         * redPacketOrderRedisDtos : [{"type":"EOS","amount":"10.0000","account":"lucan222","createTime":"2018-04-20 15:30:14"}]
+         * redPacketOrderRedisDtos : [{"type":"RIX","amount":"10.0000","account":"lucan222","createTime":"2018-04-20 15:30:14"}]
          */
 
         private StatisticsBean statistics;
@@ -125,7 +125,7 @@ public class RedPacketDetailsBean {
 
         public static class RedPacketOrderRedisDtosBean {
             /**
-             * type : EOS
+             * type : RIX
              * amount : 10.0000
              * account : lucan222
              * createTime : 2018-04-20 15:30:14

@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.blockchain.cypto.digest;
+package com.oraclechain.pocketrix.blockchain.cypto.digest;
 
 import com.google.common.base.Preconditions;
 import com.google.common.primitives.Ints;
-import com.oraclechain.pocketeos.blockchain.cypto.util.HexUtils;
+import com.oraclechain.pocketrix.blockchain.cypto.util.HexUtils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

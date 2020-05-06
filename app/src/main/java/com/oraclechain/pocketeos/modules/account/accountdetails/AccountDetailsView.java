@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.modules.account.accountdetails;
+package com.oraclechain.pocketrix.modules.account.accountdetails;
 
-import com.oraclechain.pocketeos.base.BaseView;
+import com.oraclechain.pocketrix.base.BaseView;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public interface AccountDetailsView extends BaseView {

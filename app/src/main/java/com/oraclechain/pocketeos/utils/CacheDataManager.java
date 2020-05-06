@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.content.Context;
 import android.os.Environment;
@@ -8,7 +8,7 @@ import java.io.File;
 import java.math.BigDecimal;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  * 清除緩存
  */
 

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="?attr/color_bg_main"
     android:fitsSystemWindows="true"
-    tools:context="com.oraclechain.pocketeos.modules.resourcemanager.changememory.ChangeMemoryActivity">
+    tools:context="com.oraclechain.pocketrix.modules.resourcemanager.changememory.ChangeMemoryActivity">
     <include layout="@layout/title_project"/>
 
     <View
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_30"
-            android:text="@string/pocket_eos"
+            android:text="@string/pocket_rix"
             android:textSize="@dimen/dimens_18"/>
 
         <TextView
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_10"
-            android:text="@string/pocket_eos"
+            android:text="@string/pocket_rix"
             android:textSize="@dimen/dimens_13"/>
     </LinearLayout>
 

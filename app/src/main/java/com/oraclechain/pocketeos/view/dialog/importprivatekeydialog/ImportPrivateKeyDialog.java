@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.importprivatekeydialog;
+package com.oraclechain.pocketrix.view.dialog.importprivatekeydialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,11 +11,11 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.view.ScrollText;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.view.ScrollText;
 
 /**
- * Created by pocketEos on 2017/12/5.
+ * Created by pocketrix on 2017/12/5.
  * 导出私钥弹窗
  */
 

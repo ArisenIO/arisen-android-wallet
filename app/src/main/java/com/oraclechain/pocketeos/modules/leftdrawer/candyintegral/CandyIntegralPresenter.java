@@ -1,23 +1,23 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.candyintegral;
+package com.oraclechain.pocketrix.modules.leftdrawer.candyintegral;
 
 import android.content.Context;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.CandyScoreBean;
-import com.oraclechain.pocketeos.bean.CandyUserTaskBean;
-import com.oraclechain.pocketeos.bean.HotEquitiesBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.CandyScoreBean;
+import com.oraclechain.pocketrix.bean.CandyUserTaskBean;
+import com.oraclechain.pocketrix.bean.HotEquitiesBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class CandyIntegralPresenter extends BasePresent<CandyIntegralView> {

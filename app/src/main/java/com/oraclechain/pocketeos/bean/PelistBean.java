@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/1/24.
+ * Created by pocketrix on 2018/1/24.
  */
 
 public class PelistBean {

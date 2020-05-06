@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/1/23.
+ * Created by pocketrix on 2018/1/23.
  */
 
 public class UpdataPhotoBean {

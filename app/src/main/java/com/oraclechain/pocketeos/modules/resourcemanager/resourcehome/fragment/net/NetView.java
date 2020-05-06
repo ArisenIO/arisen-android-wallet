@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.fragment.net;
+package com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.fragment.net;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.BlockChainAccountInfoBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.BlockChainAccountInfoBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface NetView extends BaseView {
 

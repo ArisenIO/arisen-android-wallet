@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.view.dialog.importprivatekeydialog;
+package com.oraclechain.pocketrix.view.dialog.importprivatekeydialog;
 
 /**
- * Created by pocketEos on 2017/12/5.
+ * Created by pocketrix on 2017/12/5.
  */
 
 public interface ImportrivateKeyCallBack {

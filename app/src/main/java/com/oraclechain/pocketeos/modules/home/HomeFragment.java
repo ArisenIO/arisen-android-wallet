@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.home;
+package com.oraclechain.pocketrix.modules.home;
 
 
 import android.Manifest;
@@ -22,37 +22,37 @@ import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.modules.account.accountdetails.AccountDetailsActivity;
-import com.oraclechain.pocketeos.modules.coindetails.CoinDetailsActivity;
-import com.oraclechain.pocketeos.modules.leftdrawer.usercenter.UserCenterActivity;
-import com.oraclechain.pocketeos.modules.nodevote.NodeVoteActivity;
-import com.oraclechain.pocketeos.modules.scancode.ScanCodeActivity;
-import com.oraclechain.pocketeos.modules.switchusernumber.SwitchUserNumberActivity;
-import com.oraclechain.pocketeos.modules.transaction.makecollections.MakeCollectionsActivity;
-import com.oraclechain.pocketeos.modules.transaction.redpacket.makeredpacket.RedPacketActivity;
-import com.oraclechain.pocketeos.modules.transaction.transferaccounts.TransferAccountsActivity;
-import com.oraclechain.pocketeos.modules.unstake.UnStakeActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.DensityUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.AppDefeatHeadView;
-import com.oraclechain.pocketeos.view.MyScrollview;
-import com.oraclechain.pocketeos.view.RoundImageView;
-import com.oraclechain.pocketeos.view.ScrollText;
-import com.oraclechain.pocketeos.view.dialog.advertisingdialog.AdvertisingCallback;
-import com.oraclechain.pocketeos.view.dialog.advertisingdialog.AdvertisingDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.modules.account.accountdetails.AccountDetailsActivity;
+import com.oraclechain.pocketrix.modules.coindetails.CoinDetailsActivity;
+import com.oraclechain.pocketrix.modules.leftdrawer.usercenter.UserCenterActivity;
+import com.oraclechain.pocketrix.modules.nodevote.NodeVoteActivity;
+import com.oraclechain.pocketrix.modules.scancode.ScanCodeActivity;
+import com.oraclechain.pocketrix.modules.switchusernumber.SwitchUserNumberActivity;
+import com.oraclechain.pocketrix.modules.transaction.makecollections.MakeCollectionsActivity;
+import com.oraclechain.pocketrix.modules.transaction.redpacket.makeredpacket.RedPacketActivity;
+import com.oraclechain.pocketrix.modules.transaction.transferaccounts.TransferAccountsActivity;
+import com.oraclechain.pocketrix.modules.unstake.UnStakeActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.DensityUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.AppDefeatHeadView;
+import com.oraclechain.pocketrix.view.MyScrollview;
+import com.oraclechain.pocketrix.view.RoundImageView;
+import com.oraclechain.pocketrix.view.ScrollText;
+import com.oraclechain.pocketrix.view.dialog.advertisingdialog.AdvertisingCallback;
+import com.oraclechain.pocketrix.view.dialog.advertisingdialog.AdvertisingDialog;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import me.ljp.permission.PermissionItem;
 
-import static com.oraclechain.pocketeos.R.id.spring;
+import static com.oraclechain.pocketrix.R.id.spring;
 
 /**
  * 首页
@@ -184,9 +184,9 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
                 mAccountWithCoinBeen.add(accountWithCoinBean);
             }
             mCoinAdapter.notifyDataSetChanged();
-            BigDecimal eosToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(0).getCoinForCny()));
+            BigDecimal rixToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(0).getCoinForCny()));
             BigDecimal octToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(1).getCoinForCny()));
-            openMoney = "≈" + StringUtils.addComma((BigDecimalUtil.add(eosToCny, octToCny) + ""));
+            openMoney = "≈" + StringUtils.addComma((BigDecimalUtil.add(rixToCny, octToCny) + ""));
             isOpen = Utils.getSpUtils().getBoolean("isOpenMoney");
             if (!isOpen) {
                 mUserAllProperty.setText("******");
@@ -293,18 +293,18 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
                 break;
             case R.id.transfer_accounts:
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 bundle.putString("from", "home");
                 ActivityUtils.next(getActivity(), TransferAccountsActivity.class, bundle, 100);
                 break;
             case R.id.make_collections:
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 ActivityUtils.next(getActivity(), MakeCollectionsActivity.class, bundle);
                 break;
             case R.id.red_packet:
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 ActivityUtils.next(getActivity(), RedPacketActivity.class, bundle);
                 break;
         }
@@ -434,7 +434,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
             @Override
             public void onClick(View v) {
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 bundle.putString("from", "home");
                 ActivityUtils.next(getActivity(), TransferAccountsActivity.class, bundle);
             }
@@ -443,7 +443,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
             @Override
             public void onClick(View v) {
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 ActivityUtils.next(getActivity(), MakeCollectionsActivity.class, bundle);
             }
         });
@@ -451,7 +451,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
             @Override
             public void onClick(View v) {
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "rix");
                 ActivityUtils.next(getActivity(), RedPacketActivity.class);
             }
         });

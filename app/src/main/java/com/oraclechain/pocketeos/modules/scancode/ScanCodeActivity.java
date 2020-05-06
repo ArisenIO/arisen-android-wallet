@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.scancode;
+package com.oraclechain.pocketrix.modules.scancode;
 
 import android.Manifest;
 import android.content.Intent;
@@ -15,24 +15,24 @@ import com.google.zxing.client.result.ParsedResult;
 import com.mylhyl.zxing.scanner.OnScannerCompletionListener;
 import com.mylhyl.zxing.scanner.ScannerView;
 import com.mylhyl.zxing.scanner.decode.QRDecode;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.QrCodeAccountBean;
-import com.oraclechain.pocketeos.bean.QrCodeAccountPrivateKeyBean;
-import com.oraclechain.pocketeos.bean.QrCodeMakeCollectionBean;
-import com.oraclechain.pocketeos.bean.QrCodeWalletBean;
-import com.oraclechain.pocketeos.modules.account.importaccount.ImportAccountActivity;
-import com.oraclechain.pocketeos.modules.friendslist.friendsdetails.FriendsDetailsActivity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.modules.transaction.transferaccounts.TransferAccountsActivity;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.QrCodeAccountBean;
+import com.oraclechain.pocketrix.bean.QrCodeAccountPrivateKeyBean;
+import com.oraclechain.pocketrix.bean.QrCodeMakeCollectionBean;
+import com.oraclechain.pocketrix.bean.QrCodeWalletBean;
+import com.oraclechain.pocketrix.modules.account.importaccount.ImportAccountActivity;
+import com.oraclechain.pocketrix.modules.friendslist.friendsdetails.FriendsDetailsActivity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.modules.transaction.transferaccounts.TransferAccountsActivity;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -201,7 +201,7 @@ public class ScanCodeActivity extends BaseAcitvity<NormalView, NormalPresenter> 
             } else {
                 QrCodeMakeCollectionBean qrCodeMakeCollectionBean = (QrCodeMakeCollectionBean) JsonUtil.parseStringToBean(data.toString(), QrCodeMakeCollectionBean.class);
                 bundle.putString("account", MyApplication.getInstance().getUserBean().getWallet_main_account());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "RIX");
                 bundle.putParcelable("info", qrCodeMakeCollectionBean);
                 bundle.putString("from", "qrcode");
                 ActivityUtils.next(ScanCodeActivity.this, TransferAccountsActivity.class, bundle, true);

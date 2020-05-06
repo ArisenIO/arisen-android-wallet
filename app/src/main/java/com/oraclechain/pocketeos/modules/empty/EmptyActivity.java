@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.modules.empty;
+package com.oraclechain.pocketrix.modules.empty;
 
 import android.os.Bundle;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
 
 public class EmptyActivity extends BaseAcitvity<NormalView, NormalPresenter> implements NormalView {
 

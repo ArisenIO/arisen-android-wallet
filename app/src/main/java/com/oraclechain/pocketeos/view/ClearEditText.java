@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view;
+package com.oraclechain.pocketrix.view;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -12,7 +12,7 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
  * 待删除文本输入框

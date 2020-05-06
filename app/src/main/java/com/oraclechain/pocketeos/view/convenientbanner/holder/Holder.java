@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.view.convenientbanner.holder;
+package com.oraclechain.pocketrix.view.convenientbanner.holder;
 
 /**
- * Created by pocketEos on 2017/12/7.
+ * Created by pocketrix on 2017/12/7.
  * @param <T> 任何你指定的对象
  */
 

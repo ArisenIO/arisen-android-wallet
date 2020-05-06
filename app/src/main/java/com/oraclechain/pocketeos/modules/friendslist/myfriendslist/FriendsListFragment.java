@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.friendslist.myfriendslist;
+package com.oraclechain.pocketrix.modules.friendslist.myfriendslist;
 
 
 import android.os.Bundle;
@@ -8,13 +8,13 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.User;
-import com.oraclechain.pocketeos.modules.seach.SeachActivity;
-import com.oraclechain.pocketeos.view.contact.SideBarView;
-import com.oraclechain.pocketeos.view.contact.UserAdapter;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.User;
+import com.oraclechain.pocketrix.modules.seach.SeachActivity;
+import com.oraclechain.pocketrix.view.contact.SideBarView;
+import com.oraclechain.pocketrix.view.contact.UserAdapter;
 
 import java.util.ArrayList;
 

@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-package com.oraclechain.pocketeos.blockchain.cypto.ec;
+package com.oraclechain.pocketrix.blockchain.cypto.ec;
 
 
-import com.oraclechain.pocketeos.blockchain.cypto.digest.Sha256;
-import com.oraclechain.pocketeos.blockchain.cypto.util.Base58;
+import com.oraclechain.pocketrix.blockchain.cypto.digest.Sha256;
+import com.oraclechain.pocketrix.blockchain.cypto.util.Base58;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -36,16 +36,16 @@ import java.security.SecureRandom;
  * Created by swapnibble on 2017-09-25.
  *
  * 참고:
- * https://github.com/EOSIO/eosjs-ecc
- * https://github.com/EOSIO/eosjs-ecc/blob/master/src/ecdsa.js
+ * https://github.com/ARISEN/rixjs-ecc
+ * https://github.com/ARISEN/rixjs-ecc/blob/master/src/ecdsa.js
  */
 
-public class EosPrivateKey {
+public class rixPrivateKey {
 
     private static final String PREFIX = "PVT";
 
     private final BigInteger mPrivateKey;
-    private final EosPublicKey mPublicKey;
+    private final rixPublicKey mPublicKey;
 
     private final CurveParam mCurveParam;
 
@@ -59,32 +59,32 @@ public class EosPrivateKey {
         return mSecRandom;
     }
 
-    public EosPrivateKey(){
+    public rixPrivateKey(){
         this( CurveParam.SECP256_K1);
     }
 
-    public EosPrivateKey( int curveParamType){
+    public rixPrivateKey( int curveParamType){
         mCurveParam = EcTools.getCurveParam(curveParamType);
 
         mPrivateKey = getOrCreatePrivKeyBigInteger( null );
-        mPublicKey = new EosPublicKey(findPubKey( mPrivateKey ), mCurveParam);
+        mPublicKey = new rixPublicKey(findPubKey( mPrivateKey ), mCurveParam);
     }
 
-    public EosPrivateKey( String base58Str ) {
-        String[] split = EosEcUtil.safeSplitEosCryptoString( base58Str );
+    public rixPrivateKey( String base58Str ) {
+        String[] split = rixEcUtil.safeSplitrixCryptoString( base58Str );
         byte[] keyBytes;
 
         if ( split.length == 1 ){
             mCurveParam = EcTools.getCurveParam( CurveParam.SECP256_K1);
-            keyBytes = EosEcUtil.getBytesIfMatchedSha256( base58Str, null);
+            keyBytes = rixEcUtil.getBytesIfMatchedSha256( base58Str, null);
         }
         else {
             if ( split.length < 3 ) {
                 throw new IllegalArgumentException("Invalid private key format: " + base58Str);
             }
 
-            mCurveParam = EosEcUtil.getCurveParamFrom( split[1]);
-            keyBytes = EosEcUtil.getBytesIfMatchedRipemd160( split[2], split[1], null);
+            mCurveParam = rixEcUtil.getCurveParamFrom( split[1]);
+            keyBytes = rixEcUtil.getBytesIfMatchedRipemd160( split[2], split[1], null);
         }
 
 
@@ -93,7 +93,7 @@ public class EosPrivateKey {
         }
 
         mPrivateKey = getOrCreatePrivKeyBigInteger( keyBytes );
-        mPublicKey = new EosPublicKey(findPubKey( mPrivateKey ), mCurveParam);
+        mPublicKey = new rixPublicKey(findPubKey( mPrivateKey ), mCurveParam);
     }
 
 
@@ -111,7 +111,7 @@ public class EosPrivateKey {
         return Q.getEncoded();
     }
 
-    public EosPublicKey getPublicKey() {
+    public rixPublicKey getPublicKey() {
         return mPublicKey;
     }
 
@@ -143,7 +143,7 @@ public class EosPrivateKey {
             return toWif();
         }
 
-        return EosEcUtil.encodeEosCrypto( PREFIX, mCurveParam , getBytes());
+        return rixEcUtil.encoderixCrypto( PREFIX, mCurveParam , getBytes());
     }
 
     public BigInteger getAsBigInteger() {

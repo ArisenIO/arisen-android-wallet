@@ -1,18 +1,18 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.systemsetting;
+package com.oraclechain.pocketrix.modules.leftdrawer.systemsetting;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.SystemInfoBean;
-import com.oraclechain.pocketeos.modules.leftdrawer.suggestionfeedback.SuggestionFeedbackActivity;
-import com.oraclechain.pocketeos.utils.CacheDataManager;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.SystemInfoBean;
+import com.oraclechain.pocketrix.modules.leftdrawer.suggestionfeedback.SuggestionFeedbackActivity;
+import com.oraclechain.pocketrix.utils.CacheDataManager;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.Utils;
 
 import java.io.File;
 
@@ -62,13 +62,13 @@ public class SystemSettingActivity extends BaseAcitvity<SystemSettingView, Syste
                 break;
             case R.id.system_settings_one:
 //                presenter.getSystemInfo("1");
-                bundle.putString("details", FilesUtils.readAssetsTxt(this, "policy_pocketeos"));
+                bundle.putString("details", FilesUtils.readAssetsTxt(this, "policy_pocketrix"));
                 bundle.putString("title", getString(R.string.setting_one));
                 ActivityUtils.next(SystemSettingActivity.this, RichTextActivity.class, bundle);
                 break;
             case R.id.system_settings_two:
 //                presenter.getSystemInfo("2");
-                bundle.putString("details", FilesUtils.readAssetsTxt(this, "about_pocketeos"));
+                bundle.putString("details", FilesUtils.readAssetsTxt(this, "about_pocketrix"));
                 bundle.putString("title", getString(R.string.setting_two));
                 ActivityUtils.next(SystemSettingActivity.this, RichTextActivity.class, bundle);
                 break;

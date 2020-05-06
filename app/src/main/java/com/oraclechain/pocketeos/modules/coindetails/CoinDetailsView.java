@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.modules.coindetails;
+package com.oraclechain.pocketrix.modules.coindetails;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.SparkLinesBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.SparkLinesBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface CoinDetailsView extends BaseView {
 

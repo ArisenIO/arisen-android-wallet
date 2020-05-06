@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.usercenter.otherlogintype;
+package com.oraclechain.pocketrix.modules.leftdrawer.usercenter.otherlogintype;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,15 +7,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.OtherLoginCallBack;
-import com.oraclechain.pocketeos.modules.otherloginorshare.QQUserInfoBean;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.OtherLoginCallBack;
+import com.oraclechain.pocketrix.modules.otherloginorshare.QQUserInfoBean;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
 import com.tencent.tauth.Tencent;
 
 import butterknife.BindView;

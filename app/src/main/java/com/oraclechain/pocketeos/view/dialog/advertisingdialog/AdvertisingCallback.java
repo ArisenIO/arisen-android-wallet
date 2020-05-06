@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.advertisingdialog;
+package com.oraclechain.pocketrix.view.dialog.advertisingdialog;
 
 
 public interface AdvertisingCallback {

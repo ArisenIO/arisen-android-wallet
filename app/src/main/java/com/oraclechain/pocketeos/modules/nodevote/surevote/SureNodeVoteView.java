@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.nodevote.surevote;
+package com.oraclechain.pocketrix.modules.nodevote.surevote;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.bean.ResultTableRowBean;
-import com.oraclechain.pocketeos.bean.ResultVoteWeightBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.ResultTableRowBean;
+import com.oraclechain.pocketrix.bean.ResultVoteWeightBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface SureNodeVoteView extends BaseView {
 

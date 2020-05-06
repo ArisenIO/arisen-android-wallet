@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.changepassworddialog;
+package com.oraclechain.pocketrix.view.dialog.changepassworddialog;
 
 
 public interface PasswordCallback {

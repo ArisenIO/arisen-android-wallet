@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.transaction.makecollections;
+package com.oraclechain.pocketrix.modules.transaction.makecollections;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,34 +17,34 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.liaoinstan.springview.container.AliFooter;
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.PostChainHistoryBean;
-import com.oraclechain.pocketeos.bean.QrCodeMakeCollectionBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
-import com.oraclechain.pocketeos.utils.AndroidBug5497Workaround;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.RotateUtils;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.dialog.makecollectiondialog.MakeCollectionCallBack;
-import com.oraclechain.pocketeos.view.dialog.makecollectiondialog.MakeCollectionsDialog;
-import com.oraclechain.pocketeos.view.popupwindow.BasePopupWindow;
-import com.oraclechain.pocketeos.view.textwatcher.MakeCollectionMoneyTextWatcher;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.PostChainHistoryBean;
+import com.oraclechain.pocketrix.bean.QrCodeMakeCollectionBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.utils.AndroidBug5497Workaround;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.RotateUtils;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.dialog.makecollectiondialog.MakeCollectionCallBack;
+import com.oraclechain.pocketrix.view.dialog.makecollectiondialog.MakeCollectionsDialog;
+import com.oraclechain.pocketrix.view.popupwindow.BasePopupWindow;
+import com.oraclechain.pocketrix.view.textwatcher.MakeCollectionMoneyTextWatcher;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
@@ -57,7 +57,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 //收款
 public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, MakeCollectionsPresenter> implements MakeCollectionsView {
@@ -124,7 +124,7 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
 
         mAccountInfoBeanList = JsonUtil.parseJsonToArrayList(MyApplication.getInstance().getUserBean().getAccount_info(), AccountInfoBean.class);
         mSwitchNumber.setText(getIntent().getStringExtra("account"));
-        mSwitchProperty.setText(getIntent().getStringExtra("coin"));//默认选择EOS
+        mSwitchProperty.setText(getIntent().getStringExtra("coin"));//默认选择rix
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(MakeCollectionsActivity.this, LinearLayoutManager.VERTICAL, false);
         layoutManager.setSmoothScrollbarEnabled(true);
@@ -156,7 +156,7 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
 
     @Override
     protected void initData() {
-        mCoinList.add("EOS");
+        mCoinList.add("rix");
         mCoinList.add("OCT");
 
         showProgress();
@@ -164,7 +164,7 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
         if (mSwitchProperty.getText().toString().equals("OCT")) {
             presenter.getCoinRateData("oraclechain");
         } else {
-            presenter.getCoinRateData("eos");
+            presenter.getCoinRateData("rix");
         }
 
         mPostChainHistoryBean.setFrom(mSwitchNumber.getText().toString());
@@ -172,13 +172,13 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
         mPostChainHistoryBean.setPage(page);
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
-        PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
-        symbolsBeanEos.setContractName(com.oraclechain.pocketeos.base.Constants.EOSCONTRACT);
+        PostChainHistoryBean.SymbolsBean symbolsBeanrix = new PostChainHistoryBean.SymbolsBean();
+        symbolsBeanrix.setSymbolName("rix");
+        symbolsBeanrix.setContractName(com.oraclechain.pocketrix.base.Constants.rixCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
-        symbolsBeanOCT.setContractName(com.oraclechain.pocketeos.base.Constants.OCTCONTRACT);
-        symbolsBeans.add(symbolsBeanEos);
+        symbolsBeanOCT.setContractName(com.oraclechain.pocketrix.base.Constants.OCTCONTRACT);
+        symbolsBeans.add(symbolsBeanrix);
         symbolsBeans.add(symbolsBeanOCT);
         mPostChainHistoryBean.setSymbols(symbolsBeans);
         presenter.getTransferHistoryData(mPostChainHistoryBean);
@@ -318,8 +318,8 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
 
                             if (mSwitchProperty.getText().toString().equals("OCT")) {
                                 presenter.getCoinRateData("oraclechain");
-                            } else if (mSwitchProperty.getText().toString().equals("EOS")) {
-                                presenter.getCoinRateData("eos");
+                            } else if (mSwitchProperty.getText().toString().equals("rix")) {
+                                presenter.getCoinRateData("rix");
                             }
                             if (isSHow1) {
                                 isSHow1 = false;
@@ -358,9 +358,9 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
                             Bundle params = new Bundle();
                             params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
                             params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, FilesUtils.savePhoto(bitmap, Environment
-                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/makeCollectionCode", String
+                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/makeCollectionCode", String
                                     .valueOf(System.currentTimeMillis())));
-                            params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketEos");
+                            params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketrix");
                             params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_ITEM_HIDE);
                             MyApplication.getInstance().getTencent().shareToQQ(MakeCollectionsActivity.this, params, new BaseUIListener(MakeCollectionsActivity.this, true));
                         }
@@ -371,7 +371,7 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
                             params.putInt(QzonePublish.PUBLISH_TO_QZONE_KEY_TYPE, QzonePublish.PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD);
                             ArrayList<String> imgUrlList = new ArrayList<>();
                             imgUrlList.add(FilesUtils.savePhoto(bitmap, Environment
-                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/makeCollectionCode", String
+                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/makeCollectionCode", String
                                     .valueOf(System.currentTimeMillis())));// 图片地址
                             params.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL,
                                     imgUrlList);// 图片地址ArrayList

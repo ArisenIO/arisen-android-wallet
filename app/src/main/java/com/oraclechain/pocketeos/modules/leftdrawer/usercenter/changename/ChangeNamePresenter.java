@@ -1,19 +1,19 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.usercenter.changename;
+package com.oraclechain.pocketrix.modules.leftdrawer.usercenter.changename;
 
 import android.content.Context;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public class ChangeNamePresenter extends BasePresent<ChangeNameView> {

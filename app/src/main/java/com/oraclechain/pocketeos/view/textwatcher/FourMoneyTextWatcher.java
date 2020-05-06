@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.textwatcher;
+package com.oraclechain.pocketrix.view.textwatcher;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 /**
- * Created by pocketEos on 2018/2/27.
+ * Created by pocketrix on 2018/2/27.
  */
 
 public class FourMoneyTextWatcher implements TextWatcher {

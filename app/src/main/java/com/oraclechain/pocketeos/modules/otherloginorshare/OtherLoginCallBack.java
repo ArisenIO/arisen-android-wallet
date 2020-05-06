@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.modules.otherloginorshare;
+package com.oraclechain.pocketrix.modules.otherloginorshare;
 
 /**
- * Created by pocketEos on 2018/3/15.
+ * Created by pocketrix on 2018/3/15.
  */
 
 public interface OtherLoginCallBack {

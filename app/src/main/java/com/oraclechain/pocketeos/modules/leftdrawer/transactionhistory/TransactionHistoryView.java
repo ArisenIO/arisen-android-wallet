@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.transactionhistory;
+package com.oraclechain.pocketrix.modules.leftdrawer.transactionhistory;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface TransactionHistoryView extends BaseView {
 

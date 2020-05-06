@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.confimdialog;
+package com.oraclechain.pocketrix.view.dialog.confimdialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 
 /**

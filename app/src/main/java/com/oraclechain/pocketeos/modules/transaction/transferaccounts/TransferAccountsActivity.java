@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.transaction.transferaccounts;
+package com.oraclechain.pocketrix.modules.transaction.transferaccounts;
 
 import android.Manifest;
 import android.content.Intent;
@@ -17,39 +17,39 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.liaoinstan.springview.container.AliFooter;
 import com.liaoinstan.springview.widget.SpringView;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.MultiItemTypeAdapter;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.PostChainHistoryBean;
-import com.oraclechain.pocketeos.bean.QrCodeMakeCollectionBean;
-import com.oraclechain.pocketeos.bean.TransferEosMessageBean;
-import com.oraclechain.pocketeos.bean.TransferHistoryBean;
-import com.oraclechain.pocketeos.blockchain.EosDataManger;
-import com.oraclechain.pocketeos.modules.scancode.ScanCodeActivity;
-import com.oraclechain.pocketeos.modules.transaction.transferaccounts.switchfriend.SwitchFriendActivity;
-import com.oraclechain.pocketeos.utils.AndroidBug5497Workaround;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.RotateUtils;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.RecycleViewDivider;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
-import com.oraclechain.pocketeos.view.popupwindow.BasePopupWindow;
-import com.oraclechain.pocketeos.view.textwatcher.TransferMoneyTextWatcher;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.MultiItemTypeAdapter;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.PostChainHistoryBean;
+import com.oraclechain.pocketrix.bean.QrCodeMakeCollectionBean;
+import com.oraclechain.pocketrix.bean.TransferrixMessageBean;
+import com.oraclechain.pocketrix.bean.TransferHistoryBean;
+import com.oraclechain.pocketrix.blockchain.rixDataManger;
+import com.oraclechain.pocketrix.modules.scancode.ScanCodeActivity;
+import com.oraclechain.pocketrix.modules.transaction.transferaccounts.switchfriend.SwitchFriendActivity;
+import com.oraclechain.pocketrix.utils.AndroidBug5497Workaround;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.RotateUtils;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.RecycleViewDivider;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.view.popupwindow.BasePopupWindow;
+import com.oraclechain.pocketrix.view.textwatcher.TransferMoneyTextWatcher;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import me.ljp.permission.PermissionItem;
 
-import static com.oraclechain.pocketeos.utils.Utils.getContext;
+import static com.oraclechain.pocketrix.utils.Utils.getContext;
 
 //资产转账页面
 public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView, TransferAccountsPresenter> implements TransferAccountsView {
@@ -114,7 +114,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
     private PostChainHistoryBean mPostChainHistoryBean = new PostChainHistoryBean();
 
 
-    private AccountWithCoinBean eos, oct;//选择账号之后重新获取最新数据信息
+    private AccountWithCoinBean rix, oct;//选择账号之后重新获取最新数据信息
     private BigDecimal coinRate;//资产汇率
     private String userPassword = null;
 
@@ -186,7 +186,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
 
     @Override
     protected void initData() {
-        mCoinList.add("EOS");
+        mCoinList.add("rix");
         mCoinList.add("OCT");
         showProgress();
         mAccountInfoBeanList = JsonUtil.parseJsonToArrayList(MyApplication.getInstance().getUserBean().getAccount_info(), AccountInfoBean.class);
@@ -196,7 +196,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
         if (mSwitchProperty.getText().toString().equals("OCT")) {
             presenter.getCoinRateData("oraclechain");
         } else {
-            presenter.getCoinRateData("eos");
+            presenter.getCoinRateData("rix");
         }
 
 
@@ -205,13 +205,13 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
         mPostChainHistoryBean.setPage(page);
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
-        PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
-        symbolsBeanEos.setContractName(com.oraclechain.pocketeos.base.Constants.EOSCONTRACT);
+        PostChainHistoryBean.SymbolsBean symbolsBeanrix = new PostChainHistoryBean.SymbolsBean();
+        symbolsBeanrix.setSymbolName("rix");
+        symbolsBeanrix.setContractName(com.oraclechain.pocketrix.base.Constants.rixCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
-        symbolsBeanOCT.setContractName(com.oraclechain.pocketeos.base.Constants.OCTCONTRACT);
-        symbolsBeans.add(symbolsBeanEos);
+        symbolsBeanOCT.setContractName(com.oraclechain.pocketrix.base.Constants.OCTCONTRACT);
+        symbolsBeans.add(symbolsBeanrix);
         symbolsBeans.add(symbolsBeanOCT);
         mPostChainHistoryBean.setSymbols(symbolsBeans);
         presenter.getTransferHistoryData(mPostChainHistoryBean);
@@ -255,18 +255,18 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
             mCanUseProperty.setText(StringUtils.addComma(accountDetailsBean.getOct_balance()) + " OCT");
             mRmbProperty.setText("≈" + StringUtils.addComma(accountDetailsBean.getOct_balance_cny()) + " CNY");
         } else {
-            mCanUseProperty.setText(StringUtils.addComma(accountDetailsBean.getEos_balance()) + " EOS");
-            mRmbProperty.setText("≈" + StringUtils.addComma(accountDetailsBean.getEos_balance_cny()) + " CNY");
+            mCanUseProperty.setText(StringUtils.addComma(accountDetailsBean.getrix_balance()) + " rix");
+            mRmbProperty.setText("≈" + StringUtils.addComma(accountDetailsBean.getrix_balance_cny()) + " CNY");
         }
-        eos = new AccountWithCoinBean();
-        eos.setCoinName("EOS");
-        eos.setCoinForCny(StringUtils.addComma(accountDetailsBean.getEos_balance_cny()) + " CNY");
-        eos.setCoinNumber(StringUtils.addComma(accountDetailsBean.getEos_balance()) + " EOS");
-        eos.setCoinImg(accountDetailsBean.getAccount_icon());
-        if (accountDetailsBean.getEos_price_change_in_24h().contains("-")) {
-            eos.setCoinUpsAndDowns(accountDetailsBean.getEos_price_change_in_24h() + "%");
+        rix = new AccountWithCoinBean();
+        rix.setCoinName("rix");
+        rix.setCoinForCny(StringUtils.addComma(accountDetailsBean.getrix_balance_cny()) + " CNY");
+        rix.setCoinNumber(StringUtils.addComma(accountDetailsBean.getrix_balance()) + " rix");
+        rix.setCoinImg(accountDetailsBean.getAccount_icon());
+        if (accountDetailsBean.getrix_price_change_in_24h().contains("-")) {
+            rix.setCoinUpsAndDowns(accountDetailsBean.getrix_price_change_in_24h() + "%");
         } else {
-            eos.setCoinUpsAndDowns("+" + accountDetailsBean.getEos_price_change_in_24h() + "%");
+            rix.setCoinUpsAndDowns("+" + accountDetailsBean.getrix_price_change_in_24h() + "%");
         }
 
         oct = new AccountWithCoinBean();
@@ -401,10 +401,10 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
                                 mCanUseProperty.setText(oct.getCoinNumber());
                                 mRmbProperty.setText("≈" + oct.getCoinForCny());
                                 presenter.getCoinRateData("oraclechain");
-                            } else if (mSwitchProperty.getText().toString().equals("EOS")) {
-                                mCanUseProperty.setText(eos.getCoinNumber());
-                                mRmbProperty.setText("≈" + eos.getCoinForCny());
-                                presenter.getCoinRateData("eos");
+                            } else if (mSwitchProperty.getText().toString().equals("rix")) {
+                                mCanUseProperty.setText(rix.getCoinNumber());
+                                mRmbProperty.setText("≈" + rix.getCoinForCny());
+                                presenter.getCoinRateData("rix");
                             }
                             isSHow1 = !isSHow1;
                             RotateUtils.rotateArrow(mLookProperty, isSHow1);
@@ -430,17 +430,17 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
                             if (MyApplication.getInstance().getUserBean().getWallet_shapwd().equals(PasswordToKeyUtils.shaCheck(password))) {
                                 userPassword = password;
                                 showProgress();
-                                if (mSwitchProperty.getText().toString().equals("EOS")) {
-                                    new EosDataManger(TransferAccountsActivity.this, userPassword).setCoinRate(coinRate).pushAction(
-                                            new Gson().toJson(new TransferEosMessageBean(mLeaveMessage.getText().toString().trim()
+                                if (mSwitchProperty.getText().toString().equals("rix")) {
+                                    new rixDataManger(TransferAccountsActivity.this, userPassword).setCoinRate(coinRate).pushAction(
+                                            new Gson().toJson(new TransferrixMessageBean(mLeaveMessage.getText().toString().trim()
                                                     , mPropertyPerson.getText().toString().trim(),
                                                     StringUtils.addZero(mTakePropertyNumber.getText().toString().trim()) + " " + mSwitchProperty.getText().toString().trim(),
                                                     mSwitchNumber.getText().toString().trim())),
                                             mSwitchNumber.getText().toString().trim());
 
                                 } else {
-                                    new EosDataManger(TransferAccountsActivity.this, userPassword).setCoinRate(coinRate).pushAction(
-                                            new Gson().toJson(new TransferEosMessageBean(mLeaveMessage.getText().toString().trim()
+                                    new rixDataManger(TransferAccountsActivity.this, userPassword).setCoinRate(coinRate).pushAction(
+                                            new Gson().toJson(new TransferrixMessageBean(mLeaveMessage.getText().toString().trim()
                                                     , mPropertyPerson.getText().toString().trim(),
                                                     StringUtils.addZero(mTakePropertyNumber.getText().toString().trim()) + " " + mSwitchProperty.getText().toString().trim(),
                                                     mSwitchNumber.getText().toString().trim())),
@@ -481,10 +481,10 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
             mTakePropertyNumber.setText(data.getStringExtra("money"));
             mSwitchProperty.setText(data.getStringExtra("coin"));
 
-            if (data.getStringExtra("coin").equals("EOS")) {
-                mCanUseProperty.setText(eos.getCoinNumber());
-                mRmbProperty.setText("≈" + eos.getCoinForCny());
-                presenter.getCoinRateData("eos");
+            if (data.getStringExtra("coin").equals("rix")) {
+                mCanUseProperty.setText(rix.getCoinNumber());
+                mRmbProperty.setText("≈" + rix.getCoinForCny());
+                presenter.getCoinRateData("rix");
             } else {
                 mCanUseProperty.setText(oct.getCoinNumber());
                 mRmbProperty.setText("≈" + oct.getCoinForCny());

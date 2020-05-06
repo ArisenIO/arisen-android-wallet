@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.resourcemanager.changenet;
+package com.oraclechain.pocketrix.modules.resourcemanager.changenet;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,19 +8,19 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.StakeBean;
-import com.oraclechain.pocketeos.bean.UnstakeBean;
-import com.oraclechain.pocketeos.blockchain.PushDatamanger;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.StringUtils;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.StakeBean;
+import com.oraclechain.pocketrix.bean.UnstakeBean;
+import com.oraclechain.pocketrix.blockchain.PushDatamanger;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.StringUtils;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.math.BigDecimal;
 
@@ -50,7 +50,7 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
 
 
     String tag, amount = null;
-    BigDecimal canStakeAmount, userEosBanlance, total;
+    BigDecimal canStakeAmount, userrixBanlance, total;
     String lowAmount = "1";
     String price;
 
@@ -94,7 +94,7 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (progress == 0) {
-                    mNumber.setText(lowAmount + " EOS");
+                    mNumber.setText(lowAmount + " RIX");
                     if (tag.equals("1")) {
                         mEstimate.setText(getString(R.string.estimate) + BigDecimalUtil.divide(new BigDecimal(lowAmount), new BigDecimal(price), 4) + " ms");
                     } else {
@@ -102,7 +102,7 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
                     }
                 } else {
                     BigDecimal bigDecimal = BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(progress), new BigDecimal(100), 2), total, 4);
-                    mNumber.setText(BigDecimalUtil.add(bigDecimal, new BigDecimal(lowAmount)) + " EOS");
+                    mNumber.setText(BigDecimalUtil.add(bigDecimal, new BigDecimal(lowAmount)) + "RIX");
                     if (tag.equals("1")) {
                         mEstimate.setText(getString(R.string.estimate)+ BigDecimalUtil.divide(BigDecimalUtil.add(bigDecimal, new BigDecimal(lowAmount)), new BigDecimal(price), 4) + " ms");
                     } else {
@@ -136,11 +136,11 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
             stakeBean.setFrom(getIntent().getStringExtra("account"));
             stakeBean.setReceiver(getIntent().getStringExtra("account"));
             if (tag.equals("1")) {
-                stakeBean.setStake_cpu_quantity(StringUtils.addZero(BigDecimalUtil.minus(finalAmount, new BigDecimal(amount), 4).toString()) + " EOS");
-                stakeBean.setStake_net_quantity("0.0000 EOS");
+                stakeBean.setStake_cpu_quantity(StringUtils.addZero(BigDecimalUtil.minus(finalAmount, new BigDecimal(amount), 4).toString()) + " RIX");
+                stakeBean.setStake_net_quantity("0.0000 RIX");
             } else {
-                stakeBean.setStake_net_quantity(StringUtils.addZero(BigDecimalUtil.minus(finalAmount, new BigDecimal(amount), 4).toString()) + " EOS");
-                stakeBean.setStake_cpu_quantity("0.0000 EOS");
+                stakeBean.setStake_net_quantity(StringUtils.addZero(BigDecimalUtil.minus(finalAmount, new BigDecimal(amount), 4).toString()) + " RIX");
+                stakeBean.setStake_cpu_quantity("0.0000 RIX");
             }
             PasswordDialog mPasswordDialog = new PasswordDialog(this, new PasswordCallback() {
                 @Override
@@ -157,7 +157,7 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
                                     toast(getString(R.string.add_stake_fail));
                                 }
                             }
-                        }).pushAction("eosio", "delegatebw",
+                        }).pushAction("arisen", "delegatebw",
                                 new Gson().toJson(stakeBean), getIntent().getStringExtra("account"));
                     } else {
                         toast(getResources().getString(R.string.password_error));
@@ -176,11 +176,11 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
             unstakeBean.setFrom(getIntent().getStringExtra("account"));
             unstakeBean.setReceiver(getIntent().getStringExtra("account"));
             if (tag.equals("1")) {
-                unstakeBean.setUnstake_cpu_quantity(StringUtils.addZero(BigDecimalUtil.minus(new BigDecimal(amount), finalAmount, 4).toString()) + " EOS");
-                unstakeBean.setUnstake_net_quantity("0.0000 EOS");
+                unstakeBean.setUnstake_cpu_quantity(StringUtils.addZero(BigDecimalUtil.minus(new BigDecimal(amount), finalAmount, 4).toString()) + " RIX");
+                unstakeBean.setUnstake_net_quantity("0.0000 RIX");
             } else {
-                unstakeBean.setUnstake_net_quantity(StringUtils.addZero(BigDecimalUtil.minus(new BigDecimal(amount), finalAmount, 4).toString()) + " EOS");
-                unstakeBean.setUnstake_cpu_quantity("0.0000 EOS");
+                unstakeBean.setUnstake_net_quantity(StringUtils.addZero(BigDecimalUtil.minus(new BigDecimal(amount), finalAmount, 4).toString()) + " RIX");
+                unstakeBean.setUnstake_cpu_quantity("0.0000 RIX");
             }
             PasswordDialog mPasswordDialog = new PasswordDialog(this, new PasswordCallback() {
                 @Override
@@ -197,7 +197,7 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
                                     toast(getString(R.string.unstake_fail));
                                 }
                             }
-                        }).pushAction("eosio", "undelegatebw",
+                        }).pushAction("arisen", "undelegatebw",
                                 new Gson().toJson(unstakeBean), getIntent().getStringExtra("account"));
                     } else {
                         toast(getResources().getString(R.string.password_error));
@@ -221,12 +221,12 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
     @Override
     public void getAccountDetailsDataHttp(AccountDetailsBean accountDetailsBean) {
         hideProgress();
-        userEosBanlance = new BigDecimal(accountDetailsBean.getEos_balance());
-        total = BigDecimalUtil.add(userEosBanlance, canStakeAmount);
+        userrixBanlance = new BigDecimal(accountDetailsBean.getrix_balance());
+        total = BigDecimalUtil.add(userrixBanlance, canStakeAmount);
         initProgress = BigDecimalUtil.multiply(BigDecimalUtil.divide(canStakeAmount, total, 4), new BigDecimal(100), 0).intValue();
         mSeekbar.setProgress(initProgress);
 
-        if (BigDecimalUtil.greaterThan(BigDecimalUtil.add(userEosBanlance, new BigDecimal(amount), 4), new BigDecimal(lowAmount))) {
+        if (BigDecimalUtil.greaterThan(BigDecimalUtil.add(userrixBanlance, new BigDecimal(amount), 4), new BigDecimal(lowAmount))) {
             mSeekbar.setEnabled(true);
             mSeekbar.setFocusable(true);
             mSeekbar.setFocusableInTouchMode(true);
@@ -241,7 +241,7 @@ public class ChangeNetActivity extends BaseAcitvity<ChangeNetView, ChangeNetPres
             mSure.setClickable(false);
             mSure.setBackgroundColor(getResources().getColor(R.color.gray_color));
         }
-        mNumber.setText(new BigDecimal(amount) + " EOS");
+        mNumber.setText(new BigDecimal(amount) + "RIX");
         if (tag.equals("1")) {
             mEstimate.setText(getString(R.string.estimate) + BigDecimalUtil.divide(new BigDecimal(amount), new BigDecimal(price), 4) + " ms");
         } else {

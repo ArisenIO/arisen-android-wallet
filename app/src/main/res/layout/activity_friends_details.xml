@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/pocket_eos"
+                android:text="@string/pocket_rix"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_19"
                 android:textStyle="bold"/>
@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.oraclechain.pocketeos.view.MyScrollview
+            <com.oraclechain.pocketrix.view.MyScrollview
                 android:id="@+id/scrollView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -116,7 +116,7 @@
                         android:layout_height="@dimen/dimens_204"
                         android:background="@mipmap/friend_top">
 
-                        <com.oraclechain.pocketeos.view.RoundImageView
+                        <com.oraclechain.pocketrix.view.RoundImageView
                             android:id="@+id/friends_img"
                             android:layout_width="@dimen/dimens_46"
                             android:layout_height="@dimen/dimens_46"
@@ -311,7 +311,7 @@
                             android:textSize="@dimen/dimens_10"/>
                     </RelativeLayout>
                 </LinearLayout>
-            </com.oraclechain.pocketeos.view.MyScrollview>
+            </com.oraclechain.pocketrix.view.MyScrollview>
         </com.liaoinstan.springview.widget.SpringView>
     </LinearLayout>
 </FrameLayout>

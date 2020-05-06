@@ -1,14 +1,14 @@
-package com.oraclechain.pocketeos.modules.otherloginorshare;
+package com.oraclechain.pocketrix.modules.otherloginorshare;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.Toast;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.base.Constants;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.ShowDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.base.Constants;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.ShowDialog;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXImageObject;
@@ -25,7 +25,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 /**
- * Created by pocketEos on 2018/3/23.
+ * Created by pocketrix on 2018/3/23.
  */
 
 public class WxShareAndLoginUtils {
@@ -140,8 +140,8 @@ public class WxShareAndLoginUtils {
         //第一版暂为applogo
 //        Bitmap bitmap = getBitmap(imgUrl);
         Bitmap bitmap;
-        if (title.equals(context.getString(R.string.eos_info_detail))) {
-            bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.eos);
+        if (title.equals(context.getString(R.string.rix_info_detail))) {
+            bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.rix);
         } else if (title.equals(context.getString(R.string.oct_info_detail))) {
             bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.oct);
         } else {

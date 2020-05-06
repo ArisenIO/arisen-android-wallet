@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.textwatcher;
+package com.oraclechain.pocketrix.view.textwatcher;
 
 import android.graphics.Color;
 import android.text.Editable;
@@ -7,13 +7,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.StringUtils;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.StringUtils;
 
 import java.math.BigDecimal;
 
 /**
- * Created by pocketEos on 2018/2/3.
+ * Created by pocketrix on 2018/2/3.
  * 监听edittext文本框输入限制小数点后面四位
  * 1.首位输入.的时候,补全为0.
  * <p>

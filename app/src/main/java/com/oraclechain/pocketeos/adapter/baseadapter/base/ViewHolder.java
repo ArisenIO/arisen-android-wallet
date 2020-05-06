@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.adapter.baseadapter.base;
+package com.oraclechain.pocketrix.adapter.baseadapter.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

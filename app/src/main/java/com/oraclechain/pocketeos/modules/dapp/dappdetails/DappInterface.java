@@ -1,23 +1,23 @@
-package com.oraclechain.pocketeos.modules.dapp.dappdetails;
+package com.oraclechain.pocketrix.modules.dapp.dappdetails;
 
 import android.content.Context;
 import android.webkit.JavascriptInterface;
 
 import com.lzy.okgo.utils.OkLogger;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.blockchain.DappDatamanger;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
-import com.oraclechain.pocketeos.view.webview.BaseWebView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.blockchain.DappDatamanger;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.view.webview.BaseWebView;
 
 import static com.lzy.okgo.utils.HttpUtils.runOnUiThread;
 
 /**
- * Created by pocketEos on 2018/4/25.
+ * Created by pocketrix on 2018/4/25.
  */
 public class DappInterface {
 

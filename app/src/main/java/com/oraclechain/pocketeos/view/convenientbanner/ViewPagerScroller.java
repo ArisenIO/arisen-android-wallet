@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.convenientbanner;
+package com.oraclechain.pocketrix.view.convenientbanner;
 
 import android.content.Context;
 import android.view.animation.Interpolator;

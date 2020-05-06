@@ -1,18 +1,18 @@
-package com.oraclechain.pocketeos.adapter.baseadapter;
+package com.oraclechain.pocketrix.adapter.baseadapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ItemViewDelegate;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ItemViewDelegateManager;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ItemViewDelegate;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ItemViewDelegateManager;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
     protected Context mContext;

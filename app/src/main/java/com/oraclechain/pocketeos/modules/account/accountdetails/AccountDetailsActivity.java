@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.account.accountdetails;
+package com.oraclechain.pocketrix.modules.account.accountdetails;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,38 +18,38 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.zxing.client.result.ParsedResultType;
 import com.mylhyl.zxing.scanner.encode.QREncode;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.QrCodeAccountBean;
-import com.oraclechain.pocketeos.bean.QrCodeAccountPrivateKeyBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.otherloginorshare.BaseUIListener;
-import com.oraclechain.pocketeos.modules.otherloginorshare.WxShareAndLoginUtils;
-import com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.activity.ResourceManagerActivity;
-import com.oraclechain.pocketeos.modules.wallet.createwallet.login.LoginActivity;
-import com.oraclechain.pocketeos.utils.DensityUtil;
-import com.oraclechain.pocketeos.utils.EncryptUtil;
-import com.oraclechain.pocketeos.utils.FilesUtils;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.ToastUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.utils.ViewToImageUtils;
-import com.oraclechain.pocketeos.view.CustomSlideToUnlockView;
-import com.oraclechain.pocketeos.view.dialog.confimdialog.Callback;
-import com.oraclechain.pocketeos.view.dialog.confimdialog.ConfirmDialog;
-import com.oraclechain.pocketeos.view.dialog.importprivatekeydialog.ImportPrivateKeyDialog;
-import com.oraclechain.pocketeos.view.dialog.importprivatekeydialog.ImportrivateKeyCallBack;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
-import com.oraclechain.pocketeos.view.dialog.sharedialog.ShareCallBack;
-import com.oraclechain.pocketeos.view.dialog.sharedialog.ShareDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.QrCodeAccountBean;
+import com.oraclechain.pocketrix.bean.QrCodeAccountPrivateKeyBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.otherloginorshare.BaseUIListener;
+import com.oraclechain.pocketrix.modules.otherloginorshare.WxShareAndLoginUtils;
+import com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.activity.ResourceManagerActivity;
+import com.oraclechain.pocketrix.modules.wallet.createwallet.login.LoginActivity;
+import com.oraclechain.pocketrix.utils.DensityUtil;
+import com.oraclechain.pocketrix.utils.EncryptUtil;
+import com.oraclechain.pocketrix.utils.FilesUtils;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.ToastUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.utils.ViewToImageUtils;
+import com.oraclechain.pocketrix.view.CustomSlideToUnlockView;
+import com.oraclechain.pocketrix.view.dialog.confimdialog.Callback;
+import com.oraclechain.pocketrix.view.dialog.confimdialog.ConfirmDialog;
+import com.oraclechain.pocketrix.view.dialog.importprivatekeydialog.ImportPrivateKeyDialog;
+import com.oraclechain.pocketrix.view.dialog.importprivatekeydialog.ImportrivateKeyCallBack;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.view.dialog.sharedialog.ShareCallBack;
+import com.oraclechain.pocketrix.view.dialog.sharedialog.ShareDialog;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
@@ -151,9 +151,9 @@ public class AccountDetailsActivity extends BaseAcitvity<AccountDetailsView, Acc
                             Bundle params = new Bundle();
                             params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
                             params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, FilesUtils.savePhoto(ViewToImageUtils.loadBitmapFromView(mRel), Environment
-                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/accountCode", String
+                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/accountCode", String
                                     .valueOf(System.currentTimeMillis())));
-                            params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketEos");
+                            params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketrix");
                             params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_ITEM_HIDE);
                             MyApplication.getInstance().getTencent().shareToQQ(AccountDetailsActivity.this, params, new BaseUIListener(AccountDetailsActivity.this, true));
                         }
@@ -164,7 +164,7 @@ public class AccountDetailsActivity extends BaseAcitvity<AccountDetailsView, Acc
                             params.putInt(QzonePublish.PUBLISH_TO_QZONE_KEY_TYPE, QzonePublish.PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD);
                             ArrayList<String> imgUrlList = new ArrayList<>();
                             imgUrlList.add(FilesUtils.savePhoto(ViewToImageUtils.loadBitmapFromView(mRel), Environment
-                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketEos/accountCode", String
+                                    .getExternalStorageDirectory().getAbsolutePath() + "/pocketrix/accountCode", String
                                     .valueOf(System.currentTimeMillis())));// 图片地址
                             params.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL,
                                     imgUrlList);// 图片地址ArrayList

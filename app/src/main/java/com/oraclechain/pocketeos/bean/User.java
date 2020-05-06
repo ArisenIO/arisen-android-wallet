@@ -1,8 +1,8 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 
 /**
- * Created by pocketEos on 2017/11/30.
+ * Created by pocketrix on 2017/11/30.
  */
 public class User {
     private String uid;

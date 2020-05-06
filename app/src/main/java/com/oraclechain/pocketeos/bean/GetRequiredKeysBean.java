@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/1/27.
+ * Created by pocketrix on 2018/1/27.
  */
 
 public class GetRequiredKeysBean {
@@ -13,7 +13,7 @@ public class GetRequiredKeysBean {
     /**
      * code : 0
      * message : ok
-     * data : {"required_keys":["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"]}
+     * data : {"required_keys":["RSN6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"]}
      */
 
     private int code;

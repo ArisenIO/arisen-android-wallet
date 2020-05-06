@@ -18,7 +18,7 @@
  * Parts of this code was extracted from the Java cryptography library from
  * www.bouncycastle.org.
  */
-package com.oraclechain.pocketeos.blockchain.cypto.ec;
+package com.oraclechain.pocketrix.blockchain.cypto.ec;
 
 import java.math.BigInteger;
 

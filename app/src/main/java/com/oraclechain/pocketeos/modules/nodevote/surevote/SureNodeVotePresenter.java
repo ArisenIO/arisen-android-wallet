@@ -1,25 +1,25 @@
-package com.oraclechain.pocketeos.modules.nodevote.surevote;
+package com.oraclechain.pocketrix.modules.nodevote.surevote;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.RequestTableRowsBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.bean.ResultTableRowBean;
-import com.oraclechain.pocketeos.bean.ResultVoteWeightBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.RequestTableRowsBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.ResultTableRowBean;
+import com.oraclechain.pocketrix.bean.ResultVoteWeightBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import org.json.JSONObject;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class SureNodeVotePresenter extends BasePresent<SureNodeVoteView> {

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.contact;
+package com.oraclechain.pocketrix.view.contact;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,18 +10,18 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.bean.User;
-import com.oraclechain.pocketeos.modules.friendslist.friendsdetails.FriendsDetailsActivity;
-import com.oraclechain.pocketeos.modules.friendslist.pelist.PelistActivity;
-import com.oraclechain.pocketeos.view.RoundImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.bean.User;
+import com.oraclechain.pocketrix.modules.friendslist.friendsdetails.FriendsDetailsActivity;
+import com.oraclechain.pocketrix.modules.friendslist.pelist.PelistActivity;
+import com.oraclechain.pocketrix.view.RoundImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/11/30.
+ * Created by pocketrix on 2017/11/30.
  */
 public class UserAdapter extends BaseAdapter {
     private Context mContext;

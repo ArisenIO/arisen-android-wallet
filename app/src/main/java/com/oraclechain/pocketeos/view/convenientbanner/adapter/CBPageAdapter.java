@@ -1,17 +1,17 @@
-package com.oraclechain.pocketeos.view.convenientbanner.adapter;
+package com.oraclechain.pocketrix.view.convenientbanner.adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.view.convenientbanner.holder.CBViewHolderCreator;
-import com.oraclechain.pocketeos.view.convenientbanner.holder.Holder;
-import com.oraclechain.pocketeos.view.convenientbanner.view.CBLoopViewPager;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.view.convenientbanner.holder.CBViewHolderCreator;
+import com.oraclechain.pocketrix.view.convenientbanner.holder.Holder;
+import com.oraclechain.pocketrix.view.convenientbanner.view.CBLoopViewPager;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/7.
+ * Created by pocketrix on 2017/12/7.
  */
 public class CBPageAdapter<T> extends PagerAdapter {
     protected List<T> mDatas;

@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/6/12.
+ * Created by pocketrix on 2018/6/12.
  */
 
 public class DelegatebwMessageBean {
@@ -9,8 +9,8 @@ public class DelegatebwMessageBean {
     /**
      * from : aaaaaavotera
      * receiver : aaaaaavotera
-     * stake_net_quantity : 10.0000 SYS
-     * stake_cpu_quantity : 10.0000 SYS
+     * stake_net_quantity : 10.0000 RIX
+     * stake_cpu_quantity : 10.0000 RIX
      * transfer : 0
      */
 

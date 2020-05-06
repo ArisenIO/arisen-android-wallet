@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oraclechain.pocketeos.net.callbck;
+package com.oraclechain.pocketrix.net.callbck;
 
 
 import com.google.gson.stream.JsonReader;
 import com.lzy.okgo.convert.Converter;
-import com.oraclechain.pocketeos.bean.BaseResponseBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.BaseResponseBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -31,7 +31,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketrix on 2018/4/2.
  */
 public class JsonConvert<T> implements Converter<T> {
 

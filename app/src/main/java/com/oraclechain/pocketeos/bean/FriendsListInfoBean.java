@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2017/12/27.
+ * Created by pocketrix on 2017/12/27.
  * 关注列表Bean
  */
 

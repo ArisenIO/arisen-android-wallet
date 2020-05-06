@@ -1,6 +1,6 @@
-package com.oraclechain.pocketeos.blockchain.types;
+package com.oraclechain.pocketrix.blockchain.types;
 
-import com.oraclechain.pocketeos.blockchain.cypto.digest.Sha256;
+import com.oraclechain.pocketrix.blockchain.cypto.digest.Sha256;
 
 /**
  * Created by swapnibble on 2017-09-12.

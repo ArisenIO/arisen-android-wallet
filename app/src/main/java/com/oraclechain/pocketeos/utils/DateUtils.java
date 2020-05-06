@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 public class DateUtils {
 

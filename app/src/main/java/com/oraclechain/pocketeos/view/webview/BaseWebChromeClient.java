@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.webview;
+package com.oraclechain.pocketrix.view.webview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,7 +11,7 @@ import android.webkit.WebView;
 import android.widget.ProgressBar;
 
 /**
- * Created by pocketEos on 2018/4/11.
+ * Created by pocketrix on 2018/4/11.
  */
 
 public class BaseWebChromeClient extends WebChromeClient {

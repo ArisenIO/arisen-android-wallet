@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.convenientbanner.view;
+package com.oraclechain.pocketrix.view.convenientbanner.view;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -6,8 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.oraclechain.pocketeos.view.convenientbanner.adapter.CBPageAdapter;
-import com.oraclechain.pocketeos.view.convenientbanner.listener.OnItemClickListener;
+import com.oraclechain.pocketrix.view.convenientbanner.adapter.CBPageAdapter;
+import com.oraclechain.pocketrix.view.convenientbanner.listener.OnItemClickListener;
 
 
 public class CBLoopViewPager extends ViewPager {

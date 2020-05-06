@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.continueredpacket;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.continueredpacket;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.RedPacketDetailsBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.RedPacketDetailsBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface ContinueRedPacketView extends BaseView {
     void getCoinRateDataHttp(CoinRateBean.DataBean coinRateBean);

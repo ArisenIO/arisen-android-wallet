@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view;
+package com.oraclechain.pocketrix.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Created by pocketEos on 2018/5/15.
+ * Created by pocketrix on 2018/5/15.
  * 图片文字居中
  */
 

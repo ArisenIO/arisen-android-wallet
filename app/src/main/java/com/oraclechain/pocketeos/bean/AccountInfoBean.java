@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by pocketEos on 2017/12/27.
+ * Created by pocketrix on 2017/12/27.
  * 账号信息
  */
 

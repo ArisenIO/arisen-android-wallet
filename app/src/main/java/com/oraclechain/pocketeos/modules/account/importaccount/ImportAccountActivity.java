@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.account.importaccount;
+package com.oraclechain.pocketrix.modules.account.importaccount;
 
 import android.Manifest;
 import android.content.Intent;
@@ -9,26 +9,26 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.app.AppManager;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.BlockChainAccountInfoBean;
-import com.oraclechain.pocketeos.bean.UserBean;
-import com.oraclechain.pocketeos.blockchain.cypto.ec.EosPrivateKey;
-import com.oraclechain.pocketeos.gen.UserBeanDao;
-import com.oraclechain.pocketeos.modules.blackbox.BlackBoxMainActivity;
-import com.oraclechain.pocketeos.modules.main.MainActivity;
-import com.oraclechain.pocketeos.modules.scancode.ScanCodeActivity;
-import com.oraclechain.pocketeos.utils.EncryptUtil;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.utils.Utils;
-import com.oraclechain.pocketeos.view.ClearEditText;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.app.AppManager;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.BlockChainAccountInfoBean;
+import com.oraclechain.pocketrix.bean.UserBean;
+import com.oraclechain.pocketrix.blockchain.cypto.ec.rixPrivateKey;
+import com.oraclechain.pocketrix.gen.UserBeanDao;
+import com.oraclechain.pocketrix.modules.blackbox.BlackBoxMainActivity;
+import com.oraclechain.pocketrix.modules.main.MainActivity;
+import com.oraclechain.pocketrix.modules.scancode.ScanCodeActivity;
+import com.oraclechain.pocketrix.utils.EncryptUtil;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.utils.Utils;
+import com.oraclechain.pocketrix.view.ClearEditText;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -60,8 +60,8 @@ public class ImportAccountActivity extends BaseAcitvity<ImportAccountView, Impor
     private String mAccount_owner_private_key, mAccount_active_private_key = null;
     private String mAccount_owner_public_key, mAccount_active_public_key = null;
 
-    private EosPrivateKey mOwnerKey;
-    private EosPrivateKey mActiveKey;
+    private rixPrivateKey mOwnerKey;
+    private rixPrivateKey mActiveKey;
 
     private String userPassword = null;
     private UserBean userBean = new UserBean();
@@ -114,7 +114,7 @@ public class ImportAccountActivity extends BaseAcitvity<ImportAccountView, Impor
             }
         }
         if (mAccount_active_public_key.equals(chainAccountActiveKey) && mAccount_owner_public_key.equals(chainAccountOwnerKey)) {
-            presenter.postEosAccountData(mAccountName.getText().toString().trim(), userBean.getWallet_uid());//只是通知，不以服务端返回结果作为查询依据
+            presenter.postrixAccountData(mAccountName.getText().toString().trim(), userBean.getWallet_uid());//只是通知，不以服务端返回结果作为查询依据
             toast(getString(R.string.import_success));
             ArrayList<AccountInfoBean> accountInfoBeanArrayList = new ArrayList<>();
             if (MyApplication.getInstance().getUserBean().getAccount_info() != null) {
@@ -178,7 +178,7 @@ public class ImportAccountActivity extends BaseAcitvity<ImportAccountView, Impor
     }
 
     @Override
-    public void postEosAccountDataHttp() {
+    public void postrixAccountDataHttp() {
 
     }
 
@@ -199,8 +199,8 @@ public class ImportAccountActivity extends BaseAcitvity<ImportAccountView, Impor
                     mAccount_owner_private_key = mOwnerPrivateKey.getText().toString();
                     mAccount_active_private_key = mActivePrivateKey.getText().toString();
                     try {
-                        mActiveKey = new EosPrivateKey(mAccount_active_private_key);
-                        mOwnerKey = new EosPrivateKey(mAccount_owner_private_key);
+                        mActiveKey = new rixPrivateKey(mAccount_active_private_key);
+                        mOwnerKey = new rixPrivateKey(mAccount_owner_private_key);
                     } catch (Exception e) {
                         e.printStackTrace();
                         toast("私钥格式错误");

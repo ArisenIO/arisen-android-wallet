@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp.dappdetails;
+package com.oraclechain.pocketrix.modules.dapp.dappdetails;
 
 import android.content.Intent;
 import android.net.http.SslError;
@@ -13,14 +13,14 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.chooseaccountwithcoin.ChooseAccountWithCoinActivity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.view.webview.BaseWebSetting;
-import com.oraclechain.pocketeos.view.webview.BaseWebView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.chooseaccountwithcoin.ChooseAccountWithCoinActivity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.view.webview.BaseWebSetting;
+import com.oraclechain.pocketrix.view.webview.BaseWebView;
 
 import butterknife.BindView;
 
@@ -53,7 +53,7 @@ public class DappDetailsActivity extends BaseAcitvity<NormalView, NormalPresente
         // 开启辅助功能崩溃
         mWebDappDetails.disableAccessibility(this);
         new BaseWebSetting(mWebDappDetails, DappDetailsActivity.this, false);//设置webseeting
-        mWebDappDetails.getSettings().setUserAgentString("PocketEosAndroid");
+        mWebDappDetails.getSettings().setUserAgentString("PocketrixAndroid");
         mWebDappDetails.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
@@ -72,7 +72,7 @@ public class DappDetailsActivity extends BaseAcitvity<NormalView, NormalPresente
             public void onProgressChanged(WebView view, int progress) {
                 if (progress == 100) {
                     mProgressBar.setVisibility(View.GONE);//加载完网页进度条消失
-                    mWebDappDetails.loadUrl("javascript:getEosAccount('" + account + "')");
+                    mWebDappDetails.loadUrl("javascript:getrixAccount('" + account + "')");
                 } else {
                     mProgressBar.setVisibility(View.VISIBLE);//开始加载网页时显示进度条
                     mProgressBar.setProgress(progress);//设置进度值

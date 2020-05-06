@@ -1,11 +1,11 @@
-package com.oraclechain.pocketeos.modules.resourcemanager.changememory;
+package com.oraclechain.pocketrix.modules.resourcemanager.changememory;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.TableResultBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.TableResultBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface ChangeMemoryView extends BaseView {
 

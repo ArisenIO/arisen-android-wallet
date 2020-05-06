@@ -1,19 +1,19 @@
-package com.oraclechain.pocketeos.modules.account.createaccount;
+package com.oraclechain.pocketrix.modules.account.createaccount;
 
 import android.content.Context;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public class CreateAccountPresenter extends BasePresent<CreateAccountView> {
@@ -27,17 +27,17 @@ public class CreateAccountPresenter extends BasePresent<CreateAccountView> {
 
 
 
-    public void postEosAccountData(String eosAccountName ,String owner_key, String active_key) {
+    public void postrixAccountData(String rixAccountName ,String owner_key, String active_key) {
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
-        hashMap.put("eosAccountName", eosAccountName);
+        hashMap.put("rixAccountName", rixAccountName);
         hashMap.put("ownerKey", owner_key);
         hashMap.put("activeKey", active_key);
-        HttpUtils.postRequest(BaseUrl.HTTP_add_new_eos, mContext, hashMap, new JsonCallback<ResponseBean<String>>() {
+        HttpUtils.postRequest(BaseUrl.HTTP_add_new_rix, mContext, hashMap, new JsonCallback<ResponseBean<String>>() {
             @Override
             public void onSuccess(Response<ResponseBean<String>> response) {
                 if (response.body().code == 0) {
-                    view.postEosAccountDataHttp();
+                    view.postrixAccountDataHttp();
                 } else {
                     view.getDataHttpFail(response.body().message);
                 }
@@ -45,10 +45,10 @@ public class CreateAccountPresenter extends BasePresent<CreateAccountView> {
         });
     }
 
-    public void setMianAccountData(String eosAccountName) {
+    public void setMianAccountData(String rixAccountName) {
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
-        hashMap.put("eosAccountName", eosAccountName);
+        hashMap.put("rixAccountName", rixAccountName);
         HttpUtils.postRequest(BaseUrl.HTTP_set_mian_account, mContext, hashMap, new JsonCallback<ResponseBean<String>>() {
             @Override
             public void onSuccess(Response<ResponseBean<String>> response) {

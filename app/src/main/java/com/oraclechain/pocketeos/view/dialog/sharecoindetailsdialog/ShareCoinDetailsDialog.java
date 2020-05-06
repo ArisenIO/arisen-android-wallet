@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.dialog.sharecoindetailsdialog;
+package com.oraclechain.pocketrix.view.dialog.sharecoindetailsdialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,12 +11,12 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.bean.AccountWithCoinBean;
-import com.oraclechain.pocketeos.utils.StringUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.bean.AccountWithCoinBean;
+import com.oraclechain.pocketrix.utils.StringUtils;
 
 /**
- * Created by pocketEos on 2017/12/5.
+ * Created by pocketrix on 2017/12/5.
  * 分享token弹窗
  */
 
@@ -80,8 +80,8 @@ public class ShareCoinDetailsDialog extends Dialog implements View.OnClickListen
             coin_one_price.setText("￥" + StringUtils.addComma(accountWithCoinBean.getOct_price_cny()));
             coin_maket_total_price.setText("￥" + StringUtils.addComma(accountWithCoinBean.getOct_market_cap_cny()));
         } else {
-            coin_one_price.setText("￥" + StringUtils.addComma(accountWithCoinBean.getEos_price_cny()));
-            coin_maket_total_price.setText("￥" + StringUtils.addComma(accountWithCoinBean.getEos_market_cap_cny()));
+            coin_one_price.setText("￥" + StringUtils.addComma(accountWithCoinBean.getrix_price_cny()));
+            coin_maket_total_price.setText("￥" + StringUtils.addComma(accountWithCoinBean.getrix_market_cap_cny()));
         }
         return this;
     }

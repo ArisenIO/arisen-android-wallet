@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.base;
+package com.oraclechain.pocketrix.base;
 
 /**
- * Created by pocketEos on 2017/7/14.
+ * Created by pocketrix on 2017/7/14.
  */
 
 public interface BaseView {

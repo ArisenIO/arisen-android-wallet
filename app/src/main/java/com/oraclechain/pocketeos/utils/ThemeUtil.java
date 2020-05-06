@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
- * Created by pocketEos on 2018/5/16.
+ * Created by pocketrix on 2018/5/16.
  */
 
 public class ThemeUtil {

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.nodevote;
+package com.oraclechain.pocketrix.modules.nodevote;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -6,14 +6,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.view.webview.BaseWebChromeClient;
-import com.oraclechain.pocketeos.view.webview.BaseWebSetting;
-import com.oraclechain.pocketeos.view.webview.BaseWebView;
-import com.oraclechain.pocketeos.view.webview.BaseWebViewClient;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.view.webview.BaseWebChromeClient;
+import com.oraclechain.pocketrix.view.webview.BaseWebSetting;
+import com.oraclechain.pocketrix.view.webview.BaseWebView;
+import com.oraclechain.pocketrix.view.webview.BaseWebViewClient;
 
 import butterknife.BindView;
 

@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.getredpacketdetails;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.getredpacketdetails;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.RedPacketDetailsBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.RedPacketDetailsBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 public interface GetRedPacketDetailsView extends BaseView {
     void getRedPacketDetailsDataHttp(RedPacketDetailsBean.DataBean dataBean);

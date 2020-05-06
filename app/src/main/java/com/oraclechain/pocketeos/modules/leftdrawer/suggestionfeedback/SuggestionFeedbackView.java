@@ -1,12 +1,12 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.suggestionfeedback;
+package com.oraclechain.pocketrix.modules.leftdrawer.suggestionfeedback;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.SuggestionBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.SuggestionBean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取friendslist
  */
 public interface SuggestionFeedbackView extends BaseView {

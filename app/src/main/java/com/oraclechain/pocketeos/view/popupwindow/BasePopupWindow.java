@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.popupwindow;
+package com.oraclechain.pocketrix.view.popupwindow;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -9,17 +9,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.CommonAdapter;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.bean.CoinBean;
-import com.oraclechain.pocketeos.utils.RotateUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.CommonAdapter;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.bean.CoinBean;
+import com.oraclechain.pocketrix.utils.RotateUtils;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/4.
+ * Created by pocketrix on 2017/12/4.
  */
 
 public class BasePopupWindow extends PopupWindow {

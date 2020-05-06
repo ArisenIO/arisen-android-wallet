@@ -1,15 +1,15 @@
-package com.oraclechain.pocketeos.modules.resourcemanager.resourcehome.fragment.net;
+package com.oraclechain.pocketrix.modules.resourcemanager.resourcehome.fragment.net;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseFragment;
-import com.oraclechain.pocketeos.bean.BlockChainAccountInfoBean;
-import com.oraclechain.pocketeos.modules.resourcemanager.changenet.ChangeNetActivity;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseFragment;
+import com.oraclechain.pocketrix.bean.BlockChainAccountInfoBean;
+import com.oraclechain.pocketrix.modules.resourcemanager.changenet.ChangeNetActivity;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
 
 import java.math.BigDecimal;
 

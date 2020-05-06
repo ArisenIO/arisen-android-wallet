@@ -1,17 +1,17 @@
-package com.oraclechain.pocketeos.modules.account.backupaccount.activity;
+package com.oraclechain.pocketrix.modules.account.backupaccount.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.WindowManager;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.baseadapter.BackUpAccount_tab_Adapter;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountInfoBean;
-import com.oraclechain.pocketeos.modules.account.backupaccount.fragment.BackUpAccountFragment;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.baseadapter.BackUpAccount_tab_Adapter;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountInfoBean;
+import com.oraclechain.pocketrix.modules.account.backupaccount.fragment.BackUpAccountFragment;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 
 /**
- * 备份eos账号
+ * 备份rix账号
  */
 public class BackUpAccountActivity extends BaseAcitvity<NormalView, NormalPresenter> implements NormalView {
 

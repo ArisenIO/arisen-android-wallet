@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.base;
+package com.oraclechain.pocketrix.base;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 
 public class BaseUrl {
@@ -28,11 +28,11 @@ public class BaseUrl {
      * 正式环境服务器地址
      */
     public final static String HTTP_PACKETADDRESS = "http://192.168.3.185:8089/api_oc_redpacket/";
-    public final static String HTTP_ADDRESS = "https://api.pocketeos.top/api_oc_personal/v1.0.0/";
-     public final static String HTTP_CHAIN_VOTE_ADDRESS = "https://api.pocketeos.top/voteoraclechain/";
-    public final static String HTTP_CHAIN_ADDRESS = "https://api.pocketeos.top/api_oc_blockchain-v1.3.0/";
-    public final static String HTTP_ANSWER_ADDRESS = "https://api.pocketeos.top/eosaskanswer30/";
-    public final static String HTTP_CANDY_ADDRESS = "https://api.pocketeos.top/api_oc_pe_candy_system/";
+    public final static String HTTP_ADDRESS = "https://api.pocketrix.top/api_oc_personal/v1.0.0/";
+     public final static String HTTP_CHAIN_VOTE_ADDRESS = "https://api.pocketrix.top/voteoraclechain/";
+    public final static String HTTP_CHAIN_ADDRESS = "https://api.pocketrix.top/api_oc_blockchain-v1.3.0/";
+    public final static String HTTP_ANSWER_ADDRESS = "https://api.pocketrix.top/rixaskanswer30/";
+    public final static String HTTP_CANDY_ADDRESS = "https://api.pocketrix.top/api_oc_pe_candy_system/";
     // 获取关注列表
     public final static String HTTP_Getfollow_list = HTTP_ADDRESS + "follow_list";
     // 获取新闻列表
@@ -59,16 +59,16 @@ public class BaseUrl {
     public final static String HTTP_unbindWechat = HTTP_ADDRESS + "user/unbindWechat";
     // 绑定微信
     public final static String HTTP_bindwechat = HTTP_ADDRESS + "user/bindwechat";
-    // 注册EOS账号
-    public final static String HTTP_eos_register = HTTP_CHAIN_ADDRESS + "create_account";
-    //备份EOS账号至服务器
-    public final static String HTTP_add_new_eos = HTTP_ADDRESS + "user/add_new_eos";
-    // 获取EOS账号信息
-    public final static String HTTP_eos_get_account = HTTP_CHAIN_ADDRESS + "get_account_asset";
+    // 注册rix账号
+    public final static String HTTP_rix_register = HTTP_CHAIN_ADDRESS + "create_account";
+    //备份rix账号至服务器
+    public final static String HTTP_add_new_rix = HTTP_ADDRESS + "user/add_new_rix";
+    // 获取rix账号信息
+    public final static String HTTP_rix_get_account = HTTP_CHAIN_ADDRESS + "get_account_asset";
     // 获取链上信息
-    public final static String HTTP_eos_get_table = HTTP_CHAIN_ADDRESS + "get_table_rows";
+    public final static String HTTP_rix_get_table = HTTP_CHAIN_ADDRESS + "get_table_rows";
     // 获取资产汇率
-    public final static String HTTP_eos_get_coin_rate = HTTP_CHAIN_ADDRESS + "get_rate";
+    public final static String HTTP_rix_get_coin_rate = HTTP_CHAIN_ADDRESS + "get_rate";
     // 获取走势图
     public final static String HTTP_get_sparklines = HTTP_CHAIN_ADDRESS + "get_sparklines";
     // 上传用户头像
@@ -80,7 +80,7 @@ public class BaseUrl {
     // 获取企业富豪榜
     public final static String HTTP_commpanylist = HTTP_ADDRESS + "top/getEnterprise";
     // 获取好友钱包详情信息
-    public final static String HTTP_FriendsDetaislist = HTTP_ADDRESS + "user/getEosAccount";
+    public final static String HTTP_FriendsDetaislist = HTTP_ADDRESS + "user/getrixAccount";
     // 添加关注
     public final static String HTTP_add_follow = HTTP_ADDRESS + "add_follow";
     // 取消关注
@@ -102,11 +102,11 @@ public class BaseUrl {
     // 发起交易
     public final static String HTTP_push_transaction = HTTP_CHAIN_ADDRESS + "push_transaction";
     // 获取交易历史
-    public final static String HTTP_get_transaction_history ="http://history.pocketeos.top/VX/GetActions";
+    public final static String HTTP_get_transaction_history ="http://history.pocketrix.top/VX/GetActions";
     // 获取区块链账号信息
     public final static String HTTP_get_chain_account_info = HTTP_CHAIN_ADDRESS + "get_account";
     // 设置主账号
-    public final static String HTTP_set_mian_account = HTTP_ADDRESS + "user/toggleEosMain";
+    public final static String HTTP_set_mian_account = HTTP_ADDRESS + "user/togglerixMain";
     // 保护隐私
     public final static String HTTP_set_policy_account = HTTP_ADDRESS + "user/update_secret";
     // 系统设置

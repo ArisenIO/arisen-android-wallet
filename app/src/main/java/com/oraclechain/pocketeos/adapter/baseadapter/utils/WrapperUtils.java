@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.adapter.baseadapter.utils;
+package com.oraclechain.pocketrix.adapter.baseadapter.utils;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -6,7 +6,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.ViewGroup;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketRix on 2017/11/23.
  */
 public class WrapperUtils
 {

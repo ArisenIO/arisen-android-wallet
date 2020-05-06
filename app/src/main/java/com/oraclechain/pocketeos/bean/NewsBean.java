@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/12/28.
+ * Created by pocketrix on 2017/12/28.
  */
 
 public class NewsBean {

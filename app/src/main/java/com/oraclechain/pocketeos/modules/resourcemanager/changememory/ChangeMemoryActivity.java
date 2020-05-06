@@ -1,22 +1,22 @@
-package com.oraclechain.pocketeos.modules.resourcemanager.changememory;
+package com.oraclechain.pocketrix.modules.resourcemanager.changememory;
 
 import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.AccountDetailsBean;
-import com.oraclechain.pocketeos.bean.BuyRamBean;
-import com.oraclechain.pocketeos.bean.SealRamBean;
-import com.oraclechain.pocketeos.bean.TableResultBean;
-import com.oraclechain.pocketeos.blockchain.PushDatamanger;
-import com.oraclechain.pocketeos.utils.BigDecimalUtil;
-import com.oraclechain.pocketeos.utils.PasswordToKeyUtils;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordCallback;
-import com.oraclechain.pocketeos.view.dialog.passworddialog.PasswordDialog;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.AccountDetailsBean;
+import com.oraclechain.pocketrix.bean.BuyRamBean;
+import com.oraclechain.pocketrix.bean.SealRamBean;
+import com.oraclechain.pocketrix.bean.TableResultBean;
+import com.oraclechain.pocketrix.blockchain.PushDatamanger;
+import com.oraclechain.pocketrix.utils.BigDecimalUtil;
+import com.oraclechain.pocketrix.utils.PasswordToKeyUtils;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordCallback;
+import com.oraclechain.pocketrix.view.dialog.passworddialog.PasswordDialog;
 
 import java.math.BigDecimal;
 
@@ -73,12 +73,12 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (tag.equals("1")) {
                     BigDecimal bigDecimal = BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(progress), new BigDecimal(100), 2), total, 4);
-                    mNumber.setText(bigDecimal + " EOS");
+                    mNumber.setText(bigDecimal + " rix");
                     mEstimate.setText(getString(R.string.estimate)+ BigDecimalUtil.divide(bigDecimal, price, 4) + " bytes");
                 } else {
                     BigDecimal bigDecimal = BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(progress), new BigDecimal(100), 2), useRam, 4);
                     mNumber.setText(bigDecimal + " bytes");
-                    mEstimate.setText(getString(R.string.estimate_price) + BigDecimalUtil.multiply(bigDecimal, price, 4) + " EOS");
+                    mEstimate.setText(getString(R.string.estimate_price) + BigDecimalUtil.multiply(bigDecimal, price, 4) + " rix");
                 }
             }
 
@@ -97,12 +97,12 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
     @Override
     public void getAccountDetailsDataHttp(AccountDetailsBean accountDetailsBean) {
         hideProgress();
-        total = new BigDecimal(accountDetailsBean.getEos_balance());
+        total = new BigDecimal(accountDetailsBean.getrix_balance());
         switch (tag) {
             case "1"://买入
                 mDesc.setText(R.string.change_buy_number_toast);
                 if (BigDecimalUtil.greaterThan(total, new BigDecimal(0))) {
-                    mNumber.setText(BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(mSeekbar.getProgress()), new BigDecimal(100), 2), total, 4) + " EOS");
+                    mNumber.setText(BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(mSeekbar.getProgress()), new BigDecimal(100), 2), total, 4) + " rix");
                     mEstimate.setText(getString(R.string.estimate) + BigDecimalUtil.divide(BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(mSeekbar.getProgress()), new BigDecimal(100), 2), total, 4), price, 4) + " bytes");
                     mSeekbar.setEnabled(true);
                     mSeekbar.setFocusable(true);
@@ -111,7 +111,7 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
                     mSure.setClickable(true);
                     mSure.setBackgroundColor(getResources().getColor(R.color.blue_button));
                 } else {
-                    mNumber.setText("0 EOS");
+                    mNumber.setText("0 rix");
                     mEstimate.setText(getString(R.string.estimate) + "0 bytes");
                     mSeekbar.setProgress(0);
                     mSeekbar.setEnabled(false);
@@ -126,7 +126,7 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
                 mDesc.setText(R.string.change_seal_number_toast);
                 if (BigDecimalUtil.greaterThan(useRam, new BigDecimal(0))) {
                     mNumber.setText(BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(mSeekbar.getProgress()), new BigDecimal(100), 2), useRam, 4) + " bytes");
-                    mEstimate.setText(getString(R.string.estimate_price) + BigDecimalUtil.multiply(BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(mSeekbar.getProgress()), new BigDecimal(100), 2), useRam, 4), price, 4) + " EOS");
+                    mEstimate.setText(getString(R.string.estimate_price) + BigDecimalUtil.multiply(BigDecimalUtil.multiply(BigDecimalUtil.divide(new BigDecimal(mSeekbar.getProgress()), new BigDecimal(100), 2), useRam, 4), price, 4) + " rix");
                     mSeekbar.setEnabled(true);
                     mSeekbar.setFocusable(true);
                     mSeekbar.setFocusableInTouchMode(true);
@@ -134,7 +134,7 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
                     mSure.setClickable(true);
                     mSure.setBackgroundColor(getResources().getColor(R.color.blue_button));
                 } else {
-                    mNumber.setText("0 EOS");
+                    mNumber.setText("0 rix");
                     mEstimate.setText(getString(R.string.estimate) + "0 bytes");
                     mSeekbar.setProgress(0);
                     mSeekbar.setEnabled(false);
@@ -190,7 +190,7 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
                                         toast(getString(R.string.buy_fail));
                                     }
                                 }
-                            }).pushAction("eosio", "buyram",
+                            }).pushAction("arisen", "buyram",
                                     new Gson().toJson(buyRamBean), getIntent().getStringExtra("account"));
                         } else {
                             toast(getResources().getString(R.string.password_error));
@@ -229,7 +229,7 @@ public class ChangeMemoryActivity extends BaseAcitvity<ChangeMemoryView, ChangeM
                                         toast(getString(R.string.seal_fail));
                                     }
                                 }
-                            }).pushAction("eosio", "sellram",
+                            }).pushAction("arisen", "sellram",
                                     new Gson().toJson(sealRamBean), getIntent().getStringExtra("account"));
                         } else {
                             toast(getResources().getString(R.string.password_error));

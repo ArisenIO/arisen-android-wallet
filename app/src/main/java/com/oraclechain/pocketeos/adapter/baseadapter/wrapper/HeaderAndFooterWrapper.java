@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.adapter.baseadapter.wrapper;
+package com.oraclechain.pocketrix.adapter.baseadapter.wrapper;
 
 import android.support.v4.util.SparseArrayCompat;
 import android.support.v7.widget.GridLayoutManager;
@@ -6,12 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
-import com.oraclechain.pocketeos.adapter.baseadapter.utils.WrapperUtils;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.adapter.baseadapter.utils.WrapperUtils;
 
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 public class HeaderAndFooterWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 {

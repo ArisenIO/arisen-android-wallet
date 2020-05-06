@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.fragment;
+package com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.fragment;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.PaidAnswerBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.PaidAnswerBean;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  * 获取有问必答问题列表
  */
 public interface PaidAnswerView extends BaseView {

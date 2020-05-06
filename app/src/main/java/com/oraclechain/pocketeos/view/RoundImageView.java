@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view;
+package com.oraclechain.pocketrix.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,10 +17,10 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
- * Created by pocketEos on 2018/3/12.
+ * Created by pocketrix on 2018/3/12.
  */
 
 public class RoundImageView extends ImageView {

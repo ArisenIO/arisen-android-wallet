@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.types;
+package com.oraclechain.pocketrix.blockchain.types;
 
 
 

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.getredpacketdetails;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.getredpacketdetails;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,15 +7,15 @@ import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.AdapterManger;
-import com.oraclechain.pocketeos.adapter.baseadapter.wrapper.EmptyWrapper;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.RedPacketDetailsBean;
-import com.oraclechain.pocketeos.bean.RedPacketHistoryBean;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.view.RoundImageView;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.AdapterManger;
+import com.oraclechain.pocketrix.adapter.baseadapter.wrapper.EmptyWrapper;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.RedPacketDetailsBean;
+import com.oraclechain.pocketrix.bean.RedPacketHistoryBean;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.view.RoundImageView;
 
 import java.util.ArrayList;
 import java.util.List;

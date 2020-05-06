@@ -1,10 +1,10 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.systemsetting;
+package com.oraclechain.pocketrix.modules.leftdrawer.systemsetting;
 
-import com.oraclechain.pocketeos.base.BaseView;
-import com.oraclechain.pocketeos.bean.SystemInfoBean;
+import com.oraclechain.pocketrix.base.BaseView;
+import com.oraclechain.pocketrix.bean.SystemInfoBean;
 
 /**
- * Created by pocketEos on 2018/1/18.
+ * Created by pocketrix on 2018/1/18.
  */
 
 public interface SystemSettingView extends BaseView {

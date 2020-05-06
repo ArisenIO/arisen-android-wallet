@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view;
+package com.oraclechain.pocketrix.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,7 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by pocketEos on 2018/1/3.
+ * Created by pocketrix on 2018/1/3.
  * recycleview分割线
  */
 

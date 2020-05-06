@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.blockchain.cypto.digest;
+package com.oraclechain.pocketrix.blockchain.cypto.digest;
 
 /**
  * Created by swapnibble on 2017-09-02.

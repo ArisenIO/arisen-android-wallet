@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.seach;
+package com.oraclechain.pocketrix.modules.seach;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,14 +8,14 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.bean.BlockChainAccountInfoBean;
-import com.oraclechain.pocketeos.modules.friendslist.friendsdetails.FriendsDetailsActivity;
-import com.oraclechain.pocketeos.utils.KeyBoardUtil;
-import com.oraclechain.pocketeos.utils.RegexUtil;
-import com.oraclechain.pocketeos.view.ClearEditText;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.bean.BlockChainAccountInfoBean;
+import com.oraclechain.pocketrix.modules.friendslist.friendsdetails.FriendsDetailsActivity;
+import com.oraclechain.pocketrix.utils.KeyBoardUtil;
+import com.oraclechain.pocketrix.utils.RegexUtil;
+import com.oraclechain.pocketrix.view.ClearEditText;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -74,7 +74,7 @@ public class SeachActivity extends BaseAcitvity<SeachView, SeachPresenter> imple
                         showProgress();
                         presenter.getAccountInfoData(mEdtSeach.getText().toString());
                     } else {
-                        toast(getString(R.string.eos_register_toast));
+                        toast(getString(R.string.rix_register_toast));
                     }
                 }
                 return false;

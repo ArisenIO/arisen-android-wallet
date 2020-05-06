@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 /**
- * Created by pocketEos on 2018/1/22.
+ * Created by pocketrix on 2018/1/22.
  */
 
 public class AccountDetailsBean {
@@ -10,14 +10,14 @@ public class AccountDetailsBean {
     /**
      * account_name : asdf123
      * account_icon : http://about_blank
-     * eos_balance : 0.00040000
-     * eos_balance_usd : 0.00237535
-     * eos_balance_cny : 0.01506424
-     * eos_price_usd : 5.93838
-     * eos_price_cny : 37.660612122
-     * eos_price_change_in_24h : -6.58
-     * eos_market_cap_usd : 4255038009.0
-     * eos_market_cap_cny : 26985025549.0
+     * rix_balance : 0.00040000
+     * rix_balance_usd : 0.00237535
+     * rix_balance_cny : 0.01506424
+     * rix_price_usd : 5.93838
+     * rix_price_cny : 37.660612122
+     * rix_price_change_in_24h : -6.58
+     * rix_market_cap_usd : 4255038009.0
+     * rix_market_cap_cny : 26985025549.0
      * oct_balance : 0.00020000
      * oct_balance_usd : 0.00008678
      * oct_balance_cny : 0.00055036
@@ -30,14 +30,14 @@ public class AccountDetailsBean {
 
     private String account_name;
     private String account_icon;
-    private String eos_balance;
-    private String eos_balance_usd;
-    private String eos_balance_cny;
-    private String eos_price_usd;
-    private String eos_price_cny;
-    private String eos_price_change_in_24h;
-    private String eos_market_cap_usd;
-    private String eos_market_cap_cny;
+    private String rix_balance;
+    private String rix_balance_usd;
+    private String rix_balance_cny;
+    private String rix_price_usd;
+    private String rix_price_cny;
+    private String rix_price_change_in_24h;
+    private String rix_market_cap_usd;
+    private String rix_market_cap_cny;
     private String oct_balance;
     private String oct_balance_usd;
     private String oct_balance_cny;
@@ -46,23 +46,23 @@ public class AccountDetailsBean {
     private String oct_price_change_in_24h;
     private String oct_market_cap_usd;
     private String oct_market_cap_cny;
-    private String eos_net_weight;
-    private String eos_cpu_weight;
+    private String rix_net_weight;
+    private String rix_cpu_weight;
 
-    public String getEos_net_weight() {
-        return eos_net_weight == null ? "" : eos_net_weight;
+    public String getRix_net_weight() {
+        return rix_net_weight == null ? "" : rix_net_weight;
     }
 
-    public void setEos_net_weight(String eos_net_weight) {
-        this.eos_net_weight = eos_net_weight;
+    public void setRix_net_weight(String rix_net_weight) {
+        this.rix_net_weight = rix_net_weight;
     }
 
-    public String getEos_cpu_weight() {
-        return eos_cpu_weight == null ? "" : eos_cpu_weight;
+    public String getRix_cpu_weight() {
+        return rix_cpu_weight == null ? "" : rix_cpu_weight;
     }
 
-    public void setEos_cpu_weight(String eos_cpu_weight) {
-        this.eos_cpu_weight = eos_cpu_weight;
+    public void setRix_cpu_weight(String rix_cpu_weight) {
+        this.rix_cpu_weight = rix_cpu_weight;
     }
 
     public String getAccount_name() {
@@ -81,68 +81,68 @@ public class AccountDetailsBean {
         this.account_icon = account_icon;
     }
 
-    public String getEos_balance() {
-        return eos_balance == null ? "" : eos_balance;
+    public String getRix_balance() {
+        return rix_balance == null ? "" : rix_balance;
     }
 
-    public void setEos_balance(String eos_balance) {
-        this.eos_balance = eos_balance;
+    public void setRix_balance(String rix_balance) {
+        this.rix_balance = rix_balance;
     }
 
-    public String getEos_balance_usd() {
-        return eos_balance_usd == null ? "" : eos_balance_usd;
+    public String getRix_balance_usd() {
+        return rix_balance_usd == null ? "" : rix_balance_usd;
     }
 
-    public void setEos_balance_usd(String eos_balance_usd) {
-        this.eos_balance_usd = eos_balance_usd;
+    public void setRix_balance_usd(String rix_balance_usd) {
+        this.rix_balance_usd = rix_balance_usd;
     }
 
-    public String getEos_balance_cny() {
-        return eos_balance_cny == null ? "" : eos_balance_cny;
+    public String getRix_balance_cny() {
+        return rix_balance_cny == null ? "" : rix_balance_cny;
     }
 
-    public void setEos_balance_cny(String eos_balance_cny) {
-        this.eos_balance_cny = eos_balance_cny;
+    public void setRix_balance_cny(String rix_balance_cny) {
+        this.rix_balance_cny = rix_balance_cny;
     }
 
-    public String getEos_price_usd() {
-        return eos_price_usd == null ? "" : eos_price_usd;
+    public String getRix_price_usd() {
+        return rix_price_usd == null ? "" : rix_price_usd;
     }
 
-    public void setEos_price_usd(String eos_price_usd) {
-        this.eos_price_usd = eos_price_usd;
+    public void setRix_price_usd(String rix_price_usd) {
+        this.rix_price_usd = rix_price_usd;
     }
 
-    public String getEos_price_cny() {
-        return eos_price_cny == null ? "" : eos_price_cny;
+    public String getRix_price_cny() {
+        return rix_price_cny == null ? "" : rix_price_cny;
     }
 
-    public void setEos_price_cny(String eos_price_cny) {
-        this.eos_price_cny = eos_price_cny;
+    public void setRix_price_cny(String rix_price_cny) {
+        this.rix_price_cny = rix_price_cny;
     }
 
-    public String getEos_price_change_in_24h() {
-        return eos_price_change_in_24h == null ? "" : eos_price_change_in_24h;
+    public String getRix_price_change_in_24h() {
+        return rix_price_change_in_24h == null ? "" : rix_price_change_in_24h;
     }
 
-    public void setEos_price_change_in_24h(String eos_price_change_in_24h) {
-        this.eos_price_change_in_24h = eos_price_change_in_24h;
+    public void setRix_price_change_in_24h(String rix_price_change_in_24h) {
+        this.rix_price_change_in_24h = rix_price_change_in_24h;
     }
 
-    public String getEos_market_cap_usd() {
-        return eos_market_cap_usd == null ? "" : eos_market_cap_usd;
+    public String getRix_market_cap_usd() {
+        return rix_market_cap_usd == null ? "" : rix_market_cap_usd;
     }
 
-    public void setEos_market_cap_usd(String eos_market_cap_usd) {
-        this.eos_market_cap_usd = eos_market_cap_usd;
+    public void setRix_market_cap_usd(String rix_market_cap_usd) {
+        this.rix_market_cap_usd = rix_market_cap_usd;
     }
 
-    public String getEos_market_cap_cny() {
-        return eos_market_cap_cny == null ? "" : eos_market_cap_cny;
+    public String getRix_market_cap_cny() {
+        return rix_market_cap_cny == null ? "" : rix_market_cap_cny;
     }
 
-    public void setEos_market_cap_cny(String eos_market_cap_cny) {
-        this.eos_market_cap_cny = eos_market_cap_cny;
+    public void setRix_market_cap_cny(String rix_market_cap_cny) {
+        this.rix_market_cap_cny = rix_market_cap_cny;
     }
 
     public String getOct_balance() {

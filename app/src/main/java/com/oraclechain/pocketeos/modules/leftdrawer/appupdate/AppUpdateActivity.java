@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.leftdrawer.appupdate;
+package com.oraclechain.pocketrix.modules.leftdrawer.appupdate;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,19 +8,19 @@ import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.bean.UpdateAppBean;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
-import com.oraclechain.pocketeos.utils.AppUtil;
-import com.oraclechain.pocketeos.utils.TextDrawUtil;
-import com.oraclechain.pocketeos.utils.UpdateUtils;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.bean.UpdateAppBean;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.utils.AppUtil;
+import com.oraclechain.pocketrix.utils.TextDrawUtil;
+import com.oraclechain.pocketrix.utils.UpdateUtils;
+import com.oraclechain.pocketrix.utils.Utils;
 
 import java.util.HashMap;
 

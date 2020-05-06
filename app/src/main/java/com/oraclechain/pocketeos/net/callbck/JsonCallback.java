@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oraclechain.pocketeos.net.callbck;
+package com.oraclechain.pocketrix.net.callbck;
 
 import com.google.gson.JsonSyntaxException;
 import com.lzy.okgo.callback.AbsCallback;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.utils.ShowDialog;
-import com.oraclechain.pocketeos.utils.ToastUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.utils.ShowDialog;
+import com.oraclechain.pocketrix.utils.ToastUtils;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -29,7 +29,7 @@ import java.net.SocketTimeoutException;
 import okhttp3.Response;
 
 /**
- * Created by pocketEos on 2018/4/2.
+ * Created by pocketrix on 2018/4/2.
  */
 public abstract class JsonCallback<T> extends AbsCallback<T> {
 

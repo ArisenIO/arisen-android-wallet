@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view;
+package com.oraclechain.pocketrix.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,10 +12,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
- * Created by pocketEos on 2017/12/7.
+ * Created by pocketrix on 2017/12/7.
  * 弧形view
  */
 

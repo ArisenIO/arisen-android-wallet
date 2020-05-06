@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
-package com.oraclechain.pocketeos.blockchain.cypto.ec;
+package com.oraclechain.pocketrix.blockchain.cypto.ec;
 
 import com.google.common.base.Preconditions;
-import com.oraclechain.pocketeos.blockchain.cypto.Hmac;
-import com.oraclechain.pocketeos.blockchain.cypto.digest.Sha256;
-import com.oraclechain.pocketeos.blockchain.types.EosByteWriter;
+import com.oraclechain.pocketrix.blockchain.cypto.Hmac;
+import com.oraclechain.pocketrix.blockchain.cypto.digest.Sha256;
+import com.oraclechain.pocketrix.blockchain.types.rixByteWriter;
 
 import java.math.BigInteger;
 import java.util.Arrays;
@@ -77,7 +77,7 @@ public class EcDsa {
 
     private static BigInteger deterministicGenerateK(CurveParam curveParam, byte[] hash, BigInteger d, SigChecker checker, int nonce ){
         if ( nonce > 0 ){
-//            hash = Sha256.from(hash, EosPrivateKey.getSecuRandom().generateSeed(nonce)).getBytes();
+//            hash = Sha256.from(hash, rixPrivateKey.getSecuRandom().generateSeed(nonce)).getBytes();
             hash = Sha256.from(hash, BigInteger.valueOf(nonce).toByteArray()).getBytes();
         }
 
@@ -92,7 +92,7 @@ public class EcDsa {
         Arrays.fill(k, (byte)0x00);
 
         // Step d
-        EosByteWriter bwD = new EosByteWriter(32 + 1 + 32 + 32);
+        rixByteWriter bwD = new rixByteWriter(32 + 1 + 32 + 32);
         bwD.putBytes(v);
         bwD.put((byte) 0x00 );
         bwD.putBytes( dBytes );
@@ -103,7 +103,7 @@ public class EcDsa {
         v = Hmac.hmacSha256(k, v);
 
         // Step f
-        EosByteWriter bwF = new EosByteWriter(32 + 1 + 32 + 32);
+        rixByteWriter bwF = new rixByteWriter(32 + 1 + 32 + 32);
         bwF.putBytes(v);
         bwF.put((byte) 0x01 );
         bwF.putBytes(dBytes);
@@ -120,7 +120,7 @@ public class EcDsa {
 
         // Step H3, repeat until T is within the interval [1, Secp256k1Param.n - 1]
         while ((t.signum() <= 0) || (t.compareTo( curveParam.n()) >= 0) || !checker.checkSignature(curveParam, t)) {
-            EosByteWriter bwH = new EosByteWriter(32 + 1);
+            rixByteWriter bwH = new rixByteWriter(32 + 1);
             bwH.putBytes(v);
             bwH.put((byte) 0x00);
             k = Hmac.hmacSha256(k, bwH.toBytes());
@@ -135,7 +135,7 @@ public class EcDsa {
         return t;
     }
 
-    public static EcSignature sign(Sha256 hash, EosPrivateKey key ) {
+    public static EcSignature sign(Sha256 hash, rixPrivateKey key ) {
         BigInteger privAsBI = key.getAsBigInteger();
         SigChecker checker = new SigChecker(hash.getBytes(), privAsBI);
 
@@ -158,10 +158,10 @@ public class EcDsa {
 
         byte[] data = hash.getBytes();
 
-        EosPublicKey pubKey = key.getPublicKey();
+        rixPublicKey pubKey = key.getPublicKey();
 
         for (int i = 0; i < 4; i++) {
-            EosPublicKey recovered = recoverPubKey(curveParam, data, signature, i);
+            rixPublicKey recovered = recoverPubKey(curveParam, data, signature, i);
             if ( pubKey.equals( recovered)) {
                 signature.setRecid( i );
                 break;
@@ -175,11 +175,11 @@ public class EcDsa {
         return signature;
     }
 
-    public static EosPublicKey recoverPubKey(byte[] messageSigned, EcSignature signature ) {
+    public static rixPublicKey recoverPubKey(byte[] messageSigned, EcSignature signature ) {
         return recoverPubKey( signature.curveParam, messageSigned, signature, signature.recId);
     }
 
-    public static EosPublicKey recoverPubKey(CurveParam curveParam, byte[] messageSigned, EcSignature signature, int recId ) {
+    public static rixPublicKey recoverPubKey(CurveParam curveParam, byte[] messageSigned, EcSignature signature, int recId ) {
 
         Preconditions.checkArgument(recId >= 0, "recId must be positive");
         Preconditions.checkArgument(signature.r.compareTo(BigInteger.ZERO) >= 0, "r must be positive");
@@ -252,7 +252,7 @@ public class EcDsa {
         // lost when multiply() is used.
         q = new EcPoint(curve, q.getX(), q.getY(), true);
 
-        return new EosPublicKey( q.getEncoded() );
+        return new rixPublicKey( q.getEncoded() );
     }
 
 

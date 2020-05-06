@@ -1,15 +1,15 @@
-package com.oraclechain.pocketeos.adapter.baseadapter;
+package com.oraclechain.pocketrix.adapter.baseadapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ItemViewDelegate;
-import com.oraclechain.pocketeos.adapter.baseadapter.base.ViewHolder;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ItemViewDelegate;
+import com.oraclechain.pocketrix.adapter.baseadapter.base.ViewHolder;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketRix on 2017/11/23.
  */
 public abstract class CommonAdapter<T> extends MultiItemTypeAdapter<T>
 {

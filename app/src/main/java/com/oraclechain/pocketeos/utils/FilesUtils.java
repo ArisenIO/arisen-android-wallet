@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.utils;
+package com.oraclechain.pocketrix.utils;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -27,7 +27,7 @@ import java.io.InputStream;
 import java.io.RandomAccessFile;
 
 /**
- * Created by pocketEos on 2017/11/23.
+ * Created by pocketrix on 2017/11/23.
  */
 public class FilesUtils {
 

@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.view.swiperecycle;
+package com.oraclechain.pocketrix.view.swiperecycle;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,10 +11,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.oraclechain.pocketeos.R;
+import com.oraclechain.pocketrix.R;
 
 /**
- * Created by pocketEos on 2017/12/11.
+ * Created by pocketrix on 2017/12/11.
  * 通过layout_gravity属性指定各个View的功能, 并且最多只能存在一个Content， 一个LeftMenu，一个RightMenu。
  * <p>
  * Content : 不设置layout_gravity属性

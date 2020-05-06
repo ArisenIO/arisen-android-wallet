@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.activity;
+package com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,17 +16,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.adapter.Find_tab_Adapter;
-import com.oraclechain.pocketeos.app.ActivityUtils;
-import com.oraclechain.pocketeos.base.BaseAcitvity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.chooseaccountwithcoin.ChooseAccountWithCoinActivity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.makequestion.MakeQuestionActivity;
-import com.oraclechain.pocketeos.modules.dapp.paidanswer.paidanswerhome.fragment.PaidAnswerFragment;
-import com.oraclechain.pocketeos.modules.normalvp.NormalPresenter;
-import com.oraclechain.pocketeos.modules.normalvp.NormalView;
-import com.oraclechain.pocketeos.utils.DensityUtil;
-import com.oraclechain.pocketeos.utils.Utils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.adapter.Find_tab_Adapter;
+import com.oraclechain.pocketrix.app.ActivityUtils;
+import com.oraclechain.pocketrix.base.BaseAcitvity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.chooseaccountwithcoin.ChooseAccountWithCoinActivity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.makequestion.MakeQuestionActivity;
+import com.oraclechain.pocketrix.modules.dapp.paidanswer.paidanswerhome.fragment.PaidAnswerFragment;
+import com.oraclechain.pocketrix.modules.normalvp.NormalPresenter;
+import com.oraclechain.pocketrix.modules.normalvp.NormalView;
+import com.oraclechain.pocketrix.utils.DensityUtil;
+import com.oraclechain.pocketrix.utils.Utils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

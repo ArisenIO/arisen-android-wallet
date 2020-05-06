@@ -1,20 +1,20 @@
-package com.oraclechain.pocketeos.modules.transaction.redpacket.continueredpacket;
+package com.oraclechain.pocketrix.modules.transaction.redpacket.continueredpacket;
 
 import android.content.Context;
 
 import com.lzy.okgo.model.Response;
-import com.oraclechain.pocketeos.base.BasePresent;
-import com.oraclechain.pocketeos.base.BaseUrl;
-import com.oraclechain.pocketeos.bean.CoinRateBean;
-import com.oraclechain.pocketeos.bean.RedPacketDetailsBean;
-import com.oraclechain.pocketeos.bean.ResponseBean;
-import com.oraclechain.pocketeos.net.HttpUtils;
-import com.oraclechain.pocketeos.net.callbck.JsonCallback;
+import com.oraclechain.pocketrix.base.BasePresent;
+import com.oraclechain.pocketrix.base.BaseUrl;
+import com.oraclechain.pocketrix.bean.CoinRateBean;
+import com.oraclechain.pocketrix.bean.RedPacketDetailsBean;
+import com.oraclechain.pocketrix.bean.ResponseBean;
+import com.oraclechain.pocketrix.net.HttpUtils;
+import com.oraclechain.pocketrix.net.callbck.JsonCallback;
 
 import java.util.HashMap;
 
 /**
- * Created by pocketEos on 2017/12/26.
+ * Created by pocketrix on 2017/12/26.
  */
 
 public class ContinueRedpacketPresenter extends BasePresent<ContinueRedPacketView> {
@@ -27,7 +27,7 @@ public class ContinueRedpacketPresenter extends BasePresent<ContinueRedPacketVie
     public void getCoinRateData(String coinmarket_id) {
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("coinmarket_id", coinmarket_id);
-        HttpUtils.postRequest(BaseUrl.HTTP_eos_get_coin_rate, mContext, hashMap, new JsonCallback<ResponseBean<CoinRateBean.DataBean>>() {
+        HttpUtils.postRequest(BaseUrl.HTTP_rix_get_coin_rate, mContext, hashMap, new JsonCallback<ResponseBean<CoinRateBean.DataBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<CoinRateBean.DataBean>> response) {
                 if (response.body().code == 0) {

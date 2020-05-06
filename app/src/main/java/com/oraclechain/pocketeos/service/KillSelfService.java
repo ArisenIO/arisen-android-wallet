@@ -1,4 +1,4 @@
-package com.oraclechain.pocketeos.service;
+package com.oraclechain.pocketrix.service;
 
 import android.app.Service;
 import android.content.Intent;

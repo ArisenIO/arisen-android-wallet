@@ -1,13 +1,13 @@
-package com.oraclechain.pocketeos.modules.otherloginorshare;
+package com.oraclechain.pocketrix.modules.otherloginorshare;
 
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 
-import com.oraclechain.pocketeos.R;
-import com.oraclechain.pocketeos.app.MyApplication;
-import com.oraclechain.pocketeos.utils.JsonUtil;
-import com.oraclechain.pocketeos.utils.ToastUtils;
+import com.oraclechain.pocketrix.R;
+import com.oraclechain.pocketrix.app.MyApplication;
+import com.oraclechain.pocketrix.utils.JsonUtil;
+import com.oraclechain.pocketrix.utils.ToastUtils;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.tauth.IUiListener;

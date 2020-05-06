@@ -1,9 +1,9 @@
-package com.oraclechain.pocketeos.bean;
+package com.oraclechain.pocketrix.bean;
 
 import java.util.List;
 
 /**
- * Created by pocketEos on 2018/2/2.
+ * Created by pocketrix on 2018/2/2.
  */
 
 public class PaidAnswerBean {

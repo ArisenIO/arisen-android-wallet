@@ -1,7 +1,7 @@
-package com.oraclechain.pocketeos.blockchain.cypto.util;
+package com.oraclechain.pocketrix.blockchain.cypto.util;
 
 /**
- * Created by pocketEos on 2018/4/26.
+ * Created by pocketrix on 2018/4/26.
  * Utilities for going to and from ASCII-HEX representation.
  */
 
